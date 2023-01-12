@@ -1,11 +1,8 @@
 <?php
 /**
  * Template Name: Mes Messages
- * Template Post Type: page
+ * 
  */
-
-// 
-
 $context = Timber::context();
 
 $timber_post     = new Timber\Post();
