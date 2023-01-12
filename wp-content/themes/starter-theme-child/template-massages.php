@@ -1,6 +1,8 @@
 <?php
-  /* Template Name: Pages service */
-  
+/*
+  Template Name: Massages
+*/
+
   $context = Timber::context();
 
   $timber_post     = new Timber\Post();
