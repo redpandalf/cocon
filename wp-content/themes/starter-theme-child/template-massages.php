@@ -1,7 +1,7 @@
 <?php
 /**
  * Template Name: Mes Messages
- * Description: A Page Template with a darker design.
+ * Template Post Type: page
  */
 
 // 
