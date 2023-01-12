@@ -1,9 +1,8 @@
 <?php
 /**
- * Template Name: My Custom Page
- * The template for displaying all pages.
+ * Template Name: Business Template
  *
- * Description: A Page Template with a darker design.
+ * Displays the Business Template of the theme.
  *
  * @package  WordPress
  * @subpackage  Timber
