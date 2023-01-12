@@ -1,13 +1,20 @@
 /*
- * Theme Name: Cocon Theme
- * Description: Starter Theme to use with Cocon
- * Author: ASavva
- * Modèle: Cocon
- * Version: 1.1
- * Text Domain: Cocon
- * License: GNU General Public License v2 or later
- * License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Theme Name: Cocon
+Theme URI: http://themegrill.com/themes/accelerate/
+Author: Cocon
+Author URI: http://themegrill.com
+Description: Accelerate is multipurpose WordPress theme made for simplicity and ease of use. This theme is a piece of art that has this premium look and feel which will make your site stand out. Supports all post formats. Accelerate can be used for portfolio, business, blog, personal, travel, corporate, business services or any other kinds of sites. Get free support in http://themegrill.com/support-forum/ and check the demo at http://demo.themegrill.com/accelerate/. Available Translation: Polish and Hungarian.
+Version: 1.2.5
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: light, white, two-columns, right-sidebar, left-sidebar, fluid-layout, responsive-layout, custom-header, custom-background, custom-menu, custom-colors, sticky-post, threaded-comments, translation-ready, featured-images, theme-options, post-formats
+Text Domain: Cocon
 
-  Tags: one-column, accessibility-ready, custom-colors, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, block-patterns, rtl-language-support, sticky-post, threaded-comments, translation-ready
-
+Resetting and rebuilding styles have been helped along thanks to the fine work of
+Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
+along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+and Blueprint http://www.blueprintcss.org/
 */
+
+/* =Reset
+-------------------------------------------------------------- */
