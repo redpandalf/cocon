@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Business Template
+ * Template Name: Massages
  *
  * Displays the Business Template of the theme.
  *
