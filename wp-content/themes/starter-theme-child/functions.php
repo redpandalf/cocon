@@ -65,7 +65,7 @@ class StarterSite extends Timber\Site {
 		add_filter( 'timber/twig', array( $this, 'add_to_twig' ) );
 		add_action( 'init', array( $this, 'register_post_types' ) );
 		add_action( 'init', array( $this, 'register_taxonomies' ) );
-		add_action( 'wp_enqueue_style', array( $this, 'loadStyle' ) );
+		add_action( 'init', array( $this, 'loadStyle' ) );
 		parent::__construct();
 	}
 	/** This is where you can register custom post types. */
