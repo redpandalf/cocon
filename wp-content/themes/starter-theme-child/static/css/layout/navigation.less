@@ -32,6 +32,7 @@ nav {
       margin: 0 1.5vw;
       display: flex;
       align-items: center;
+
       // Tablet
       @media  screen and (min-width: @screen-xxl) {
         margin: 0 24px;
@@ -43,7 +44,7 @@ nav {
           display: block;
           padding: 10px 0;
           font-family: @font-primary;
-          font-size: 16px;
+          font-size: @font-size-base;
           font-weight: 400;
           color: @color-text-nav;
 
@@ -60,7 +61,6 @@ nav {
           }
         }
       }
-
       // design for mobile
       // mobile
       @media  screen and (max-width: @screen-m) {
@@ -69,6 +69,10 @@ nav {
           display: block;
           width: 100%;
         }
+      }
+
+      a, a:link, a:visited {        
+        font-size: @font-size-base-mobile;
       }
       
       // last item
