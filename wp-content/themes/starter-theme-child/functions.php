@@ -160,21 +160,18 @@ class StarterSite extends Timber\Site {
 		$twig->addExtension( new Twig\Extension\StringLoaderExtension() );
 		$twig->addFilter( new Twig\TwigFilter( 'myfoo', array( $this, 'myfoo' ) ) );
 
-
-		/* this is where you can add your own fuctions to twig */
-    $twig->addFunction($function);
-    $function = new Twig_SimpleFunction('enqueue_script', function ($handle) {
-        // register it elsewhere
-        wp_enqueue_script( $handle);
-    });
-    $twig->addFunction($function);
-    $function = new Twig_SimpleFunction('enqueue_style', function ($handle) {
-        // register it elsewhere
-        wp_enqueue_style( $handle);
-    });
-    $twig->addFunction($function);
-    return $twig;
+		return $twig;
 	}
+
+
+	/** This is where you can add your own functions to twig.
+	 *
+	 * @param string $twig get extension.
+	 */
+		$function = new Twig_SimpleFunction('enqueue_style', function ($handle, $src) {
+			wp_enqueue_style( $handle, get_stylesheet_directory_uri() . '/static/css/'.$src);
+	 });
+	 $twig->addFunction($function);
 
 
 }
