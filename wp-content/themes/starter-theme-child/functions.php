@@ -91,6 +91,15 @@ class StarterSite extends Timber\Site {
 		$context['main_menu']  = new Timber\Menu('Main Menu');
     $context['footer_menu'] = new Timber\Menu('Footer Menu');
 
+		register_sidebar( array(
+			'name' => 'Home left sidebar',
+			'id' => 'home_left',
+			'before_widget' => '<div>',
+			'after_widget' => '</div>',
+			'before_title' => '<h2 class="rounded">',
+			'after_title' => '</h2>',
+	) );
+
 		return $context;
 	}
 
@@ -173,15 +182,6 @@ class StarterSite extends Timber\Site {
 		return $twig;
 	}
 
-
-	register_sidebar( array(
-		'name' => 'Home left sidebar',
-		'id' => 'home_left',
-		'before_widget' => '<div>',
-		'after_widget' => '</div>',
-		'before_title' => '<h2 class="rounded">',
-		'after_title' => '</h2>',
-) );
 
 }
 
