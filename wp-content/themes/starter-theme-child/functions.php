@@ -163,11 +163,13 @@ class StarterSite extends Timber\Site {
 		return $twig;
 	}
 
+	public function add_style( $twig ) {
 		$twig->addFunction(new Timber\Twig_Function('add_style', function () { 
 			echo get_template_directory_uri() . '/dist/app.css'; 
 			wp_register_style('style', get_template_directory_uri() . '/dist/app.css', [], '1', 'all'); 
 			wp_enqueue_style('style'); 
 		}));
+	}
 
 		
 }
