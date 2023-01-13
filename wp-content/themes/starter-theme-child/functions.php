@@ -165,3 +165,14 @@ class StarterSite extends Timber\Site {
 }
 
 new StarterSite();
+
+
+
+/** This is where you can add your own functions to twig.
+ *
+ * @param string $twig get extension.
+ */
+$function = new Twig_SimpleFunction('enqueue_style', function ($handle, $src) {
+	wp_enqueue_style( $handle, get_stylesheet_directory_uri() . '/static/css/'.$src);
+});
+$twig -> addFunction( $function );
