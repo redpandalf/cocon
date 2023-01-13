@@ -19,3 +19,7 @@ $timberContext['content'] = ob_get_contents();
 ob_end_clean();
 $templates = array( 'page-plugin.twig' );
 Timber::render( $templates, $timberContext );
+
+
+$context['site_copyright_info'] = get_field('copyright_info', 'options');
+Timber::render('index.twig', $context);
