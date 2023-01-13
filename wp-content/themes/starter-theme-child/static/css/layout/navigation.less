@@ -35,30 +35,35 @@ nav {
       align-items: center;
 
       // design for desktop
-      // desktop
-      @media  screen and (min-width: @screen-m + .5) {
-        &:hover, 
-        &.current-menu-item {
-          border:1px solid red;
+      
+      &:hover, 
+      &.current-menu-item {
+        // desktop
+        @media  screen and (min-width: @screen-m + .5) {
           a {
             text-shadow: 0 0 0.015px;
             box-shadow: 0 5px 0 0 @color-primary;
           }
         }
-        a, a:visited, a:link {
-          display: block;
-          padding: 10px 0;
-          font-family: @font-primary;
-          font-size: @font-size-base;
-          font-weight: 400;
-          color: @color-text-nav;
+      }
+      
 
-          // Tablet
-          @media  screen and (max-width: @screen-l) {
-            font-size: 1.3rem;
-          }
+      a, a:visited, a:link {
+        display: block;
+        padding: 10px 0;
+        font-family: @font-primary;
+        font-size: @font-size-base;
+        font-weight: 400;
+        color: @color-text-nav;
+
+        // Tablet
+        @media  screen and (max-width: @screen-l) {
+          font-size: 1.3rem;
         }
       }
+
+      
+  
       // design for mobile
       // mobile
       @media  screen and (max-width: @screen-m) {
