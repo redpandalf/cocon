@@ -189,12 +189,14 @@ new StarterSite();
 function cocon_widgets_init() {
 	// Widget Footer Contact Bloc
 	register_sidebar(array(
-		'name' 					=> 'Footer : Block Contact',
-		'id'						=> 'footer_block_contact',
-		'before_sidebar' => '<div class="block-container">',
-		'after_sidebar' 	=> '</div>',
-		'before_title' 	=> '<p class="h3 title">',
-		'after_title' 	=> '</p>',
+		'name' 						=> 'Footer : Block Contact',
+		'id'							=> 'footer_block_contact',
+		'before_widget' 	=> '<div class="block-container">',
+		'after_widget' 		=> '</div>',
+		'before_title' 		=> '<p class="h3 title">',
+		'after_title' 		=> '</p>',
+		'before_sidebar'	=> '',
+		'after_sidebar' 	=> '',
 	));
 
 }
