@@ -25,12 +25,14 @@
     // mobile menu 
     .mobile-menu {
       padding: 10px;
-      border: 1px solid red;
       // desktop
       @media screen and (min-width: @screen-m) {
-        &, & + input {
+        & {
           display: none;
         }
+      }
+      & + input {
+        display: none;
       }
     }
     input:checked + ul {
