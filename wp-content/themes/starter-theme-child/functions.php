@@ -163,29 +163,13 @@ class StarterSite extends Timber\Site {
 		return $twig;
 	}
 
+		$twig->addFunction(new Timber\Twig_Function('add_style', function () { 
+			echo get_template_directory_uri() . '/dist/app.css'; 
+			wp_register_style('style', get_template_directory_uri() . '/dist/app.css', [], '1', 'all'); 
+			wp_enqueue_style('style'); 
+		}));
 
-	/**
-	 * versioned_theme_uri() Twig Function
-	 *
-	 * Create an auto-versioned URI for a relative theme file.
-	 *
-	 * @param \Twig\Environment $twig The Twig environment.
-	 * @return \Twig\Environment
-	 */
-	function kevinlearynet_extend_timber_twig($twig) {
-		$twig_function = new Timber\Twig_Function( 'theme_uri_versioned', function ($theme_file) {
-			$uri = get_theme_file_uri( $theme_file );
-			$filepath = get_theme_file_path( $theme_file );
-			$version = file_exists( $filepath ) ? filemtime( $filepath ) : 'FILE_NOT_FOUND';
-
-			return "$uri?v=$version";
-		} );
-
-		$twig->addFunction( $twig_function );
-
-		return $twig;
-	}
-	add_filter( 'timber/twig', 'kevinlearynet_extend_timber_twig' );
+		
 }
 
 new StarterSite();
