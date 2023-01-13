@@ -11,15 +11,18 @@
     display: flex;
 
     li {
-      &, a, a:visited {
+      a, a:visited, a:link {
+        display: block;
+        padding: 12px;
         font-family: @font-primary;
         font-size: 16px;
         font-weight: 400;
         color: @color-text-nav;
-      }
-      a {
-        display: block;
-        padding: 12px;
+
+        &:hover, 
+        &:active {
+          box-shadow: 2px 0 5px @color-primary;
+        }
       }
       
     }
