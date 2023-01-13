@@ -8,13 +8,6 @@
  * @since   Timber 0.1
  */
 
-
- if(function_exists('acf_add_options_page') ) {
-    
-	acf_add_options_page();
-	
-}
-
 /**
  * If you are installing Timber as a Composer dependency in your theme, you'll need this block
  * to load your dependencies and initialize Timber. If you are using Timber via the WordPress.org
@@ -82,6 +75,13 @@ class StarterSite extends Timber\Site {
 	public function register_taxonomies() {
 
 	}
+
+	if(function_exists('acf_add_options_page') ) {
+    
+		acf_add_options_page();
+		
+	}
+	
 
 	/** This is where you add some context
 	 *
