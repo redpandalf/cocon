@@ -92,12 +92,7 @@ class StarterSite extends Timber\Site {
     $context['footer_menu'] = new Timber\Menu('Footer Menu');
 
 		
-add_filter( 'init', 'mytheme_timber_context'  );
-
-function mytheme_timber_context( $context ) {
     $context['options'] = get_fields('option');
-    return $context;
-}
 
 		return $context;
 	}
