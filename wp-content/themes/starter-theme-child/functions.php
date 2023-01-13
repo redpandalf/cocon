@@ -162,7 +162,7 @@ class StarterSite extends Timber\Site {
 
 
 		$twig->addFunction($function);
-    $function = new Twig_SimpleFunction('enqueue_style', function () {
+    $function = new Twig_SimpleFunction('enqueue_style', function ($function) {
         // register it elsewhere
         wp_enqueue_style('script-name', get_template_directory_uri() . '/static/css/styles.less', array(), '1.0.0', true);
     });
