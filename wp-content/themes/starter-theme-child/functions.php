@@ -90,13 +90,13 @@ class StarterSite extends Timber\Site {
 		$context['main_menu']  = new Timber\Menu('Main Menu');
     $context['footer_menu'] = new Timber\Menu('Footer Menu');
 
-		$context['options'] = get_fields( 'options' );
-		
+		/* functions.php */
+		add_filter( 'timber_context', 'mytheme_timber_context'  );
 
-		// ACF Options Page, if you have one
-		if( function_exists('acf_add_options_page') ) {
-			acf_add_options_page();
-	}
+		function mytheme_timber_context( $context ) {
+				$context['options'] = get_fields('option');
+				return $context;
+		}
 
 		return $context;
 	}
