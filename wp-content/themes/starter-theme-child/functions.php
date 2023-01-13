@@ -187,12 +187,12 @@ function cocon_widgets_init() {
 
 	// Widget Footer Contact Bloc
 	register_sidebar( array(
-		'name' => 'Home left sidebar',
-		'id' => 'home_left',
+		'name' 					=> 'Footer : Block Contact',
+		'id'						=> 'footer_block_contact',
 		'before_widget' => '<div>',
-		'after_widget' => '</div>',
-		'before_title' => '<h2 class="rounded">',
-		'after_title' => '</h2>',
+		'after_widget' 	=> '</div>',
+		'before_title' 	=> '<p class="h3 title">',
+		'after_title' 	=> '</p>',
 ) );
 
 
