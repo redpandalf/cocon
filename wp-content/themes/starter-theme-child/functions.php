@@ -180,6 +180,8 @@ class StarterSite extends Timber\Site {
 new StarterSite();
 
 
+add_action( 'widgets_init', 'accelerate_widgets_init');
+
 function accelerate_widgets_init() {
 
 	// Registering main right sidebar
