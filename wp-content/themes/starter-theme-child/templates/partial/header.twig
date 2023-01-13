@@ -7,7 +7,10 @@
     </div>
 
     <nav id="nav-main" class="nav-main" role="navigation">
-      <div class="mobile-menu"><i class="fa-solid fa-bars fa-2x"></i></div>
+
+      <label for="open-mobile-menu" class="mobile-menu"><i class="fa-solid fa-bars fa-2x"></i></label>
+      <input type="radio" name="open-mobile-menu" />
+
       {% include "menu.twig" with { 'type': main_menu } %}      
     </nav>
   </div>
