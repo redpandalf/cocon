@@ -90,6 +90,8 @@ class StarterSite extends Timber\Site {
 		$context['main_menu']  = new Timber\Menu('Main Menu');
     $context['footer_menu'] = new Timber\Menu('Footer Menu');
 
+		$context['options'] = get_fields('options');
+
 		return $context;
 	}
 
@@ -172,12 +174,6 @@ class StarterSite extends Timber\Site {
 		return $twig;
 	}
 
-	add_filter( 'timber_context', 'mytheme_timber_context'  );
-
-	function mytheme_timber_context( $context ) {
-			$context['options'] = get_fields('options');
-			return $context;
-	}
 }
 
 new StarterSite();
