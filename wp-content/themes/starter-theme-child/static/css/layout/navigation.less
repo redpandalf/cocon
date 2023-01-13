@@ -34,10 +34,6 @@ nav {
       display: flex;
       align-items: center;
 
-      // Tablet
-      @media  screen and (min-width: @screen-xxl) {
-        margin: 0 24px;
-      }
       // design for desktop
       // desktop
       @media  screen and (min-width: @screen-m + .5) {
@@ -70,6 +66,11 @@ nav {
           display: block;
           width: 100%;
         }
+      }
+
+      // Tablet
+      @media  screen and (min-width: @screen-xxl) {
+        margin: 0 24px;
       }
 
       a, a:link, a:visited {        
