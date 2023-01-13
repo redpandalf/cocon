@@ -7,9 +7,14 @@
     background-color: @color-tertiary;
     color: @color-grey-400;
     font-size: 1.4rem;
-    border: 1px solid red;
+
+    > * {
+      border: 1px solid red;
+      flex: 2;
+    }
 
     .logo {
+      flex: 1;
       // tablet
       @media screen and (max-width: @screen-xl) {
         width: 12%;
