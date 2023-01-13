@@ -93,9 +93,9 @@ class StarterSite extends Timber\Site {
 		$context['options'] = get_fields( 'options' );
 
 		// ACF Options Page, if you have one
-		if( function_exists( 'acf_add_options_page' )) {
-			$context['options'] = get_fields( 'options' );
-		}
+		if( function_exists('acf_add_options_page') ) {
+			acf_add_options_page();
+	}
 
 		return $context;
 	}
