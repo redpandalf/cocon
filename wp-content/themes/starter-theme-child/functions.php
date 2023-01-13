@@ -87,7 +87,7 @@ class StarterSite extends Timber\Site {
 		//$context['menu']  = new Timber\Menu();
 		$context['site']  = $this;
 
-		$context['primary_menu']  = new Timber\Menu('Main Menu');
+		$context['main_menu']  = new Timber\Menu('Main Menu');
     $context['footer_menu'] = new Timber\Menu('Footer Menu');
 
 		return $context;
