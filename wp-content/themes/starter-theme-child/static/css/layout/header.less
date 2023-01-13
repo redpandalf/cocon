@@ -4,7 +4,16 @@
     padding: 20px 0;
     display: flex;
     align-items: center;
-    
+
+    .logo {
+      // tablet
+      @media screen and (max-width: @screen-xl) {
+        width: 8%;
+        min-width: 60px;
+      }
+    }
+
+    // menu
     .nav-main {
       margin-left: auto;
       font-family: @font-primary;
@@ -12,13 +21,16 @@
       font-weight: 400;
       color: @color-text-nav;
     }
-  
-    .logo {
-      // tablet
-      @media screen and (max-width: @screen-xl) {
-        width: 8%;
+
+    // mobile menu 
+    .mobile-menu {
+      // desktop
+      @media screen and (min-width: @screen-m) {
+        display: none;
       }
     }
+  
+    
   }
 
 }
