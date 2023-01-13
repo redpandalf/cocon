@@ -65,16 +65,6 @@ class StarterSite extends Timber\Site {
 		add_filter( 'timber/twig', array( $this, 'add_to_twig' ) );
 		add_action( 'init', array( $this, 'register_post_types' ) );
 		add_action( 'init', array( $this, 'register_taxonomies' ) );
-
-
-		
-		add_filter( 'timber_context', 'mytheme_timber_context'  );
-
-		function mytheme_timber_context( $context ) {
-				$context['options'] = get_fields('option');
-				return $context;
-		}
-
 		
 		parent::__construct();
 	}
@@ -101,6 +91,13 @@ class StarterSite extends Timber\Site {
 		$context['main_menu']  = new Timber\Menu('Main Menu');
     $context['footer_menu'] = new Timber\Menu('Footer Menu');
 
+		
+		add_filter( 'timber_context', 'mytheme_timber_context'  );
+
+		function mytheme_timber_context( $context ) {
+				$context['options'] = get_fields('option');
+				return $context;
+		}
 
 		return $context;
 	}
