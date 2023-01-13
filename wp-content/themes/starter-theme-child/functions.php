@@ -65,6 +65,7 @@ class StarterSite extends Timber\Site {
 		add_filter( 'timber/twig', array( $this, 'add_to_twig' ) );
 		add_action( 'init', array( $this, 'register_post_types' ) );
 		add_action( 'init', array( $this, 'register_taxonomies' ) );
+		add_action('widgets_init', 'cocon_widgets_init');
 		
 		parent::__construct();
 	}
@@ -90,6 +91,8 @@ class StarterSite extends Timber\Site {
 
 		$context['main_menu']  = new Timber\Menu('Main Menu');
     $context['footer_menu'] = new Timber\Menu('Footer Menu');
+
+		$context['home_left'] = Timber::get_widgets('home_left');
 		
 
 		return $context;
@@ -180,7 +183,7 @@ class StarterSite extends Timber\Site {
 new StarterSite();
 
 
-add_action('widgets_init', 'cocon_widgets_init');
+
 
 function cocon_widgets_init() {
 
@@ -193,6 +196,6 @@ function cocon_widgets_init() {
 		'before_title' => '<h2 class="rounded">',
 		'after_title' => '</h2>',
 ) );
-$context['home_left'] = Timber::get_widgets('home_left');
+
 
 }
