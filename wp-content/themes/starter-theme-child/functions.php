@@ -90,15 +90,7 @@ class StarterSite extends Timber\Site {
 
 		$context['main_menu']  = new Timber\Menu('Main Menu');
     $context['footer_menu'] = new Timber\Menu('Footer Menu');
-
-		register_sidebar( array(
-			'name' => 'Home left sidebar',
-			'id' => 'home_left',
-			'before_widget' => '<div>',
-			'after_widget' => '</div>',
-			'before_title' => '<h2 class="rounded">',
-			'after_title' => '</h2>',
-	) );
+		
 
 		return $context;
 	}
@@ -176,8 +168,8 @@ class StarterSite extends Timber\Site {
 
 		$function = new Twig_SimpleFunction('enqueue_style', function () {
 			wp_enqueue_style('cocon-style', get_stylesheet_directory_uri() . '/static/css/styles.less');
-	 });
-	 $twig->addFunction($function);
+	 	});
+		$twig->addFunction($function);
 
 		return $twig;
 	}
@@ -186,3 +178,25 @@ class StarterSite extends Timber\Site {
 }
 
 new StarterSite();
+
+
+function accelerate_widgets_init() {
+
+	// Registering main right sidebar
+	register_sidebar( array(
+		'name' 				=> __( 'Right Sidebar', 'accelerate' ),
+		'id' 					=> 'accelerate_right_sidebar',
+		'description'   	=> __( 'Shows widgets at Right side.', 'accelerate' ),
+		'before_widget' 	=> '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  	=> '</aside>',
+		'before_title'  	=> '<p class="entry-title">',
+		'after_title'   	=> '</p>'
+	) );
+  
+	// Registering widgets
+	register_widget( "accelerate_featured_single_page_widget" );
+	register_widget( "accelerate_call_to_action_widget" );
+	register_widget( "accelerate_recent_work_widget" );
+	register_widget( "accelerate_image_service_widget" );
+	register_widget( "accelerate_custom_tag_widget" );
+}
