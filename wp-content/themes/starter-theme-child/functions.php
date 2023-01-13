@@ -91,7 +91,10 @@ class StarterSite extends Timber\Site {
 
 		$context['main_menu']  = new Timber\Menu('Main Menu');
     $context['footer_menu'] = new Timber\Menu('Footer Menu');
-		
+
+		// Widgets 
+		$context['footer_block_contact'] = Timber::get_widgets('footer_block_contact');
+		//		
 
 		return $context;
 	}
@@ -182,18 +185,18 @@ new StarterSite();
 
 
 
+// Width list
 
 function cocon_widgets_init() {
-
 	// Widget Footer Contact Bloc
-	register_sidebar( array(
+	register_sidebar(array(
 		'name' 					=> 'Footer : Block Contact',
 		'id'						=> 'footer_block_contact',
 		'before_widget' => '<div>',
 		'after_widget' 	=> '</div>',
 		'before_title' 	=> '<p class="h3 title">',
 		'after_title' 	=> '</p>',
-) );
+	));
 
 
 }
