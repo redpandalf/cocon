@@ -12,6 +12,12 @@ nav {
   > ul {
     display: flex;
 
+    // hiddenmain nav in mobile
+    // mobile
+    @media screen and (max-width: @screen-m) {
+      display: none;
+    }
+
     li {
       margin: 0 1.5vw;
       display: flex;
