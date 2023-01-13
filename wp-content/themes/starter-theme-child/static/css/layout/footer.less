@@ -3,7 +3,7 @@
   background-color: @color-tertiary;
 
   > * {
-    padding: 80px 0;
+    padding: 80px 0 40px;
     display: flex;
     color: @color-grey-400;
 
@@ -73,11 +73,12 @@
 
   .legal-notice {    
     font-size: 1.4rem;
-    margin-top: 40px;
+    margin-top: 60px;
     color: @color-grey-400;
     min-width: 100%;
     // mobile 
-    @media screen and (max-width: @screen-s) { 
+    @media screen and (max-width: @screen-s) {
+      margin-top: 40px; 
       padding-top: 30px;
       border-top: 1px solid #414141;
     }
