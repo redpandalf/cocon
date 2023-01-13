@@ -41,6 +41,11 @@
     .footer-content-blocks {
       border: 1px solid red;
       display: flex;
+      flex-wrap: wrap;
+
+      > * {
+        border: 1px solid red;
+      }
       
     }
   }
@@ -49,6 +54,7 @@
     font-size: 1.4rem;
     margin-top: 30px;
     color: @color-grey-400;
+    min-width: 100%;
     // mobile 
     @media screen and (max-width: @screen-s) { 
       margin-top: 40px;
