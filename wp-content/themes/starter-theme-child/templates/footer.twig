@@ -5,12 +5,12 @@
     </a>
   </div>
 
-  <div>
+  <div class="footer-content-blocks">
     <nav class="footer-navigation" role="navigation">
       {% include "menu.twig" with { 'type': footer_menu } %}
     </nav>
 
-    {{ footer_block_contact }}
+    <div class="contact-block">{{ footer_block_contact }}</div>
 
     <p class="legal-notice">{{"now"|date('Y')}} Cocon <span>|</span> Tous droits réservés <span>|</span> <a href="/" title="Mentions Légales">Mentions Légales</a></p>
   </div>
