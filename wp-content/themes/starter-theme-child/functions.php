@@ -171,7 +171,7 @@ class StarterSite extends Timber\Site {
 		// Chargement de la feuille de style complémentaire du thème enfant
 		wp_enqueue_style( 'starter-theme-child', get_stylesheet_directory_uri() . '/static/css/styles.css' );
 	}
-	add_action( 'wp_enqueue_style', 'capitaine_child_register_assets' );
+	do action( 'wp_enqueue_style', 'capitaine_child_register_assets' );
 
 
 }
