@@ -5,16 +5,18 @@
   > * {
     padding: 80px 0;
     display: flex;
-    align-items: center;
     color: @color-grey-400;
     font-size: 1.4rem;
     // tablet
     @media screen and (max-width: @screen-l) {      
       padding: 50px 0;
     }
+    // mobile 
+    @media screen and (max-width: @screen-s) { 
+      flex-direction: column;
+    }
 
     > * {
-      border: 1px solid red;
       flex: 2;
     }
 
