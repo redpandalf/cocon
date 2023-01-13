@@ -91,8 +91,6 @@ class StarterSite extends Timber\Site {
 
 		$context['main_menu']  = new Timber\Menu('Main Menu');
     $context['footer_menu'] = new Timber\Menu('Footer Menu');
-
-		$context['home_left'] = Timber::get_widgets('home_left');
 		
 
 		return $context;
