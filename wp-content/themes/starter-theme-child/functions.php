@@ -194,11 +194,5 @@ function accelerate_widgets_init() {
 		'before_title'  	=> '<p class="entry-title">',
 		'after_title'   	=> '</p>'
 	) );
-  
-	// Registering widgets
-	register_widget( "accelerate_featured_single_page_widget" );
-	register_widget( "accelerate_call_to_action_widget" );
-	register_widget( "accelerate_recent_work_widget" );
-	register_widget( "accelerate_image_service_widget" );
-	register_widget( "accelerate_custom_tag_widget" );
+
 }
