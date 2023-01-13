@@ -186,7 +186,6 @@ new StarterSite();
 
 
 // Width list
-
 function cocon_widgets_init() {
 	// Widget Footer Contact Bloc
 	register_sidebar(array(
@@ -197,6 +196,5 @@ function cocon_widgets_init() {
 		'before_title' 	=> '<p class="h3 title">',
 		'after_title' 	=> '</p>',
 	));
-
 
 }
