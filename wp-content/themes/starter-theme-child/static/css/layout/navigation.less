@@ -41,6 +41,13 @@ nav {
       // design for desktop
       // desktop
       @media  screen and (min-width: @screen-m + .5) {
+        &:hover, 
+        &.current-menu-item {
+          a {
+            text-shadow: 0 0 0.015px;
+            box-shadow: 0 5px 0 0 @color-primary;
+          }
+        }
         a, a:visited, a:link {
           display: block;
           padding: 10px 0;
@@ -52,13 +59,6 @@ nav {
           // Tablet
           @media  screen and (max-width: @screen-l) {
             font-size: 1.3rem;
-          }
-        }
-        &:hover, 
-        &.current-menu-item {
-          a {
-            text-shadow: 0 0 0.015px;
-            box-shadow: 0 5px 0 0 @color-primary;
           }
         }
       }
