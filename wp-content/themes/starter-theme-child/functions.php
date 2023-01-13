@@ -76,13 +76,6 @@ class StarterSite extends Timber\Site {
 
 	}
 
-	if(function_exists('acf_add_options_page') ) {
-    
-		acf_add_options_page();
-		
-	}
-	
-
 	/** This is where you add some context
 	 *
 	 * @param string $context context['this'] Being the Twig's {{ this }}.
@@ -183,7 +176,9 @@ class StarterSite extends Timber\Site {
 
 new StarterSite();
 
-
+if( function_exists('acf_add_options_page') ) {
+	acf_add_options_page();
+}
 /*
 if( function_exists('acf_add_options_page') ) {
     
