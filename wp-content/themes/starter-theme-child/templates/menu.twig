@@ -10,7 +10,7 @@
 {% endif %}
 #}
 
-{% for item in blop.items %}
+{% for item in type.items %}
 	<li class="nav-main-item {{ item.classes|join(' ') }}">
 		<a class="nav-main-link" href="{{ item.link }}">{{ item.title }}</a>
 		{% if item.children %}
