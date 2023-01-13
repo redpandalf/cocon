@@ -20,4 +20,6 @@ ob_end_clean();
 $templates = array( 'page-plugin.twig' );
 Timber::render( $templates, $timberContext );
 
+$data['cocon_footer_contact'] = Timber::get_widgets( 'cocon_footer_contact' );
+
 

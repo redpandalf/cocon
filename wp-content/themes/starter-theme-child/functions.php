@@ -184,10 +184,10 @@ add_action( 'widgets_init', 'cocon_widgets_init');
 
 function cocon_widgets_init() {
 
-	// Registering main right sidebar
+	// Widget Footer Contact Bloc
 	register_sidebar( array(
 		'name' 						=> __( 'Footer : Bloc contact', 'cocon' ),
-		'id' 							=> 'cocon_right_sidebar',
+		'id' 							=> 'cocon_footer_contact',
 		'description'   	=> __( 'Bloc contact dans le footer', 'cocon' ),
 		'before_widget' 	=> '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  	=> '</dv>',
