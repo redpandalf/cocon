@@ -26,10 +26,8 @@
     .mobile-menu {
       padding: 10px;
       // desktop
-      @media screen and (min-width: @screen-m) {
-        & {
-          display: none;
-        }
+      @media screen and (min-width: @screen-m + .5) {
+        display: none;
       }
       & + input {
         display: none;
