@@ -186,12 +186,12 @@ function cocon_widgets_init() {
 
 	// Registering main right sidebar
 	register_sidebar( array(
-		'name' 				=> __( 'Footer Content', 'cocon' ),
-		'id' 					=> 'cocon_right_sidebar',
-		'description'   	=> __( 'Shows widgets at Right side.', 'cocon' ),
-		'before_widget' 	=> '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  	=> '</aside>',
-		'before_title'  	=> '<p class="entry-title">',
+		'name' 						=> __( 'Footer : Bloc contact', 'cocon' ),
+		'id' 							=> 'cocon_right_sidebar',
+		'description'   	=> __( 'Bloc contact dans le footer', 'cocon' ),
+		'before_widget' 	=> '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  	=> '</dv>',
+		'before_title'  	=> '<p class="title">',
 		'after_title'   	=> '</p>'
 	) );
 
