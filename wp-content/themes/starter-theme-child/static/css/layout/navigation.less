@@ -38,13 +38,22 @@
 
       // last item
       &:last-of-type {
-        a:after {
-          content: "\f0e0";
-          font-family: "Font Awesome 6 Free";
-          display: inline-block;
-          margin-left: 8px;
-        }
+        a {
+          &:after {
+            content: "\f0e0";
+            font-family: "Font Awesome 6 Free";
+            display: inline-block;
+            margin-left: 8px;
+          }
+          span {
+            // Tablet
+            @media  screen and (max-width: @screen-l) {
+              display: none;
+            }
+          }
+        }  
       }
     }
+    // li
   }
 }
