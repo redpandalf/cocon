@@ -31,7 +31,12 @@
         &, & + input {
           display: none;
         }
-        
+      }
+
+      &:checked {
+        & + input + ul {
+          display: block;
+        }
       }
     }
   
