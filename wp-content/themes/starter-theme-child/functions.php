@@ -163,19 +163,29 @@ class StarterSite extends Timber\Site {
 		return $twig;
 	}
 
-	//function loadScripts() {
-	//	wp_enqueue_script( 'script-name', get_template_directory_uri() . '/js/example.js', array(), '1.0.0', true );
-	//} 
 
-	//function loadScripts() {
-	//	// Chargement de la feuille de style complémentaire du thème enfant
-	//	wp_enqueue_style( 'starter-theme-child', get_stylesheet_directory_uri() . '/static/css/styles.css', array(), '1.0.0', true );
-	//}
+	/**
+	 * versioned_theme_uri() Twig Function
+	 *
+	 * Create an auto-versioned URI for a relative theme file.
+	 *
+	 * @param \Twig\Environment $twig The Twig environment.
+	 * @return \Twig\Environment
+	 */
+	function kevinlearynet_extend_timber_twig($twig) {
+		$twig_function = new Timber\Twig_Function( 'theme_uri_versioned', function ($theme_file) {
+			$uri = get_theme_file_uri( $theme_file );
+			$filepath = get_theme_file_path( $theme_file );
+			$version = file_exists( $filepath ) ? filemtime( $filepath ) : 'FILE_NOT_FOUND';
 
-	function my_custom_css_styles() {
-		wp_enqueue_style( 'starter-theme-child', get_template_directory_uri() . '/static/css/styles.less', array(), filemtime(get_template_directory() . '/static/css/styles.less'), true );
+			return "$uri?v=$version";
+		} );
+
+		$twig->addFunction( $twig_function );
+
+		return $twig;
 	}
-	add_action( 'wp_enqueue_scripts', 'my_custom_css_styles' );
+	add_filter( 'timber/twig', 'kevinlearynet_extend_timber_twig' );
 }
 
 new StarterSite();
