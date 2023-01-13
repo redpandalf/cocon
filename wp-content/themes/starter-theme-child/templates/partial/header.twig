@@ -7,9 +7,8 @@
     </div>
 
     <nav id="nav-main" class="nav-main" role="navigation">
-      {% include "menu.twig" with { 'type': main_menu } %}
-
       <div class="mobile-menu"><i class="fa-solid fa-bars fa-2x"></i></div>
+      {% include "menu.twig" with { 'type': main_menu } %}      
     </nav>
   </div>
 {% endblock %}
