@@ -172,7 +172,12 @@ class StarterSite extends Timber\Site {
 		return $twig;
 	}
 
+	add_filter( 'timber_context', 'mytheme_timber_context'  );
 
+	function mytheme_timber_context( $context ) {
+			$context['options'] = get_fields('options');
+			return $context;
+	}
 }
 
 new StarterSite();
