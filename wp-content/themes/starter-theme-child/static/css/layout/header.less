@@ -32,12 +32,9 @@
           display: none;
         }
       }
-
-      &:checked {
-        & + input + ul {
-          display: block;
-        }
-      }
+    }
+    input:checked + ul {
+      display: block!important;
     }
   
     
