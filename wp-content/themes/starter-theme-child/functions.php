@@ -94,6 +94,7 @@ class StarterSite extends Timber\Site {
 
 		// Widgets 
 		$context['footer_block_contact'] = Timber::get_widgets('footer_block_contact');
+		$context['footer_block_social'] = Timber::get_widgets('footer_block_social');
 		//		
 
 		return $context;
@@ -187,10 +188,24 @@ new StarterSite();
 
 // Width list
 function cocon_widgets_init() {
-	// Widget Footer Contact Bloc
+	// Widget Footer Contact Block
 	register_sidebar(array(
-		'name' 						=> 'Footer : Block Contact',
+		'name' 						=> 'Footer : Bloc Contact',
 		'id'							=> 'footer_block_contact',
+		'description'    => '',
+		'class'          => '',
+		'before_widget' 	=> '<div class="block-container">',
+		'after_widget' 		=> '</div>',
+		'before_title' 		=> '<p class="h3 title">',
+		'after_title' 		=> '</p>',
+		'before_sidebar'	=> '',
+		'after_sidebar' 	=> '',
+		'show_in_rest'   => false,
+	));
+	// Widget Footer Social Network Block
+	register_sidebar(array(
+		'name' 						=> 'Footer : Bloc Reseau Sociaux',
+		'id'							=> 'footer_block_social',
 		'description'    => '',
 		'class'          => '',
 		'before_widget' 	=> '<div class="block-container">',
