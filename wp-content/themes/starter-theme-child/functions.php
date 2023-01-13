@@ -91,12 +91,6 @@ class StarterSite extends Timber\Site {
 		$context['main_menu']  = new Timber\Menu('Main Menu');
     $context['footer_menu'] = new Timber\Menu('Footer Menu');
 
-		
-    // ACF Options Page, if you have one
-		if( function_exists( 'acf_add_options_page' )) {
-			$context['options'] = get_fields( 'options' );
-		}
-
 		return $context;
 	}
 
