@@ -46,10 +46,18 @@
       flex-wrap: wrap;
 
       > * {
-        border: 1px solid red;
+        border: 1px solid blue;
         flex: 1;
+
         &:not(:last-of-child) {
           margin-right: 40px;
+        }
+
+        .contact-block {
+          > * {
+            border: 1px solid red;
+            display: flex;
+          }
         }
       }
       
