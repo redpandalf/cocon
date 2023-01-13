@@ -193,5 +193,6 @@ function cocon_widgets_init() {
 		'before_title' => '<h2 class="rounded">',
 		'after_title' => '</h2>',
 ) );
+$context['home_left'] = Timber::get_widgets('home_left');
 
 }
