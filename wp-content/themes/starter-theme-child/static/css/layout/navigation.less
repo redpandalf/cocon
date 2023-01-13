@@ -13,6 +13,7 @@
     li {
       border: 1px solid red;
       flex: none;
+
       a, a:visited, a:link {
         display: block;
         padding: 12px;
@@ -20,6 +21,15 @@
         font-size: 16px;
         font-weight: 400;
         color: @color-text-nav;
+        
+        &:before {
+          display: block;
+          content: attr(title);
+          font-weight: bold;
+          height: 0;
+          overflow: hidden;
+          visibility: hidden;
+        }
 
         &:hover, 
         &:active {
