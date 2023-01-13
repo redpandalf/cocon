@@ -11,9 +11,13 @@
     display: flex;
 
     li {
-      margin: 0 12px;
+      margin: 0 20vw;
       display: flex;
       align-items: center;
+      // Tablet
+      @media  screen and (max-width: @screen-xl) {
+        margin: 0 1.5vw;
+      }
 
       a, a:visited, a:link {
         display: block;
