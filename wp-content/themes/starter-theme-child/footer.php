@@ -11,6 +11,9 @@
  * @since   Timber 0.1
  */
 
+ 
+$data['cocon_footer_contact'] = Timber::get_widgets( 'cocon_footer_contact' );
+
 $timberContext = $GLOBALS['timberContext']; // @codingStandardsIgnoreFile
 if ( ! isset( $timberContext ) ) {
 	throw new \Exception( 'Timber context not set in footer.' );
@@ -20,6 +23,5 @@ ob_end_clean();
 $templates = array( 'page-plugin.twig' );
 Timber::render( $templates, $timberContext );
 
-$data['cocon_footer_contact'] = Timber::get_widgets( 'cocon_footer_contact' );
 
 
