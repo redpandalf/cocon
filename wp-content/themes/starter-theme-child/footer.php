@@ -11,8 +11,6 @@
  * @since   Timber 0.1
  */
 
- 
-$context['home_left'] = Timber::get_widgets('home_left');
 
 $timberContext = $GLOBALS['timberContext']; // @codingStandardsIgnoreFile
 if ( ! isset( $timberContext ) ) {
