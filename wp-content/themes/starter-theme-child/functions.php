@@ -8,6 +8,13 @@
  * @since   Timber 0.1
  */
 
+
+ if(function_exists('acf_add_options_page') ) {
+    
+	acf_add_options_page();
+	
+}
+
 /**
  * If you are installing Timber as a Composer dependency in your theme, you'll need this block
  * to load your dependencies and initialize Timber. If you are using Timber via the WordPress.org
@@ -17,12 +24,6 @@ $composer_autoload = __DIR__ . '/vendor/autoload.php';
 if ( file_exists( $composer_autoload ) ) {
 	require_once $composer_autoload;
 	$timber = new Timber\Timber();
-}
-
-if( function_exists('acf_add_options_page') ) {
-    
-	acf_add_options_page();
-	
 }
 
 /**
