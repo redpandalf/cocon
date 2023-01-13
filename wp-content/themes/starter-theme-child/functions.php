@@ -173,20 +173,12 @@ class StarterSite extends Timber\Site {
 	//}
 
 	function my_custom_css_styles() {
-		wp_enqueue_style( 'cocon', get_template_directory_uri() . '/static/css/styles.css', array(), false );
+		wp_enqueue_style( 'cocon', get_template_directory_uri() . '/static/css/styles.less', array(),
+		filemtime(get_template_directory() . '/static/css/styles.less'), false );
 	}
 	add_action( 'wp_enqueue_scripts', 'my_custom_css_styles' );
 }
 
 new StarterSite();
 
-
-/**
- * Places the following tag into the page <head>, where
- *  `{ theme_url }` = the url of your theme directory
- *  `{ filemtime }` = the timestamp of the last modified date
- *                    for the stylesheet
- * <link rel="stylesheet" href="{ theme_url }/dist/css/style.min.css?ver={ filemtime }" />
- */
-/**/
 
