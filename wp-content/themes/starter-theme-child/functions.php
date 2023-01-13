@@ -65,7 +65,7 @@ class StarterSite extends Timber\Site {
 		add_filter( 'timber/twig', array( $this, 'add_to_twig' ) );
 		add_action( 'init', array( $this, 'register_post_types' ) );
 		add_action( 'init', array( $this, 'register_taxonomies' ) );
-		add_action( 'wp_enqueue_style', 'loadScripts');
+		add_action( 'wp_enqueue_style', array( $this, 'loadScripts' ) );
 		parent::__construct();
 	}
 	/** This is where you can register custom post types. */
@@ -160,12 +160,19 @@ class StarterSite extends Timber\Site {
 	public function add_to_twig( $twig ) {
 		$twig->addExtension( new Twig\Extension\StringLoaderExtension() );
 		$twig->addFilter( new Twig\TwigFilter( 'myfoo', array( $this, 'myfoo' ) ) );
+
+
+		$twig->addFunction($function);
+    $function = new Twig_SimpleFunction('enqueue_style', function () {
+        // register it elsewhere
+        wp_enqueue_style('script-name', get_template_directory_uri() . '/static/css/styles.less', array(), '1.0.0', true);
+    });
+    $twig->addFunction($function);
+
+
 		return $twig;
 	}
 
-	function loadScripts() {
-		wp_enqueue_style( 'script-name', get_template_directory_uri() . '/static/css/styles.less', array(), '1.0.0', true );
-	} 
 
 }
 
