@@ -177,6 +177,7 @@ class StarterSite extends Timber\Site {
 new StarterSite();
 
 
+/*
 if( function_exists('acf_add_options_page') ) {
     
 	acf_add_options_page(array(
@@ -198,5 +199,11 @@ if( function_exists('acf_add_options_page') ) {
 			'menu_title'    => 'Footer',
 			'parent_slug'   => 'theme-general-settings',
 	));
+	
+}
+*/
+if( function_exists('acf_add_options_page') ) {
+    
+	acf_add_options_page();
 	
 }
