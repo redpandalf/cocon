@@ -172,6 +172,10 @@ class StarterSite extends Timber\Site {
 		return $twig;
 	}
 
+}
+
+new StarterSite();
+
 
 	// Options pages for ACF
 	if( function_exists('acf_add_options_page') ) {
@@ -179,9 +183,3 @@ class StarterSite extends Timber\Site {
     acf_add_options_page();
     
 	}
-
-
-
-}
-
-new StarterSite();
