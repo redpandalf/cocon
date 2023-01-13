@@ -19,12 +19,6 @@
         font-weight: 400;
         color: @color-text-nav;
 
-        &:hover, 
-        &:active {
-          text-shadow: 0 0 0.015px ;
-          box-shadow: 0 4px 0 0 @color-primary;
-        }
-
         // Tablet
         @media  screen and (max-width: @screen-l) {
           font-size: 1.3rem;
@@ -32,6 +26,13 @@
         }
       }
       
+      &:hover, 
+      &.current-menu-item {
+        a {
+          text-shadow: 0 0 0.015px ;
+          box-shadow: 0 4px 0 0 @color-primary;
+        }
+      }
     }
   }
 }
