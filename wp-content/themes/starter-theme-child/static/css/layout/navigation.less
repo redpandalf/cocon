@@ -16,6 +16,7 @@ nav {
     // mobile
     @media screen and (max-width: @screen-m) {
       display: none;
+      border: 1px solid red;
     }
 
     li {
@@ -27,6 +28,8 @@ nav {
         margin: 0 24px;
       }
 
+      // design for desktop
+      // desktop
       @media  screen and (min-width: @screen-m + .5) {
         a, a:visited, a:link {
           display: block;
@@ -69,6 +72,12 @@ nav {
             }
           }
         }  
+      }
+
+      // design for mobile
+      // mobile
+      @media  screen and (max-width: @screen-m) {
+
       }
     }
     // li
