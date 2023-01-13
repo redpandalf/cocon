@@ -176,7 +176,7 @@ class StarterSite extends Timber\Site {
 
 }
 
-add_filter( 'timber_context', 'mytheme_timber_context'  );
+add_filter( 'init', 'mytheme_timber_context'  );
 
 function mytheme_timber_context( $context ) {
     $context['options'] = get_fields('option');
