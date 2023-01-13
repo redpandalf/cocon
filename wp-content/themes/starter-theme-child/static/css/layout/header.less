@@ -38,14 +38,12 @@
       & + input {
         display: none;
       }
-      &:hover {
-        .fa-bars:before {
-          //content: "\f00d"!important;
-        }
-      }
     }
-    input:checked + ul {
-      display: block!important;
+    // mobile
+    @media screen and (min-width: 767.5px) {
+      input:checked + ul {
+        display: block!important;
+      }
     }
   
     
