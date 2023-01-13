@@ -161,7 +161,7 @@ class StarterSite extends Timber\Site {
 		$twig->addFilter( new Twig\TwigFilter( 'myfoo', array( $this, 'myfoo' ) ) );
 
 		$function = new Twig_SimpleFunction('enqueue_style', function () {
-			wp_enqueue_style('blop', get_stylesheet_directory_uri() . '/static/css/styles.less');
+			wp_enqueue_style('cocon-style', get_stylesheet_directory_uri() . '/static/css/styles.less');
 	 });
 	 $twig->addFunction($function);
 
