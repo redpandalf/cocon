@@ -191,8 +191,8 @@ function cocon_widgets_init() {
 	register_sidebar(array(
 		'name' 					=> 'Footer : Block Contact',
 		'id'						=> 'footer_block_contact',
-		'before_widget' => '<div class="block-container">',
-		'after_widget' 	=> '</div>',
+		'before_sidebar' => '<div class="block-container">',
+		'after_sidebar' 	=> '</div>',
 		'before_title' 	=> '<p class="h3 title">',
 		'after_title' 	=> '</p>',
 	));
