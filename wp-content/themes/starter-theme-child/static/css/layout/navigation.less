@@ -12,11 +12,10 @@ nav {
   > ul {
     display: flex;
 
-    // hiddenmain nav in mobile
+    // hidden main nav in mobile
     // mobile
     @media screen and (max-width: @screen-m) {
       display: none;
-
 
       border: 1px solid red;
       position: fixed;
@@ -37,7 +36,6 @@ nav {
       @media  screen and (min-width: @screen-xxl) {
         margin: 0 24px;
       }
-
       // design for desktop
       // desktop
       @media  screen and (min-width: @screen-m + .5) {
@@ -63,6 +61,15 @@ nav {
         }
       }
 
+      // design for mobile
+      // mobile
+      @media  screen and (max-width: @screen-m) {
+        border: 1px solid red;
+        > * {
+          padding: 15px 0;
+        }
+      }
+      
       // last item
       &:last-of-type {
         a {
@@ -82,12 +89,6 @@ nav {
             }
           }
         }  
-      }
-
-      // design for mobile
-      // mobile
-      @media  screen and (max-width: @screen-m) {
-
       }
     }
     // li
