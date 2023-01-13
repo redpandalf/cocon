@@ -12,7 +12,7 @@
  */
 
  
-$context['cocon_footer_contact'] = Timber::get_widgets('cocon_footer_contact');
+$context['home_left'] = Timber::get_widgets('home_left');
 
 $timberContext = $GLOBALS['timberContext']; // @codingStandardsIgnoreFile
 if ( ! isset( $timberContext ) ) {
