@@ -1,13 +1,17 @@
 /* Footer */
 .footer {
   background-color: @color-tertiary;
-  
+
   > * {
-    padding: 20px 0;
+    padding: 80px 0;
     display: flex;
     align-items: center;
     color: @color-grey-400;
     font-size: 1.4rem;
+    // tablet
+    @media screen and (max-width: @screen-l) {      
+      padding: 50px 0;
+    }
 
     > * {
       border: 1px solid red;
