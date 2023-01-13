@@ -173,6 +173,16 @@ class StarterSite extends Timber\Site {
 		return $twig;
 	}
 
+
+	register_sidebar( array(
+		'name' => 'Home left sidebar',
+		'id' => 'home_left',
+		'before_widget' => '<div>',
+		'after_widget' => '</div>',
+		'before_title' => '<h2 class="rounded">',
+		'after_title' => '</h2>',
+) );
+
 }
 
 new StarterSite();
