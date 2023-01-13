@@ -180,15 +180,15 @@ class StarterSite extends Timber\Site {
 new StarterSite();
 
 
-add_action( 'widgets_init', 'accelerate_widgets_init');
+add_action( 'widgets_init', 'cocon_widgets_init');
 
-function accelerate_widgets_init() {
+function cocon_widgets_init() {
 
 	// Registering main right sidebar
 	register_sidebar( array(
-		'name' 				=> __( 'Right Sidebar', 'accelerate' ),
-		'id' 					=> 'accelerate_right_sidebar',
-		'description'   	=> __( 'Shows widgets at Right side.', 'accelerate' ),
+		'name' 				=> __( 'Footer Content', 'cocon' ),
+		'id' 					=> 'cocon_right_sidebar',
+		'description'   	=> __( 'Shows widgets at Right side.', 'cocon' ),
 		'before_widget' 	=> '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  	=> '</aside>',
 		'before_title'  	=> '<p class="entry-title">',
