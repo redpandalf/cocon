@@ -21,7 +21,7 @@ ob_end_clean();
 
 
 $context['footer_block_contact'] = Timber::get_widgets('footer_block_contact');
-
+var_dump('coucou');
 $templates = array( 'page-plugin.twig' );
 Timber::render( $templates, $timberContext );
 
