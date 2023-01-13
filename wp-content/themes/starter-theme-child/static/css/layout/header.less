@@ -30,9 +30,10 @@
       position: relative;
       z-index: 9000;
       padding: 10px;
-      // desktop
-      @media screen and (min-width: @screen-m + .5) {
-        display: none;
+      display: none;
+      // mobile
+      @media screen and (max-width: @screen-m) {
+        display: block;
       }
       & + input {
         display: none;
