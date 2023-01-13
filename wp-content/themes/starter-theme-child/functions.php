@@ -160,8 +160,8 @@ class StarterSite extends Timber\Site {
 		$twig->addExtension( new Twig\Extension\StringLoaderExtension() );
 		$twig->addFilter( new Twig\TwigFilter( 'myfoo', array( $this, 'myfoo' ) ) );
 
-		$function = new Twig_SimpleFunction('enqueue_style', function ($handle, $src) {
-			wp_enqueue_style( $handle, get_stylesheet_directory_uri() . '/static/css/'.$src);
+		$function = new Twig_SimpleFunction('enqueue_style', function () {
+			wp_enqueue_style('styles', get_stylesheet_directory_uri() . '/static/css/styles.less');
 	 });
 	 $twig->addFunction($function);
 
