@@ -27,24 +27,26 @@ nav {
         margin: 0 24px;
       }
 
-      a, a:visited, a:link {
-        display: block;
-        padding: 10px 0;
-        font-family: @font-primary;
-        font-size: 16px;
-        font-weight: 400;
-        color: @color-text-nav;
+      @media  screen and (min-width: @screen-m + .5) {
+        a, a:visited, a:link {
+          display: block;
+          padding: 10px 0;
+          font-family: @font-primary;
+          font-size: 16px;
+          font-weight: 400;
+          color: @color-text-nav;
 
-        // Tablet
-        @media  screen and (max-width: @screen-l) {
-          font-size: 1.3rem;
+          // Tablet
+          @media  screen and (max-width: @screen-l) {
+            font-size: 1.3rem;
+          }
         }
-      }
-      &:hover, 
-      &.current-menu-item {
-        a {
-          text-shadow: 0 0 0.015px;
-          box-shadow: 0 5px 0 0 @color-primary;
+        &:hover, 
+        &.current-menu-item {
+          a {
+            text-shadow: 0 0 0.015px;
+            box-shadow: 0 5px 0 0 @color-primary;
+          }
         }
       }
 
