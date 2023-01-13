@@ -7,7 +7,8 @@
     </div>
 
     <nav id="nav-main" class="nav-main" role="navigation">
-      {% include "menu.twig" with {'items': menu.get_items} %}
+      {#{% include "menu.twig" with {'items': menu.get_items} %}#}
+      {{ menu.get_items|print_r }}
 
       <div class="mobile-menu"><i class="fa-regular fa-bars"></i></div>
     </nav>
