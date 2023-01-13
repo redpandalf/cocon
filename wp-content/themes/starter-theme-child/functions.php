@@ -180,7 +180,7 @@ class StarterSite extends Timber\Site {
 new StarterSite();
 
 
-add_action( 'widgets_init', 'cocon_widgets_init');
+add_action('widgets_init', 'cocon_widgets_init');
 
 function cocon_widgets_init() {
 
