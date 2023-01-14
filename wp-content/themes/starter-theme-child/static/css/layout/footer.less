@@ -40,7 +40,7 @@
       display: flex;
       flex-wrap: wrap;
       //tablet
-      @media screen and (max-width: 991.5px) {
+      @media screen and (max-width: 860px) {
         flex-direction: column;
       }
 
@@ -51,7 +51,7 @@
       > * {
         flex: 1;
         //tablet
-        @media screen and (max-width: 991.5px) {
+        @media screen and (max-width: 860px) {
           margin-bottom: @space-m;
         }
         .block-container {
@@ -78,8 +78,12 @@
           //border: 1px solid green;
         }
         &.social-block {
+          //tablet
+          @media screen and (max-width: 860px) {
+            min-width: 100%;
+          }
           //desktop
-          @media screen and (min-width: @screen-l) {
+          @media screen and (min-width: 861px) {
             max-width: 23%;
           }
         }
