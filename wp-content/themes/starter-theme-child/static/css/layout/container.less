@@ -8,21 +8,8 @@ body {
   }
 }
 
-.row {
-  max-width: 1442px;
-  margin-left: auto;
-  margin-right: auto; 
- 
-  //tablet
-  @media screen and (max-width: 1480px) {
-    padding-left: 25px;
-    padding-right: 25px;
-  }
-} 
 
-
-// Display
-
+// Displays
 // Flex
 .flexbox {
   display: flex;
@@ -45,5 +32,24 @@ body {
 .display-inline-block { display: inline-block; }
 
 .display-none         { display: none; }
-
 // 
+
+// Generic 
+.row {
+  max-width: 1442px;
+  margin-left: auto;
+  margin-right: auto; 
+ 
+  //tablet
+  @media screen and (max-width: 1480px) {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+} 
+
+
+
+// Container : Contact section
+.contact-container {
+  background-color: @color-secondary;
+}
