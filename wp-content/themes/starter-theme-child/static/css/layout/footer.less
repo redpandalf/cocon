@@ -54,9 +54,10 @@
 
       > * {
         flex: 1;
-        //&:not(:last-of-child) {
-        //  margin-right: 40px;
-        //}
+        //tablet
+        @media screen and (max-width: 991px) {
+          margin-bottom: @space-m;
+        }
         .block-container {
           .flexbox {
             i.fa-solid {
