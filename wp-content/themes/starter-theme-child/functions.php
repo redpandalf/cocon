@@ -188,6 +188,21 @@ new StarterSite();
 
 // Width list
 function cocon_widgets_init() {
+	// Widget Pre Footer - legal notice
+	register_sidebar(array(
+		'name' 						=> 'Pre Footer : Bloc Mentions Légales',
+		'id'							=> 'prefooter_block_legal',
+		'description'    => '',
+		'class'          => '',
+		'before_widget' 	=> '<p>',
+		'after_widget' 		=> '</p>',
+		'before_title' 		=> '',
+		'after_title' 		=> '',
+		'before_sidebar'	=> '',
+		'after_sidebar' 	=> '',
+		'show_in_rest'   => false,
+	));
+
 	// Widget Footer Contact Block
 	register_sidebar(array(
 		'name' 						=> 'Footer : Bloc Contact',
