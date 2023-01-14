@@ -93,6 +93,7 @@ class StarterSite extends Timber\Site {
     $context['footer_menu'] = new Timber\Menu('Footer Menu');
 
 		// Widgets 
+		$context['prefooter_block_legal'] = Timber::get_widgets('prefooter_block_legal');
 		$context['footer_block_contact'] = Timber::get_widgets('footer_block_contact');
 		$context['footer_block_social'] = Timber::get_widgets('footer_block_social');
 		//		
