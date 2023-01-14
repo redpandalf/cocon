@@ -59,9 +59,13 @@ body {
 
   > * {
     //row
-    width: 70%;
+    border: 1px solid red;
     margin: 0 auto 0 0;
     color: @color-text-nav;
+    //tablet
+    @media screen and (min-width: @screen-m) {
+      width: 70%;
+    }
 
     .contact-details {
       flex-wrap: wrap;
