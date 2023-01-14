@@ -4,14 +4,14 @@
 
   > * {
     // row
-    padding: 80px 0 40px;
+    padding: @space-xl 0 @space-m;
     display: flex;
     color: @color-grey-400;
     font-size: 1.4rem;
 
     // tablet
     @media screen and (max-width: @screen-l) {      
-      padding: 50px 0 30px;
+      padding: @space-m 0 @space-s;
     }
     // mobile 
     @media screen and (max-width: @screen-xs) { 
@@ -63,9 +63,6 @@
           }
         }
 
-        &.contact-block {
-
-        }
         &.footer-navigation {
           //desktop
           @media screen and (min-width: @screen-l) {
@@ -76,6 +73,7 @@
             display: none;
           }
         }
+        &.contact-block {}
         &.social-block {
           //tablet
           @media screen and (max-width: @screen-l) {
