@@ -61,6 +61,7 @@ body {
     //row
     border: 1px solid red;
     margin: 0 auto 0 0;
+    padding: @space-m 0;
     color: @color-text-nav;
     //tablet
     @media screen and (min-width: @screen-l) {
@@ -76,9 +77,11 @@ body {
       
       > * {
         min-width: 48%;
-        margin-bottom: @space-m;
         line-height: 1.1;
         font-weight: 400; 
+        &:not(:last-of-type) {
+          margin-bottom: @space-m;
+        }
 
         i {
           float: left;
