@@ -40,7 +40,7 @@
       display: flex;
       flex-wrap: wrap;
       //tablet 
-      @media screen and (max-width: ~"calc(@{screen-m} - 1)") {
+      @media screen and (max-width: calc(@{screen-m} - 1)) {
         flex-direction: column;
         border: 1px solid red;
       }
