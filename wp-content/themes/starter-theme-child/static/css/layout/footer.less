@@ -43,6 +43,10 @@
     .footer-content-blocks {
       display: flex;
       flex-wrap: wrap;
+      //tablet
+      @media screen and (max-width: @screen-l) {
+        flex-direction: column;
+      }
 
       .title {
         color: #fff;
@@ -50,10 +54,9 @@
 
       > * {
         flex: 1;
-
-        &:not(:last-of-child) {
-          margin-right: 40px;
-        }
+        //&:not(:last-of-child) {
+        //  margin-right: 40px;
+        //}
         .block-container {
           .flexbox {
             i.fa-solid {
@@ -66,7 +69,7 @@
         &.contact-block {
           //desktop
           @media screen and (min-width: @screen-l) {            
-            min-width: 46%;
+            //min-width: 46%;
           }
           //border: 1px solid red;
         }
@@ -80,7 +83,7 @@
         &.social-block {
           //desktop
           @media screen and (min-width: @screen-l) {
-            max-width: 25%;
+            max-width: 23%;
           }
         }
       }
