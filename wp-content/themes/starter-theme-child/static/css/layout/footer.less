@@ -64,15 +64,19 @@
         }
 
         &.contact-block {
-          border: 1px solid red;
+          //desktop
+          @media screen and (min-width: @screen-m) {            
+            min-width: 46%;
+          }
+          //border: 1px solid red;
         }
         &.footer-navigation {
           //desktop
           @media screen and (min-width: @screen-m) {
-            max-width: 26%;
+            max-width: 30%;
           }
 
-          border: 1px solid green;
+          //border: 1px solid green;
         }
       }
       
