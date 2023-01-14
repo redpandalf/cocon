@@ -3,13 +3,11 @@
   background-color: @color-tertiary;
 
   > * {
+    // row
     padding: 80px 0 40px;
     display: flex;
     color: @color-grey-400;
-
-    & {
-      font-size: 1.4rem;
-    }
+    font-size: 1.4rem;
 
     // tablet
     @media screen and (max-width: @screen-l) {      
@@ -69,7 +67,11 @@
           border: 1px solid red;
         }
         &.footer-navigation {
-          max-width: 26%;
+          //desktop
+          @media screen and (min-width: @screen-m) {
+            max-width: 26%;
+          }
+
           border: 1px solid green;
         }
       }
