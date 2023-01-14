@@ -62,7 +62,16 @@ h2, .h2 {
     font-size: @font-size-h3;
   }
 }
-
+h4, .h4 {
+  font-family: @font-primary;
+  font-size: @font-size-h4;
+  font-weight: 500;
+  color: @color-tertiary;
+  //tablet
+  @media screen and (max-width: @screen-m) {
+    font-size: @font-size-h3;
+  }
+}
 h5, .h5 {
   font-family: @font-primary;
   font-size: @font-size-h5;
