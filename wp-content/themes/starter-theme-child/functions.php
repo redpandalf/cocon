@@ -94,6 +94,7 @@ class StarterSite extends Timber\Site {
 
 		// Widgets 
 		$context['prefooter_block_legal'] = Timber::get_widgets('prefooter_block_legal');
+
 		$context['footer_block_contact'] = Timber::get_widgets('footer_block_contact');
 		$context['footer_block_social'] = Timber::get_widgets('footer_block_social');
 		//		
@@ -195,8 +196,8 @@ function cocon_widgets_init() {
 		'id'							=> 'prefooter_block_legal',
 		'description'    => '',
 		'class'          => '',
-		'before_widget' 	=> '<p>',
-		'after_widget' 		=> '</p>',
+		'before_widget' 	=> '',
+		'after_widget' 		=> '',
 		'before_title' 		=> '',
 		'after_title' 		=> '',
 		'before_sidebar'	=> '',
