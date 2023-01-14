@@ -69,6 +69,11 @@ body {
 
     .contact-details {
       flex-wrap: wrap;
+      //tablet
+      @media screen and (min-width: @screen-s) {
+        flex-direction: column;
+      }
+      
       > * {
         min-width: 40%;
         margin-bottom: @space-s;
