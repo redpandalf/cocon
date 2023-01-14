@@ -27,6 +27,10 @@
 			{% endif %}
 		</section>
 
+		{% block contact %}
+			{% include 'partial/contact.twig' %}
+		{% endblock %}
+
 		{% block footer %}
 			<div class="row align-center caption pre-footer">{{ prefooter_block_legal }}</div>
 			<footer id="footer" class="footer">
