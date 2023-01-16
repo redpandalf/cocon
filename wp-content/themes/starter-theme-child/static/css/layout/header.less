@@ -58,7 +58,6 @@
       // mobile
       @media screen and (max-width: @screen-m) {
         display: inline-block;
-        border: 1px solid red;
       }
       & + input {
         display: none;
@@ -67,9 +66,7 @@
 
     // mobile
     @media screen and (max-width: 768px) {
-      input:checked + ul {
-        //display: block!important;
-        
+      input:checked + ul {       
         z-index: 90;
         box-shadow: -2px 0px 5px 1px rgba(0, 0, 0, .2);
         width: 80%;
