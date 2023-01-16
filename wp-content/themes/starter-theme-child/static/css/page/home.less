@@ -9,6 +9,12 @@
     padding-bottom: @space-l;
 
     .engagements-items {
+      // desktop
+      @media screen and (min-width: @screen-m) {
+        max-width: 80%;
+        margin-right: auto;
+        margin-left: auto;
+      }
       > * {
         border: 1px dotted grey;
         //width: 30%;
