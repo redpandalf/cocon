@@ -9,11 +9,16 @@
     padding-bottom: @space-l;
 
     .engagements-items {
+      // tablet desktop
+      @media screen and (min-width: @screen-s) and (max-width: @screen-m) {
+        justify-content: space-between;
+      }
       // desktop
       @media screen and (min-width: @screen-m) {
         max-width: 80%;
         margin-right: auto;
         margin-left: auto;
+        justify-content: space-around;
       }
       > * {
         border: 1px dotted grey;
