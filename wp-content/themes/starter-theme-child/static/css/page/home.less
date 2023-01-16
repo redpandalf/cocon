@@ -13,6 +13,11 @@
       .prestations-items {
         justify-content: center;
 
+        // Tablet
+        @media screen and (max-width: @screen-m) {
+          flex-direction: column;
+        }
+
         > .item {
           background-color: #fff;
           color: @color-text;
