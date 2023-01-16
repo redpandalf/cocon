@@ -174,11 +174,13 @@ class StarterSite extends Timber\Site {
 		$twig->addFilter( new Twig\TwigFilter( 'myfoo', array( $this, 'myfoo' ) ) );
 
 		$function = new Twig_SimpleFunction('enqueue_style', function () {
-			wp_enqueue_style('cocon-style', get_stylesheet_directory_uri() . '/static/css/styles.less');
 			
 			// Homepage
 			if (is_front_page()) {
 				wp_enqueue_style('cocon-style-home', get_stylesheet_directory_uri() . '/static/css/page/home.less');
+			} else {
+				// by default
+				wp_enqueue_style('cocon-style', get_stylesheet_directory_uri() . '/static/css/styles.less');
 			}
 	 	});
 		 
