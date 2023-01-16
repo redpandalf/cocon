@@ -40,10 +40,18 @@ body {
 .display-block        { display: block; }
 .display-inline-block { display: inline-block; }
 
-.display-none         { display: none; }
+.is-hidden            { display: none; }
+
+.is-hidden-on-mobile {
+  // mobile
+  @media screen and (max-width: @screen-s) {
+    display: none;
+  }
+}
 // 
 
 // Generic 
+//
 .row {
   max-width: 1442px;
   width: 100%;
@@ -58,15 +66,17 @@ body {
 } 
 
 // Title of great section
+//
 .block-title { 
   // tablet
   @media screen and (min-width: @screen-s) {
-    max-width: 59%;
+    max-width: 60%;
   }
 }
 
 
 // Section with background color
+//
 .background-dark-grey {
   background-color: @color-tertiary;
   &, * {
@@ -79,6 +89,7 @@ body {
 
 
 // Container : Contact section
+//
 .contact-container {
   background-color: @color-secondary;
   display: flex;
