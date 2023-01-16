@@ -12,19 +12,23 @@
 
       .prestations-items {
 
-        > * {
+        > .item {
           background-color: #fff;
-          border: 1px solid red;
           width: 30%;
           color: @color-text;
 
-          img { width: 100%; }
+          > * {
+            padding: @space-s;
 
-          .title, 
-          a:link, a:visited {
-            color: @color-tertiary;
+            img { width: 100%; }
+
+            .title, 
+            a:link, a:visited {
+              color: @color-tertiary;
+            }
           }
         }
+        //item
       }
     }
   }
