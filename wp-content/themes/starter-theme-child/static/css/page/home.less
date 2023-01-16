@@ -21,8 +21,10 @@
 
           // Desktop
           @media screen and (min-width: @screen-s) {
-            margin-left: @space-m;
-            margin-right: @space-m;
+            &:nth-child(2) {
+              margin-left: @space-s;
+              margin-right: @space-s;
+            }
           }
 
           > .content {
