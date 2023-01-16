@@ -175,7 +175,9 @@ class StarterSite extends Timber\Site {
 
 		$function = new Twig_SimpleFunction('enqueue_style', function () {
 			wp_enqueue_style('cocon-style', get_stylesheet_directory_uri() . '/static/css/styles.less');
-			if ( is_page_template( 'home.php' ) ) {
+			
+			// Homepage
+			if (is_front_page()) {
 				wp_enqueue_style('cocon-style-home', get_stylesheet_directory_uri() . '/static/css/page/home.less');
 			}
 	 	});
