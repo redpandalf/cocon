@@ -23,6 +23,29 @@
       color: @color-text-nav;
       position: relative;
       width: 100%;
+
+      
+      ul {
+        // hidden main nav in mobile
+        // mobile
+        @media screen and (max-width: @screen-m) {
+          //display: none;
+          z-index: 90;
+          box-shadow: -2px 0px 5px 1px rgba(0, 0, 0, .2);
+          position: fixed;
+          right: 0;
+          top: 0;
+          background: #fff;
+          width: 0;
+          height: 100%;
+          width: 80%;
+          text-align: left;
+          padding: 110px 30px 30px;
+          > * {
+            display: none;
+          }
+        }
+      }
     }
 
     // mobile menu 
@@ -41,11 +64,12 @@
         display: none;
       }
     }
+
     // mobile
     @media screen and (max-width: 768px) {
       input:checked + ul {
-        display: block!important;
-        z-index: 90;
+        //display: block!important;
+        width: 80%;
       }
     }
   
