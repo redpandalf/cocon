@@ -23,16 +23,12 @@
           color: @color-text;
 
           // Desktop
-          @media screen and (min-width: 768.5px) {
+          @media screen and (min-width: @screen-m) {
             width: 28%;
             &:nth-child(2) {
               margin-left: 2%;
               margin-right: 2%; 
             }
-          }
-          // Tablet
-          @media screen and (min-width: @screen-m) and (max-width: @screen-l) {
-            width: 31%;
           }
 
           > .content {
