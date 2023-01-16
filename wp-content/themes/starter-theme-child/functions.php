@@ -175,10 +175,6 @@ class StarterSite extends Timber\Site {
 
 		$function = new Twig_SimpleFunction('enqueue_style', function () {
 			wp_enqueue_style('cocon-style', get_stylesheet_directory_uri() . '/static/css/styles.less');
-
-			if(is_front_page) {
-				var_dump('toto');
-			}
 	 	});
 		$twig->addFunction($function);
 
