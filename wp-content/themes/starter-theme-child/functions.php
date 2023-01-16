@@ -98,7 +98,6 @@ class StarterSite extends Timber\Site {
 		$context['footer_block_contact'] = Timber::get_widgets('footer_block_contact');
 		$context['footer_block_social'] = Timber::get_widgets('footer_block_social');
 		//		
-print_r( $context );
 
 		return $context;
 	}
@@ -176,7 +175,11 @@ print_r( $context );
 
 		$function = new Twig_SimpleFunction('enqueue_style', function () {
 			wp_enqueue_style('cocon-style', get_stylesheet_directory_uri() . '/static/css/styles.less');
+			if ( is_page_template( 'home.php' ) ) {
+				wp_enqueue_style('cocon-style-home', get_stylesheet_directory_uri() . '/static/css/page/home.less');
+			}
 	 	});
+		 
 		$twig->addFunction($function);
 
 		return $twig;
