@@ -15,14 +15,16 @@
 
         > .item {
           background-color: #fff;
-          width: 28%;
           color: @color-text;
 
           // Desktop
           @media screen and (min-width: @screen-s) {
+            width: 28%;
+
             &:nth-child(2) {
               margin-left: 30px;
               margin-right: 30px;
+              
             }
           }
 
