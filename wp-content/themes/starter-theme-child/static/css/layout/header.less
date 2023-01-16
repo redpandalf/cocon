@@ -30,8 +30,6 @@
         // mobile
         @media screen and (max-width: @screen-m) {
           //display: none;
-          z-index: 90;
-          box-shadow: -2px 0px 5px 1px rgba(0, 0, 0, .2);
           position: fixed;
           right: 0;
           top: 0;
@@ -71,6 +69,9 @@
     @media screen and (max-width: 768px) {
       input:checked + ul {
         //display: block!important;
+        
+        z-index: 90;
+        box-shadow: -2px 0px 5px 1px rgba(0, 0, 0, .2);
         width: 80%;
         padding: 110px 30px 30px;
         flex-direction: column;
