@@ -58,7 +58,12 @@ body {
 } 
 
 // Title of great section
-.block-title { max-width: 70%; }
+.block-title { 
+  // tablet
+  @media screen and (min-width: @screen-s) {
+    max-width: 59%;
+  }
+}
 
 // Container : Contact section
 .contact-container {
