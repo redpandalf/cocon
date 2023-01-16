@@ -3,11 +3,22 @@
 
 .page-template-home {
 
+  // Block Citation
+  .quote-block {
+    background: url('../img/bg-citation.png') no-repeat center #fff;
+    padding-top: @space-xl;
+    padding-bottom: @space-xl;
+    // Tablet
+    @media screen and (max-width: @screen-s) {
+      padding-top: @space-m;
+      padding-bottom: @space-m;
+    }
+  }
+
   // Block Prestation 
   .prestations-block {
     padding-top: @space-xl;
     padding-bottom: @space-xl;
-
     // Tablet
     @media screen and (max-width: @screen-s) {
       padding-top: @space-m;
