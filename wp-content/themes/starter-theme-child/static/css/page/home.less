@@ -9,7 +9,7 @@
 
     .engagements-items {    
       align-items: baseline;
-      // tablet desktop
+      // mobile > desktop
       @media screen and (min-width: @screen-s) and (max-width: @screen-xl) {
         justify-content: space-between;
       }
@@ -21,8 +21,11 @@
         justify-content: space-around;
       }
       > * {
-        //width: 30%;
-        max-width: 30%;
+        width: 100%;
+        // mobile
+        @media screen and (max-width: @screen-s) {
+          margin-bottom: @space-m;
+        }
       }
     }
   }
