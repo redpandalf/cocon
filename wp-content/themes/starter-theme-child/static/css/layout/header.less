@@ -51,6 +51,15 @@
         > * {
           &:first-child {
             border: 1px solid red;
+            // mobile
+            @media screen and (max-width: @screen-m) {
+              span { display: none; }
+              &:after {
+                content: "\f015";
+                font-family: "Font Awesome 6 Free";
+                display: inline-block;
+              }
+            }
           }
         }
       }
