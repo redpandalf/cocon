@@ -35,7 +35,12 @@
             }
           }
           > .content {
-            padding: @space-m;
+            padding: @space-s;
+            // tablet
+            @media screen and (min-width: 768.5px) {
+              min-height: 330px;
+              padding: @space-m;
+            }
 
             .title, 
             a:link, a:visited {
