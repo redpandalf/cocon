@@ -9,6 +9,7 @@
 
     .engagements-items {    
       align-items: baseline;
+      justify-content: center;
       // mobile > desktop
       @media screen and (min-width: @screen-s) and (max-width: @screen-xl) {
         justify-content: space-between;
@@ -18,7 +19,6 @@
         max-width: 80%;
         margin-right: auto;
         margin-left: auto;
-        justify-content: space-around;
       }
       > * {
         width: 100%;
@@ -27,7 +27,7 @@
           margin-bottom: @space-m;
         }
         // mobile > desktop
-        @media screen and (min-width: @screen-s) and (max-width: @screen-xl) {
+        @media screen and (min-width: @screen-s) {
           &:nth-child(2) {
             margin: 0 @space-m;
           }
