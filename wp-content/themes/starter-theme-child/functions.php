@@ -89,6 +89,8 @@ class StarterSite extends Timber\Site {
 		//$context['menu']  = new Timber\Menu();
 		$context['site']  = $this;
 
+		$context['is_front_page'] = is_front_page();
+
 		$context['main_menu']  = new Timber\Menu('Main Menu');
     $context['footer_menu'] = new Timber\Menu('Footer Menu');
 
@@ -175,6 +177,10 @@ class StarterSite extends Timber\Site {
 
 		$function = new Twig_SimpleFunction('enqueue_style', function () {
 			wp_enqueue_style('cocon-style', get_stylesheet_directory_uri() . '/static/css/styles.less');
+
+			if(is_front_page) {
+				var_dump('toto');
+			}
 	 	});
 		$twig->addFunction($function);
 
