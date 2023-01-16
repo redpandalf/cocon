@@ -13,10 +13,17 @@
       .prestations-items {
         border: 1px solid red;
         justify-content: center;
+
         > .item {
           background-color: #fff;
           width: 30%;
           color: @color-text;
+
+          // Desktop
+          @media screen and (min-width: @screen-s) {
+            margin-left: @space-m;
+            margin-right: @space-m;
+          }
 
           > .content {
             padding: 30px;
