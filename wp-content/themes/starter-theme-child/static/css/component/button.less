@@ -33,18 +33,25 @@ nav {
 
   &.button-primary {
     //background-color: @color-primary;
-    color: #fff;
+    color: #fff;    
 
-    // temp
-    background: @color-primary url('../../img/natural-illustration-5.svg') no-repeat;
-    background-position: -60px center;
-    background-size: 15%;
-
+    &:before {
+      border: 1px solid red;
+      width: 50px;
+      height: 50px;
+      background: url('../../img/natural-illustration-5.svg') no-repeat center;
+      position: absolute;
+      left: -60px;
+      top: 0;
+    }
     &:hover {
       padding-left: 65px;
       padding-right: 15px;
       background-position: 7px center;
       background-size: 15%;
+      &:before {
+        left: 20px;
+      }
     }
   }
 
