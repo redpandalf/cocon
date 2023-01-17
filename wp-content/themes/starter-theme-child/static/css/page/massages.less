@@ -1,4 +1,29 @@
+/* Page Massages */
+
 @import "../styles.less";
-.row {
-  background-color: red!important;
+
+.page-template-page-massages {
+  //
+  .cover {
+    background: url('../../img/cover-massages.jpg') no-repeat center;
+    background-size: cover;
+    min-height: 550px;
+    // mobile
+    @media screen and (max-width: @screen-m) {
+      min-height: 75vh;   
+    }
+
+    > * {
+      color: #fff;
+    }
+
+    //desktop
+    @media screen and (min-width: @screen-l) {
+      .block-title {
+        max-width: 520px;
+      }
+    }
+  }
+
+
 }
