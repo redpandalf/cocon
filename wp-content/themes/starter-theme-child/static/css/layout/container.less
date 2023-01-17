@@ -59,7 +59,12 @@ body {
   margin-right: auto; 
  
   //tablet
-  @media screen and (max-width: 1490px) {
+  @media screen and (min-width: @screen-m) and (max-width: 1490px) {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  //tablet
+  @media screen and (max-width: @screen-m) {
     padding-left: 7%;
     padding-right: 7%;
   }
