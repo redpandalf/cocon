@@ -46,6 +46,7 @@
       // list item
       .list-items {
         border: 1px solid blue;
+
         > * {
           // item
           border: 1px solid red;
@@ -53,6 +54,10 @@
           // desktop
           @media screen and (min-width: @screen-m) {
             max-width: 32%;
+          }
+
+          .detail {
+            font-size: 1.8rem;
           }
         }
       }
