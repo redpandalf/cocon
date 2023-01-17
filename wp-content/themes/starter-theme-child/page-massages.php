@@ -11,6 +11,8 @@
 
 $context = Timber::context();
 
+var_dump();
+
 $timber_post     = new Timber\Post();
 $context['post'] = $timber_post;
-Timber::render( array( 'page-massages.twig', 'page.twig' ), $context );
+Timber::render( array( 'page-massages.twig', 'page.twig' ), $context);
