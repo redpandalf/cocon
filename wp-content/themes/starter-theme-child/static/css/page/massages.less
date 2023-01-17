@@ -49,11 +49,10 @@
 
         > * {
           // item
-          border: 1px solid red;
           flex: 1;
           display: flex;
           flex-direction: column;
-          justify-content: center;
+          justify-content: space-around;
           // desktop
           @media screen and (min-width: @screen-m) {
             max-width: 32%;
@@ -62,9 +61,6 @@
             i {
               margin-right: @space-xs;
             }
-          }
-          > * {            
-            border: 1px solid orange;
           }
         }
       }
