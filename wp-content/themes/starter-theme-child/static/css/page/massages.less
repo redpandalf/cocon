@@ -49,8 +49,11 @@
         > * {
           // item
           border: 1px solid red;
-          width: 32%;
           flex: 1;
+          // desktop
+          @media screen and (min-width: @screen-m) {
+            max-width: 32%;
+          }
         }
       }
     }
