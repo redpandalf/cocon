@@ -64,7 +64,7 @@
           @media screen and (max-width: @screen-m) {
             padding: 0 0 @space-s;
 
-            &:not(:last-child) {
+            &:not(:nth-last-child(-n+2)) {
               border-bottom: 1px solid #c9c9c9;
             }
           }
