@@ -115,13 +115,22 @@
   .process-section {
     .process-items {
       border: 1px solid blue;
+      justify-content: space-between;
 
       > * {
         border: 1px dotted;
+        margin-bottom: @space-m;
         //desktop
         @media screen and (min-width: @screen-xl) {
-          justify-content: space-between;
-          max-width:  45%;
+          max-width:  44%;
+        }
+        &:after {
+          content: '';
+          width: 90px;
+          height: 32px;
+          border: 1px solid red;
+          background: url('../../img/natural-illustration-4.svg') no-repeat center;
+          background-size: cover;
         }
       }
     }
