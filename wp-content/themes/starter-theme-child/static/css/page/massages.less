@@ -121,7 +121,9 @@
       }
 
       > * {
-        margin-bottom: @space-l;
+        &:not(:last-child) {
+          margin-bottom: @space-l;
+        }
         //desktop
         @media screen and (min-width: @screen-s) {
           width: 44%;
