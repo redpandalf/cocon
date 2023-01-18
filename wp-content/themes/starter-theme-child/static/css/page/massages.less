@@ -42,7 +42,9 @@
           display: flex;
           flex-direction: column;
           padding: 10px 5%;
-          margin-bottom: @space-m;
+          &:not(:last-child) {
+            margin-bottom: @space-m;
+          }
           // desktop
           @media screen and (min-width: @screen-xl) {
             width: 32%;
