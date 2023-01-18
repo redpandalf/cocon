@@ -82,6 +82,10 @@
           &.highlight {
             color: #333;
             padding: 10px 45px;
+            // desktop
+            @media screen and (min-width: @screen-m) {              
+              max-width: 370px;
+            }
 
             .badge {
               color: @color-tertiary;
