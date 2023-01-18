@@ -63,7 +63,10 @@
           // desktop
           @media screen and (max-width: @screen-m) {
             padding: 0 0 @space-s;
-            border-bottom: 1px solid #c9c9c9;
+
+            &:not(:last-child) {
+              border-bottom: 1px solid #c9c9c9;
+            }
           }
           center {
             height: 200px;
@@ -93,7 +96,8 @@
             // mobile
             @media screen and (max-width: @screen-s) {
               padding: 30px 45px;
-              margin: 0 -8%;
+              margin-left: -8%;
+              margin-right: -8%;
             }
 
             .badge {
