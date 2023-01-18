@@ -114,7 +114,11 @@
   // Déroulement
   .process-section {
     .process-items {
-      justify-content: space-between;
+      justify-content: center;
+      //desktop
+      @media screen and (min-width: @screen-s) {        
+        justify-content: space-between;
+      }
 
       > * {
         margin-bottom: @space-l;
