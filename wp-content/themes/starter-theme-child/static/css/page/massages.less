@@ -118,8 +118,11 @@
 
       > * {
         border: 1px dotted;
-        flex: 1;
-        min-width: 45%;
+        //desktop
+        @media screen and (min-width: @screen-xl) {
+          justify-content: space-between;
+          max-width:  45%;
+        }
       }
     }
   }
