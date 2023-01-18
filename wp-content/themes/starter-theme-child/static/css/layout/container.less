@@ -14,15 +14,15 @@ body {
 // Flex
 .flexbox {
   display: flex;
+  > * {
+    flex: 1;
+  }
 
   &.col-in-mobile {
     // mobile
     @media screen and (max-width: @screen-s) {
       flex-direction: column;
     }
-  }
-  > * {
-    flex: 1;
   }
 }
 //
