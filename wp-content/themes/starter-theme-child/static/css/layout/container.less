@@ -83,6 +83,19 @@ body {
 
 // Section with background color
 //
+// generic 
+*[class^="background-"] {
+  > * {
+    // row
+    padding-top: @space-xl;
+    padding-bottom: @space-xl;
+    // Tablet
+    @media screen and (max-width: @screen-s) {
+      padding-top: @space-m;
+      padding-bottom: @space-m;
+    }
+  }
+}
 // dark grey
 .background-dark-grey {
   background-color: @color-tertiary;
