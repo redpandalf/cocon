@@ -40,7 +40,7 @@
         > * {
           // item
           display: flex;
-          flex-direction: column;
+          flex-direction: c olumn;
           padding: 10px 5%;
 
           &:not(:last-child) {
@@ -83,7 +83,12 @@
           // le petit plus
           &.highlight {
             color: #333;
-            padding: 10px 40px;
+            padding: 10px 45px;
+            // mobile
+            @media screen and (max-width: @screen-s) {
+              padding-left: @space-s;
+              padding-right: @space-s;
+            }
  
             .badge {
               color: @color-tertiary;
