@@ -107,6 +107,13 @@
 
   // Déroulement
   .process-section {
+    > * {
+      //desktop
+      @media screen and (min-width: @screen-s) {        
+        padding-left: 3%;
+        padding-right: 3%;
+      }
+    }
     .process-items {
       justify-content: center;
       //desktop
