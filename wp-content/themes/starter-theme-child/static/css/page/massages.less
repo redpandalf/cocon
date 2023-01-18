@@ -52,8 +52,13 @@
           padding: 10px 5%;
           margin-bottom: @space-m;
           // desktop
-          @media screen and (min-width: @screen-m) {
+          @media screen and (min-width: @screen-xl) {
             width: 30%;
+            max-width: 450px;
+          }
+          // tablet
+          @media screen and (min-width: @screen-m) and (max-width: @screen-xl) {
+            width: 45%;
             max-width: 450px;
           }
           // desktop
