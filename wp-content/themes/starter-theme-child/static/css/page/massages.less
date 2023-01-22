@@ -176,8 +176,13 @@
       @media screen and (min-width: @screen-m) {        
         display: flex;
       }
+      .content {
+        // desktop
+        @media screen and (min-width: @screen-m) { 
+          min-width: 600px;
+        }
+      }
     }
-    .form-contact {    }
   }
 
 

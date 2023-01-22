@@ -52,6 +52,13 @@ body {
 
 .is-hidden            { display: none; }
 
+//tablet < 768px
+.is-hidden-on-tablet {
+  @media screen and (max-width: @screen-m) {
+    display: none;
+  }
+}
+//mobile < 690px
 .is-hidden-on-mobile {
   // mobile
   @media screen and (max-width: @screen-s) {
