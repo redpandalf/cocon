@@ -11,20 +11,23 @@ form {
   input, select, textarea {
     border-radius: 4px;
     padding: 10px;
-    border: 1px solid #bbb;
     background-color: #fff;
-    width: 100%;
-    font-size: 1.3rem;
     font-family: @font-primary;
+
+    &:not([type='submit']) {
+      width: 100%;
+      border: 1px solid #bbb;
+      font-size: 1.3rem;
+    }
 
     //button submit 
     &[type='submit'] {
       // desktop
-      @media screen and (min-width: @screen-m) {  
-        max-width: 150px;
-        margin: 0;
-        border: 0;
-      }
+      //@media screen and (min-width: @screen-m) {  
+      //  max-width: 150px;
+      //  margin: 0;
+      //  border: 0;
+      //}
     }
   }
   textarea {
