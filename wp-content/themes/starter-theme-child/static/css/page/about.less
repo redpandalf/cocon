@@ -38,7 +38,10 @@
         margin-left: auto;
         margin-right: 0;
         margin-top: -50vh;
-        color: @color-text;
+
+        &, p {
+          color: @color-text;
+        }
         // mobile
         @media screen and (max-width: @screen-l) {
           margin-top: -150px;
