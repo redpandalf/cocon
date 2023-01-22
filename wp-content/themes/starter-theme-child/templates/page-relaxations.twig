@@ -1,8 +1,27 @@
 {% extends "base.twig" %}
 
 {% block content %}
-Page Relaxations
-	<div class="content-wrapper">
+
+	{# Cover #}
+	<div class="margin-xxl flexbox align-items-center background-dark-grey cover">
+		<div class="row">
+
+			<div class="block-title">
+				<h1 class="title margin-l">{{post.title}}</h1>
+
+				<!--
+					<a href="#decouvrir-les-massages" title="Découvrir les massages" class="button button-primary">Découvrir les massages</a>
+				-->
+				<!--
+					<a href="#deroulement-de-seance" title="Comment se déroule une séance ?" class="button button-secondary">Comment se déroule une séance ?</a>
+				-->
+			</div> 
+
+		</div>
+	</div>
+
+
+	{#<div class="content-wrapper">
 		<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
 			<section class="article-content">
 				<h1 class="article-h1">{{post.title}}</h1>
@@ -12,5 +31,5 @@ Page Relaxations
 			</section>
 		</article>
 	</div>
-	<!-- /content-wrapper -->
+	#}
 {% endblock %}
