@@ -185,6 +185,9 @@ class StarterSite extends Timber\Site {
 				) {
 				wp_enqueue_style('cocon-massages', get_stylesheet_directory_uri() . '/static/css/page/massages-relaxation.less');
 
+			} elseif (is_page_template('page-about.php')) {
+				wp_enqueue_style('cocon-qui-suis-je', get_stylesheet_directory_uri() . '/static/css/page/about.less');
+
 			} else {
 				// by default
 				wp_enqueue_style('cocon-style', get_stylesheet_directory_uri() . '/static/css/styles.less');
