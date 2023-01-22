@@ -2,20 +2,15 @@
 
 @import "../styles.less";
 
+//
+// Common
+//
 .page-template-page-massages,
 .page-template-page-relaxations {
   //
   .cover {
-    background: url('../../img/cover-massages.jpg') no-repeat center;
-    background-size: cover;
-    min-height: 550px;
     // mobile
-    @media screen and (max-width: @screen-m) {
-      height:  80vh;
-      min-height: 450px;
-      max-height: 550px;
-      background-position: unset;
-    }
+    @media screen and (max-width: @screen-m) {}
 
 
     > * {
@@ -189,3 +184,26 @@
 
 
 }
+
+
+
+
+// Page Massages 
+//
+.page-template-page-massages {
+  .cover {
+    background: url('../../img/cover-massages.jpg') no-repeat center;
+    background-size: cover;
+    min-height: 550px;
+    // mobile
+    @media screen and (max-width: @screen-m) {
+      height:  80vh;
+      min-height: 450px;
+      max-height: 550px;
+      background-position: unset;
+    }
+  }
+}
+
+// Page Relaxtion 
+.page-template-page-relaxations {}
