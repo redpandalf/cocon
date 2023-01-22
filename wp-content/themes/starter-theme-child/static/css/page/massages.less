@@ -184,8 +184,12 @@
       }
       .content {
         // desktop
-        @media screen and (min-width: @screen-s) { 
+        @media screen and (min-width: @screen-m) { 
           min-width: 600px;
+        }
+        // desktop
+        @media screen and (max-width: @screen-m) { 
+          min-width: 490px;
         }
       }
     }
