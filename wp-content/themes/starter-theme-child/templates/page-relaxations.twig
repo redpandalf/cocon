@@ -40,7 +40,7 @@
 	</div>
 
 
-		{# Deroulement #}
+	{# Deroulement #}
 	<div class="background-dark-grey process-section" id="deroulement-de-seance">
 		<div class="row">
 
@@ -83,6 +83,86 @@
 				</div>
 
 			</div>
+
+		</div>
+	</div>
+
+
+	{# Bienfaits #}
+	<div class="background-white benefits-section">
+		<div class="row">
+
+			<h2 class="title align-center margin-xl">Les bienfaits du massage</h2>
+
+			<div class="align-center flexbox flex-wrap justify-content-space-between align-items-start child-flex-1 col-in-mobile">
+				<div>
+					<p class="h4 margin-s">Pour le corps</p>
+					<p>Fusce congue purus eget nulla dictum suscipit. Suspendisse volutpat urna ac laoreet. </p>
+					<p>Nulla egestas elit vitae commodo gravida. <br>Morbi tempor at.</p>
+				</div>
+				<div class="margin-auto">
+					<img src="{{ site.theme.link }}/static/img/natural-illustration-7.svg" alt="" width="73" />
+				</div>
+				<div>
+					<p class="h4 margin-s">Pour l'esprit</p>
+					<p>Lorem ipsume at for damet. Suspendisse volutpat urna ac laoreet volutpat. Fusce congue purus eget nulla dictum suscipit.<br>Nulla egestas elit vitae commodo.</p>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+
+	{# Formulaire contact #}
+	<div class="background-white contact-section">
+		<div class="row flexbox col-in-mobile">
+		
+			<div class="flex-1 content">
+				<p class="h2 margin-s">Envie de se faire plaisir ou de faire plaisir ?</p>
+				<p>Besoin de vous ressourcer ?  Testez un moment de bien-être sans sortir de chez vous. </p>
+				<p>Contactez moi pour en savoir plus sur mes prestations, prendre rendez-vous, ou offrir un moment de détente à vos proches.</p>
+
+				<br><br>
+
+				<form class="form-contact"> 
+					<div class="margin-s">
+						<label for="contact-objet">Pour quel envie ?</label>
+						<select name="contact-objet" id="contact-objet" required>
+							<option value="">---</option>
+							<option value="pour-soi">Envie de me faire plaisir</option>
+							<option value="pour-offrir">Pour offrir</option>
+						</select>
+					</div>
+
+					<div class="margin-m">
+						<label for="contact-message">Message</label>
+						<textarea name="contact-message" id="contact-message" placeholder="Ex : Bonjour, je souhaiterais prendre rdv pour un massage Californier le 14 février prochain. Si possible en matinée. Merci d'avance :)"></textarea>
+					</div>
+
+					
+					<div class="margin-s">
+						<label for="contact-name">Nom et prénom</label>
+						<input type="text" value="" name="contact-name" id="contact-name" placeholder="Ex : Rose Dupré" required />
+					</div>
+
+					<div class="flexbox col-in-mobile justify-content-space-between margin-s">
+						<div class="flex-2 margin-s">
+							<label for="contact-mail">Email</label>
+							<input type="email" value="" name="contact-mail" id="contact-mail" placeholder="Ex : rose.dupre@email.com" required />
+						</div>
+						<div> &nbsp; &nbsp; &nbsp; &nbsp; </div>
+						<div class="flex-1">
+							<label for="contact-phone">Téléphone (optionnel)</label>
+							<input type="tel" value="" name="contact-phone" id="contact-phone" placeholder="Ex : 0601010101"  />
+						</div>
+					</div>
+
+					<div class="align-right"><input type="submit" value="Envoyer" name="submit" class="button button-primary" /></div>
+
+				</form>
+			</div>
+
+			<div class="flex-1"></div>
 
 		</div>
 	</div>
