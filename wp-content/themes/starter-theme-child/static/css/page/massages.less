@@ -161,19 +161,20 @@
   .contact-section {
     background: url('../../img/contact-section-background.jpg') no-repeat center #fff;
     background-size: cover;
+
+    // desktop
+    @media screen and (min-width: @screen-m) {        
+      background-position: center right;
+    }
   
     > * {
-      
-      border: 1px solid red;
-      display: flex;
-
       // desktop
       @media screen and (min-width: @screen-l) and (max-width: @screen-xl) {
         padding-right: 30%;
       }
       // desktop
-      @media screen and (min-width: @screen-xl) {        
-        //padding-right: 25vw;
+      @media screen and (min-width: @screen-m) {        
+        display: flex;
       }
     }
     .form-contact {    }
