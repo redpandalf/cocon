@@ -14,5 +14,13 @@
       max-height: 550px;
       background-position: unset;
     }
+
+    > * {
+      margin-top: @space-l;
+      // desktop
+      @media screen and (min-width: @screen-l) {
+        margin-top: @space-xxl;
+      }
+    }
   }
 }
