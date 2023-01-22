@@ -8,7 +8,6 @@ form {
     display: block;
     margin-bottom: 5px;
   }
-
   input, select, textarea {
     border-radius: 4px;
     padding: 10px;
@@ -17,9 +16,13 @@ form {
     width: 100%;
     font-size: 1.3rem;
     font-family: @font-primary;
-  }
 
+    //button submit 
+    &[type='submit'] {
+      width: 145px;
+    }
+  }
   textarea {
     height: 90px;
   }
-}
+} 
