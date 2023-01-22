@@ -30,9 +30,10 @@
   .content-text-block {
     > * {
       padding: 0;
+
       .content {
         background: #fff;
-        padding: 60px;
+        padding: @space-xl;
         max-width: 810px;
         margin-left: auto;
         margin-right: 0;
@@ -40,6 +41,7 @@
         // mobile
         @media screen and (max-width: @screen-l) {
           margin-top: -150px;
+          padding: @screen-l;
         }
       }
     }
