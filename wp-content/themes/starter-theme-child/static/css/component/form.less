@@ -19,8 +19,11 @@ form {
 
     //button submit 
     &[type='submit'] {
-      width: 145px;
-      margin: 0;
+      // desktop
+      @media screen and (min-width: @screen-m) {  
+        max-width: 150px;
+        margin: 0;
+      }
     }
   }
   textarea {
