@@ -161,6 +161,11 @@
   .contact-section {
     background: url('../../img/contact-section-background.jpg') no-repeat center #fff;
     background-size: cover;
+    // mobile
+    @media screen and (max-width: @screen-s) { 
+      background-size: auto;
+      background-position: center bottom;
+    }
   
     > * {
       // desktop
