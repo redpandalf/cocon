@@ -86,21 +86,27 @@
     .content-text-block {
       border: 1px solid red;
       > * {
-        border: 1px solid red;
-        background-color: #fff;
-        padding: @space-m 30px;
-        margin: auto;
-        max-width: 810px;
-        width: 92%;
-        // tablet
-        @media screen and (min-width: @screen-m) {          
-          padding: @space-xxl;
-          position: absolute;
-          bottom: -200px;
+        
+      border: 1px solid blue;
 
-          &.revert {
-            margin-right: auto;
-            margin-left: 0;   
+
+        .content {
+          border: 1px solid red;
+          background-color: #fff;
+          padding: @space-m 30px;
+          margin: auto;
+          max-width: 810px;
+          width: 92%;
+          // tablet
+          @media screen and (min-width: @screen-m) {          
+            padding: @space-xxl;
+            position: absolute;
+            bottom: -200px;
+
+            &.revert {
+              margin-right: auto;
+              margin-left: 0;   
+            }
           }
         }
         
