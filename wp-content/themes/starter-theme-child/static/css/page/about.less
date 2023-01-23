@@ -75,8 +75,8 @@
   .immersif-background {
     background-size: cover!important;
     border: 1px solid blue;
+    margin-bottom: 240px;
     height: 850px;
-    margin-bottom: 250px;
     // tablet
     @media screen and (min-width: @screen-l) {        
       height: 1024px;
@@ -90,6 +90,10 @@
     // ma philosophie
     &.my-philosophy {
       background: url('../../img/about-philosophie.jpg') no-repeat center;
+      // tablet
+      @media screen and (min-width: @screen-l) {        
+        height: 1124px;
+      }
     }
     // mes engagements
     &.my-engagment {
@@ -103,7 +107,6 @@
         height: 100%;
 
         .content {
-          border: 1px solid red;
           background-color: #fff;
           padding: @space-l 30px;
           max-width: 810px;
