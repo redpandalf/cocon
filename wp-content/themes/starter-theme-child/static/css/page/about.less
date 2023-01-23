@@ -73,54 +73,38 @@
 
 
   .immersif-background {
-    background-size: cover!important;
     margin-bottom: 220px;
-    height: 1024px;
-    // tablet
-    @media screen and (min-width: @screen-m) {
-      background-size: cover!important;
-    }
-    // mobile
-    @media screen and (max-width: 767.5px) {
-      background-size: contain!important;
-      background-position: top center!important;
-      height: 100%;
-      margin-bottom: 180px;
-    }
-    
+    min-height: 1024px;
+    border: 1px solid black;
+    // background
+    .bg-block {
+      border: 1px solid red;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      // mobile
+      @media screen and (max-width: 767.5px) {
+        background-size: contain;
+        background-position: top center;
+      }
+    }    
 
     // cover
     &.cover {
-      background: url('../../img/cover-about.jpg') no-repeat center;
+      .bg-block {  
+        background-image: url('../../img/cover-about.jpg');
+      }
     }
     // ma philosophie
     &.my-philosophy {
-      background: url('../../img/about-philosophie.jpg') no-repeat center;
-      margin-top: 0; 
-      // tablet
-      @media screen and (min-width: @screen-l) {        
-        height: 1124px;
-        margin-top: -250px;
-      }
-      .content {
-        // tablet
-        @media screen and (min-width: @screen-m) { 
-          top: 600px!important;
-        }
+      .bg-block {  
+        background-image: url('../../img/about-philosophie.jpg');
       }
     }
     // mes engagements
     &.my-engagment {
-      background: url('../../img/about-engagement.jpg') no-repeat center;
-      // tablet
-      @media screen and (min-width: @screen-l) {
-        margin-top: -50px;
-      }
-      .content {
-        // tablet
-        @media screen and (min-width: @screen-m) { 
-        
-        }
+      .bg-block { 
+        background-image: url('../../img/about-engagement.jpg');
       }
     }
 
@@ -140,23 +124,6 @@
           padding: @space-m 30px;
           max-width: 780px;
           width: 100%;
-          top: 350px;
-          // mobile
-          @media screen and (max-width: 767.5px) {
-            top: 160px;
-          }
-          // tablet
-          @media screen and (min-width: @screen-m) {          
-            padding: @space-xxl;
-            top: 450px;
-            margin-left: auto;
-            right: 0;  
-
-            &.revert { 
-              margin-right: auto;
-              margin-left: 0;
-            }
-          }
 
           .title {
             margin-bottom: @space-l;
