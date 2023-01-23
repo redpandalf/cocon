@@ -121,9 +121,9 @@
       }
 
       .content {
-        border: 1px solid red;
+        border: 1px solid blue;
         position: relative;
-        bottom: -180px;
+        bottom: 0;
         margin: auto;
         background-color: #fff;
         padding: @space-l 25px;
@@ -133,6 +133,7 @@
         //tablet
         @media screen and (min-width: 880px) {
           position: absolute;
+          bottom: -180px;
           padding: @space-l @space-xl;
           right: 0;
         }
