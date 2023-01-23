@@ -75,8 +75,12 @@
   .immersif-background {
     margin-bottom: 220px;
     min-height: 1024px;
-    height: auto;
+    height: 60vh;
     border: 1px solid black;
+    // mobile
+    @media screen and (max-width: 767.5px) {  
+      height: auto;
+    }
     // background
     .bg-block {
       width: 100%;
