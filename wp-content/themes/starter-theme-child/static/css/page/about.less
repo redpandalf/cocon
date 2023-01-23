@@ -111,8 +111,13 @@
         }
         .illustration {
           position: absolute;
-          right: -33px;
-          top: 40%;
+          right: -47px;
+          top: 43%;
+          // mobile
+          @media screen and (max-width: @screen-m) {
+            left: -2%;
+            top: 76%;
+          }
         }
       }
     }
