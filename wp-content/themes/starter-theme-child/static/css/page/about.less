@@ -71,13 +71,13 @@
     background: url('../../img/about-philosophie.jpg') no-repeat center;
     background-size: cover;
     //max-height: 1024px;
-    height: 80vh;
+    min-height: 80vh;
 
     .content-text-block {
       > * {
         background-color: #fff;
         padding: @space-m 30px;
-        margin: auto;
+        margin: @space-xxl auto @space-l;
         max-width: 810px;
         width: 92%;
         // tablet
@@ -85,7 +85,7 @@
           margin-left: auto;
           margin-right: 0;          
           padding: @space-xxl;
-          
+
           &.revert {
             margin-right: auto;
             margin-left: 0;   
