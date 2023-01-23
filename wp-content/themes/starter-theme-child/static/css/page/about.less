@@ -75,13 +75,16 @@
   .immersif-background {
     border: 1px solid red;
     background-size: cover!important;
-    height: 850px;
-    position: relative;
     z-index: 5;
-    // tablet
-    @media screen and (min-width: @screen-l) {        
-      height: 1024px;
+    &, > * {
+      position: relative;
+      height: 850px;
+      // tablet
+      @media screen and (min-width: @screen-l) {        
+        height: 1024px;
+      }
     }
+    
 
     // cover
     &.cover {
