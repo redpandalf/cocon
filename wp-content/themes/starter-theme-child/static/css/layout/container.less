@@ -144,8 +144,11 @@ body {
     }
 
     .contact-details {
-      //max-width: 80%;
       flex-wrap: wrap;
+      //desktop
+      @media screen and (min-width: @screen-xxl) {        
+        max-width: 80%;
+      }
       //tablet
       @media screen and (max-width: @screen-s) {
         flex-direction: column;
