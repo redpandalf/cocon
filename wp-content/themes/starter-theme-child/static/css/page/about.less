@@ -112,39 +112,38 @@
     }
 
     .content-text-block {
-      > * {
-        position: relative;
-        z-index: 10;
-        //tablet
-        @media screen and (max-width: @screen-m) {
-          padding-right: 4%;
-          padding-left: 4%;
-        }
-
-        .content {
-          position: relative;
-          background-color: #fff;
-          padding: @space-m 30px;
-          max-width: 780px;
-          width: 100%;
-          margin-left: auto;
-          margin-right: 0;
-          
-          &.revert {
-            margin-right: auto;
-            margin-left: 0;
-          }
-
-          .title {
-            margin-bottom: @space-l;
-            //tablet
-            @media screen and (max-width: @screen-m) {
-              margin-bottom: 40px;
-            }
-          }
-        }
-        
+  
+      position: relative;
+      z-index: 10;
+      //tablet
+      @media screen and (max-width: @screen-m) {
+        padding-right: 4%;
+        padding-left: 4%;
       }
+
+      .content {
+        position: relative;
+        background-color: #fff;
+        padding: @space-m 30px;
+        max-width: 780px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: 0;
+
+        &.revert {
+          margin-right: auto;
+          margin-left: 0;
+        }
+
+        .title {
+          margin-bottom: @space-l;
+          //tablet
+          @media screen and (max-width: @screen-m) {
+            margin-bottom: 40px;
+          }
+        }
+      }
+      
     }
   }
 }
