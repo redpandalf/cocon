@@ -143,6 +143,19 @@
         @media screen and (min-width: @screen-m) {
           bottom: -50px;
         }
+
+        .illustration-top {
+          position: absolute;
+          top: -3%;
+          left: 5%;
+          transform: rotate(180deg);
+          // mobile
+          @media screen and (max-width: @screen-m) {
+            height: 140px;
+            top: 85%;
+            left: -4%;
+          }
+        }
       }
     }
   }
