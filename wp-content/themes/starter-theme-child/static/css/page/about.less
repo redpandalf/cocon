@@ -123,17 +123,18 @@
       }
 
       .content {
-        position: relative;
+        position: absolute;
+        bottom: -180px;
+        right: 0;
+
         background-color: #fff;
         padding: @space-m 30px;
         max-width: 780px;
         width: 100%;
-        margin-left: auto;
-        margin-right: 0;
 
         &.revert {
-          margin-right: auto;
-          margin-left: 0;
+          right: auto;
+          left: 0;
         }
 
         .title {
