@@ -111,32 +111,7 @@
         background-position: top center;
       }
     }    
-
-    // cover
-    &.my-cover {
-      .bg-block {  
-        background-image: url('../../img/cover-about.jpg');
-      }
-    }
-    // ma philosophie
-    &.my-philosophy {
-      .bg-block {  
-        background-image: url('../../img/about-philosophie.jpg');
-      }
-    }
-    // mes engagements
-    &.my-engagment {
-      .bg-block { 
-        background-image: url('../../img/about-engagement.jpg');
-      }
-      .content {
-        //tablet
-        @media screen and (min-width: @screen-m) {
-          bottom: -50px;
-        }
-      }
-    }
-
+    // content
     .content-text-block {  
       position: relative;
       z-index: 10;
@@ -173,6 +148,31 @@
         }
       }
       
+    }
+
+    // cover
+    &.my-cover {
+      .bg-block {  
+        background-image: url('../../img/cover-about.jpg');
+      }
+    }
+    // ma philosophie
+    &.my-philosophy {
+      .bg-block {  
+        background-image: url('../../img/about-philosophie.jpg');
+      }
+    }
+    // mes engagements
+    &.my-engagment {
+      .bg-block { 
+        background-image: url('../../img/about-engagement.jpg');
+      }
+      .content {
+        //tablet
+        @media screen and (min-width: @screen-m) {
+          bottom: -50px;
+        }
+      }
     }
   }
 }
