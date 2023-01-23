@@ -132,8 +132,6 @@ body {
   justify-content: flex-start;
   min-height: 500px;
   position: relative;
-  
-
   //tablet
   @media screen and (max-width: @screen-m) {
     background-position: 60% center;
@@ -170,12 +168,12 @@ body {
         display: flex;
         flex: 1;
         align-items: baseline;
+
         &, p {
           line-height: 1.1;
         }
-
         &:not(:last-of-type) {
-          margin-bottom: @space-s;
+          margin-bottom: @space-m;
         }
         i {
           margin-right: @space-xs;
