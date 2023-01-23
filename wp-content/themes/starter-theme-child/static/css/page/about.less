@@ -123,14 +123,17 @@
       }
 
       .content {
-        position: absolute;
         bottom: -180px;
         right: 0;
-
         background-color: #fff;
         padding: @space-l @space-xl;
         max-width: 780px;
         width: 100%;
+
+        //tablet
+        @media screen and (min-width: @screen-m) {
+          position: absolute;
+        }
 
         &.revert {
           right: auto;
