@@ -80,7 +80,11 @@
 
     // ma philosophie
     &.my-philosophy {
-      margin-top: -250px;
+      margin-top: -100px;
+      // tablet
+      @media screen and (min-width: @screen-m) {        
+        margin-top: -250px;
+      }
     }
 
     .content-text-block {
@@ -93,7 +97,7 @@
           border: 1px solid red;
           background-color: #fff;
           padding: @space-m 30px;
-          margin: auto;
+          margin: @space-xxl auto 0;
           max-width: 810px;
           width: 92%;
           // tablet
@@ -101,6 +105,7 @@
             padding: @space-xxl;
             position: absolute;
             bottom: -250px;
+            margin: 0;
 
             &.revert {
               margin-right: auto;
