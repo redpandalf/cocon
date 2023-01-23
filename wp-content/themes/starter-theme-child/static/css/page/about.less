@@ -73,8 +73,6 @@
 
 
   .immersif-background {
-    position: relative;
-    z-index: 10;
     background-size: cover!important;
     border: 1px solid blue;
     height: 850px;
@@ -88,25 +86,16 @@
     // cover
     &.cover {
       background: url('../../img/cover-about.jpg') no-repeat center;
-
-      .content-text-block {
-        .content {
-        
-        }
-      }
     }
     // ma philosophie
     &.my-philosophy {
       background: url('../../img/about-philosophie.jpg') no-repeat center;
-      //margin-top: -100px;
-      // tablet
-      @media screen and (min-width: @screen-m) {        
-        //margin-top: -250px;
-      }
     }
 
     .content-text-block {
       > * {
+        position: relative;
+        z-index: 10;
         height: 100%;
 
         .content {
@@ -126,6 +115,7 @@
 
             &.revert { 
               margin-right: auto;
+              margin-left: 0;
             }
           }
         }
