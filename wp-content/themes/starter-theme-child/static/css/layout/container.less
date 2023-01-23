@@ -135,8 +135,16 @@ body {
 
   //tablet
   @media screen and (max-width: @screen-m) {
+    border: 1px solid red;
     background-position: 63% 0;
+    background-image: none;
 
+    &:before {
+      content: '';
+      border: 2px solid black;
+      background: url('../../img/cover-contact.jpg') no-repeat center right @color-secondary;
+      transform: rotate(90deg);
+    }
   }
 
   > * {
