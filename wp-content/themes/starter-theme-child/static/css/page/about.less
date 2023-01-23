@@ -164,7 +164,12 @@
         .illustration-top {
           top: 9%;
           right: 5%;
-
+          // mobile
+          @media screen and (max-width: @screen-m) { 
+            transform: rotate(180deg);
+            top: 1%;
+            right: 0%;
+          }
         }
       }
     }
