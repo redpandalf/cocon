@@ -91,11 +91,7 @@
 
       .content-text-block {
         .content {
-          margin-top: 30%;
-          // mobile
-          @media screen and (max-width: 767.5px) {        
-            margin-top: 350px;
-          }
+        
         }
       }
     }
@@ -120,14 +116,17 @@
           margin: 250px auto 0;
           max-width: 810px;
           width: 100%;
+          margin-top: 350px;
+          
           // tablet
           @media screen and (min-width: @screen-m) {          
             padding: @space-xxl;
-            margin: 0 0 0 auto;
+            margin-top: 30%;
+            margin-left: auto;
             right: 0;  
 
             &.revert { 
-              margin: 0 auto 0 0;
+              margin-right: auto;
             }
           }
         }
