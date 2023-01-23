@@ -104,6 +104,12 @@
     // mes engagements
     &.my-engagment {
       background: url('../../img/about-engagement.jpg') no-repeat center;
+      .content {
+        // tablet
+        @media screen and (min-width: @screen-m) { 
+          margin-top: 25%!important;
+        }
+      }
     }
 
     .content-text-block {
