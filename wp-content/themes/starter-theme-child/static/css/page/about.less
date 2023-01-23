@@ -7,7 +7,11 @@
     > * {
       position: absolute;
       z-index: 90!important;
-      padding-top: 15%;
+      padding-top: 170px;
+      // mobile
+      @media screen and (max-width: @screen-m) {
+        padding-top: 90px;
+      }
       .title {
         color: #fff!important;
       }
