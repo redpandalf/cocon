@@ -135,13 +135,12 @@ body {
 
   > * {
     //row
-    padding-right: 38%;
     padding-top: @space-m;
     padding-bottom: @space-m;
     color: @color-text-nav;
     //tablet
-    @media screen and (min-width: @screen-l) {
-      //width: 70%;
+    @media screen and (max-width: @screen-l) {
+      padding-right: 38%;
     }
 
     .contact-details {
