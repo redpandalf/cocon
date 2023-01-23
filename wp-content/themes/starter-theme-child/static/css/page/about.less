@@ -29,8 +29,6 @@
 
   .main-container > .content-text-block {
     > * {
-      padding: 0;
-
       .content {
         background: #fff;
         margin: -30vh auto 0;
@@ -74,5 +72,21 @@
     background-size: cover;
     max-height: 1024px;
     height: 80vh;
+
+    .content-text-block {
+      > * {
+        background-color: #fff;
+        padding: @space-m 30px;
+        margin: -30vh auto 0;
+        max-width: 810px;
+        width: 92%;
+        // tablet
+        @media screen and (min-width: @screen-m) {
+          margin-left: auto;
+          margin-right: 0;          
+          padding: @space-xxl;
+        }
+      }
+    }
   }
 }
