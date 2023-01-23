@@ -1,16 +1,14 @@
 {% extends "base.twig" %}
 
 {% block content %}
-Page Contact
-	<div class="content-wrapper">
-		<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
-			<section class="article-content">
-				<h1 class="article-h1">{{post.title}}</h1>
-				<div class="article-body">
-					{{ post.content }}
-				</div>
-			</section>
-		</article>
+
+	{# Cover #}
+	<div class="margin-xxl flexbox align-items-center background-dark-grey cover">
+		<div class="row">
+			<div class="block-title">
+				<h1 class="title">{{ post.title }}</h1>
+			</div> 
+		</div>
 	</div>
-	<!-- /content-wrapper -->
+
 {% endblock %}
