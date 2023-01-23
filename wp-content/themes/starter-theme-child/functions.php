@@ -187,6 +187,9 @@ class StarterSite extends Timber\Site {
 
 			} elseif (is_page_template('page-about.php')) {
 				wp_enqueue_style('cocon-qui-suis-je', get_stylesheet_directory_uri() . '/static/css/page/about.less');
+			
+			} elseif (is_page_template('page-contact.php')) {
+				wp_enqueue_style('cocon-contact', get_stylesheet_directory_uri() . '/static/css/page/contact.less');
 
 			} else {
 				// by default
