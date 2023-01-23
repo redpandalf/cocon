@@ -3,6 +3,7 @@
 
 .page-template-page-about {
   // Cover
+  /*
   .cover {
     background: url('../../img/cover-about.jpg') no-repeat center;
     background-size: cover;
@@ -68,11 +69,11 @@
       }
     }
   }
+  */
 
 
   .immersif-background {
     border: 1px solid red;
-    background: url('../../img/about-philosophie.jpg') no-repeat center;
     background-size: cover;
     height: 850px;
     position: relative;
@@ -84,8 +85,18 @@
 
     }
 
+    // cover
+    &.cover {
+      background: url('../../img/cover-about.jpg') no-repeat center;
+      margin-top: -100px;
+      // tablet
+      @media screen and (min-width: @screen-m) {        
+        margin-top: -250px;
+      }
+    }
     // ma philosophie
     &.my-philosophy {
+      background: url('../../img/about-philosophie.jpg') no-repeat center;
       margin-top: -100px;
       // tablet
       @media screen and (min-width: @screen-m) {        
