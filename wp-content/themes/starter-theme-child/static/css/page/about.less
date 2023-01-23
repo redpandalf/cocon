@@ -123,19 +123,20 @@
       }
 
       .content {
+        border: 1px solid red;
         position: relative;
         bottom: -180px;
         margin: auto;
-        right: 0;
         background-color: #fff;
-        padding: @space-l @space-m;
+        padding: @space-l 25px;
         max-width: 780px;
-        width: 95%;
+        width: 94%;
 
         //tablet
-        @media screen and (min-width: @screen-m) {
+        @media screen and (min-width: 880px) {
           position: absolute;
           padding: @space-l @space-xl;
+          right: 0;
         }
 
         &.revert {
