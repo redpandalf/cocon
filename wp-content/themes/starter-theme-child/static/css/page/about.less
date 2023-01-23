@@ -89,7 +89,11 @@
 
       .content-text-block {
         .content {
-          margin-top: 28%;
+          margin-top: 30%;
+          // mobile
+          @media screen and (max-width: @screen-s) {        
+            margin-top: 350px;
+          }
         }
       }
     }
