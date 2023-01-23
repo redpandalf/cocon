@@ -86,8 +86,6 @@
     .content-text-block {
       border: 1px solid red;
       > * {
-        position: absolute;
-        bottom: -200px;
         border: 1px solid red;
         background-color: #fff;
         padding: @space-m 30px;
@@ -97,6 +95,8 @@
         // tablet
         @media screen and (min-width: @screen-m) {          
           padding: @space-xxl;
+          position: absolute;
+          bottom: -200px;
 
           &.revert {
             margin-right: auto;
