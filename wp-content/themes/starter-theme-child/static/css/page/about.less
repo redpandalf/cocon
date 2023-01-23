@@ -77,8 +77,12 @@
     margin-bottom: 220px;
     height: 1024px;
     // tablet
-    @media screen and (min-width: @screen-l) {        
-      height: 1024px;
+    @media screen and (min-width: @screen-m) {
+      background-size: cover!important;
+    }
+    // tablet
+    @media screen and (max-width: 767.5px) {
+      background-size: contain!important;
     }
     
 
