@@ -84,16 +84,19 @@
     }
 
     .content-text-block {
+      border: 1px solid red;
       > * {
+        position: absolute;
+        bottom: -200px;
+        border: 1px solid red;
         background-color: #fff;
         padding: @space-m 30px;
-        margin: 30% auto 0;
+        margin: auto;
         max-width: 810px;
         width: 92%;
         // tablet
         @media screen and (min-width: @screen-m) {          
           padding: @space-xxl;
-          margin: 26% 0 0 auto 0;
 
           &.revert {
             margin-right: auto;
