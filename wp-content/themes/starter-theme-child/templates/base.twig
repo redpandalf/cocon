@@ -15,11 +15,13 @@
 
 		<section id="content" role="main" class="main-container">
 			{% if title %}<h1>{{title}}</h1>{% endif %}
-			<div class="wrapper {{sidebar_class}}">
+
+			{#<div class="wrapper {{ sidebar_class }}">#}
 				{% block content %}
 					Sorry, no content
 				{% endblock %}
-			</div>
+			{#</div>#}
+
 			{% if sidebar %}
 				<aside class="layout-sidebar">
 					{{sidebar}}
