@@ -124,6 +124,7 @@
       > * {
         position: relative;
         z-index: 10;
+        //tablet
         @media screen and (max-width: @screen-m) {
           padding-right: 5%;
           padding-left: 5%;
@@ -155,6 +156,10 @@
 
           .title {
             margin-bottom: @space-l;
+            //tablet
+            @media screen and (max-width: @screen-m) {
+              margin-bottom: @space-m;
+            }
           }
         }
         
