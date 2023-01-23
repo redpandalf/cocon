@@ -89,6 +89,13 @@
     // cover
     &.cover {
       background: url('../../img/cover-about.jpg') no-repeat center;
+      &, .row {
+        height: 850px;
+        // tablet
+        @media screen and (min-width: @screen-l) {        
+          height: 1124px;
+        }
+      }
     }
     // ma philosophie
     &.my-philosophy {
