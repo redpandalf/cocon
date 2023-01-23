@@ -133,6 +133,12 @@ body {
   justify-content: flex-start;
   min-height: 500px;
 
+  //tablet
+  @media screen and (max-width: @screen-m) {
+    padding-right: 44%;
+    background-position: center;
+  }
+
   > * {
     //row
     padding-top: @space-m;
@@ -140,7 +146,7 @@ body {
     color: @color-text-nav;
     //tablet
     @media screen and (max-width: @screen-xxl) {
-      padding-right: 42%;
+      padding-right: 44%;
     }
 
     .contact-details {
