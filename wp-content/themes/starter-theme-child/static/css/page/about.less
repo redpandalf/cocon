@@ -76,7 +76,7 @@
     margin-bottom: 220px;
     min-height: 1024px;
     height: 60vh;
-    display: inline-block;
+    display: flex;
     // mobile
     @media screen and (max-width: 767.5px) {  
       height: auto;
@@ -90,7 +90,7 @@
       background-repeat: no-repeat;
       background-size: cover;
       // mobile
-      @media screen and (max-width: 879.5px) {
+      @media screen and (max-width: 767.5px) {
         height: 40%;
         background-position: top center;
       }
@@ -129,7 +129,7 @@
         max-width: 780px;
         width: 94%;
         //tablet
-        @media screen and (min-width: 880px) {
+        @media screen and (min-width: @screen-m) {
           position: absolute;
           bottom: -180px;
           right: 0;
