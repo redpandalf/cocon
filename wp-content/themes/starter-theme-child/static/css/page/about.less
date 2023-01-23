@@ -155,15 +155,16 @@
         }
         .illustration {
           top: 90%;
-          left: -4%;
+          left: -6%;
+          // mobile
+          @media screen and (max-width: @screen-m) {
+            display: none;
+          }
         }
         .illustration-top {
           top: 9%;
           right: 5%;
-          // mobile
-          @media screen and (max-width: @screen-m) {
-          
-          }
+
         }
       }
     }
