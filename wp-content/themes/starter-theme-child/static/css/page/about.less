@@ -74,9 +74,14 @@
     border: 1px solid red;
     background: url('../../img/about-philosophie.jpg') no-repeat center;
     background-size: cover;
-    height: 1024px;
+    height: 850px;
     position: relative;
     z-index: 5;
+
+    // tablet
+    @media screen and (min-width: @screen-l) {        
+      height: 1024px;
+    }
 
     // ma philosophie
     &.my-philosophy {
@@ -97,7 +102,7 @@
           border: 1px solid red;
           background-color: #fff;
           padding: @space-m 30px;
-          margin: @space-xxl auto 0;
+          margin: 250px auto 0;
           max-width: 810px;
           width: 92%;
           // tablet
