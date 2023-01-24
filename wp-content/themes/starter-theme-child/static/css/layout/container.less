@@ -173,7 +173,10 @@ body {
           line-height: 1.1;
         }
         &:not(:last-of-type) {
-          margin-bottom: 30px;
+          //tablet
+          @media screen and (max-width: @screen-m) {
+            margin-bottom: 30px;
+          }
         }
         i {
           margin-right: @space-xs;
