@@ -2,11 +2,19 @@
 @import "../styles.less";
 
 .cover {
-  .contact-details {
-    border: 1px solid red;
-
-    > * {
-      border:1px solid blue;
+  // desktop
+  @media screen and (min-width: @screen-l) {  
+    min-height: 735px;
+  }
+  > * {
+    
+    .contact-details {
+      border: 1px solid red;
+  
+      > * {
+        border:1px solid blue;
+      }
     }
   }
+  
 }
