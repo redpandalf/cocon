@@ -142,7 +142,8 @@ body {
   //desktop
   @media screen and (min-width: @screen-m) {
     background-image: url('../../img/cover-contact.jpg');
-    padding-bottom: @space-m;
+    padding-top: 0;
+    padding-bottom: 0;
   }
   //tablet
   @media screen and (max-width: @screen-m) {
@@ -156,9 +157,10 @@ body {
     padding-top: 0;
     padding-bottom: 0; 
     color: @color-text-nav;
-    //tablet
-    @media screen and (max-width: @screen-xxl) {
-      
+    //desktop
+    @media screen and (min-width: @screen-m) {
+      padding-top: @space-m;
+      padding-bottom: @space-m;
     }
 
     .contact-details {
