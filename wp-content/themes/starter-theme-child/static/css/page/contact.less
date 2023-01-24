@@ -1,60 +1,71 @@
 /* Page contact */
 @import "../styles.less";
 
-.cover {
-  // desktop
-  @media screen and (min-width: 768.5px) {  
-    min-height: 735px;
-  }
-  // tablet
-  @media screen and (max-width: 1250px) {  
-    background-position: 62% center;
-  }
-  > * {
-    padding-right: 40%;
-    // desktop
-    @media screen and (min-width: 1250px) {  
-      padding-right: 530px;
-    }
-    .contact-details {
-      max-width: 100%;
-      justify-content: flex-start;
-      align-items: flex-start;
-      // tablet
-      @media screen and (max-width: 860px) {  
-        flex-direction: column;
-      }
-  
-      > * {
-        min-width: 28%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: @space-xs;
-        text-align: center;
 
-        // desktop
-        @media screen and (min-width: @screen-xxl) {  
-          min-width: 31%;
-          flex: none;
-        }
+.page-template-page-contact {
+  // Cover
+  .cover {
+    // desktop
+    @media screen and (min-width: 768.5px) {  
+      min-height: 735px;
+    }
+    // tablet
+    @media screen and (max-width: 1250px) {  
+      background-position: 62% center;
+    }
+    > * {
+      padding-right: 40%;
+      // desktop
+      @media screen and (min-width: 1250px) {  
+        padding-right: 530px;
+      }
+      .contact-details {
+        max-width: 100%;
+        justify-content: flex-start;
+        align-items: flex-start;
         // tablet
         @media screen and (max-width: 860px) {  
-          text-align: left;
-          flex-direction: row;
-          align-items: flex-start;
+          flex-direction: column;
         }
-        i {
-          margin-bottom: @space-s;
-          font-size: @font-size-h5;
+    
+        > * {
+          min-width: 28%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: @space-xs;
+          text-align: center;
+  
+          // desktop
+          @media screen and (min-width: @screen-xxl) {  
+            min-width: 31%;
+            flex: none;
+          }
           // tablet
-          @media screen and (max-width: 860px) {
-            margin-right: 30px;
+          @media screen and (max-width: 860px) {  
+            text-align: left;
+            flex-direction: row;
+            align-items: flex-start;
+          }
+          i {
+            margin-bottom: @space-s;
+            font-size: @font-size-h5;
+            // tablet
+            @media screen and (max-width: 860px) {
+              margin-right: 30px;
+            }
           }
         }
       }
+      // contact-details
     }
-    // contact-details
+    
   }
   
+  .contact-formulaire {
+    border: 1px solid red;
+    max-width: 750px;
+  }
+
 }
+//
