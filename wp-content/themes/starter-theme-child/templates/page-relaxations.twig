@@ -124,42 +124,8 @@
 
 				<br><br>
 
-				<form class="form-contact"> 
-					<div class="margin-s">
-						<label for="contact-objet">Pour quel envie ?</label>
-						<select name="contact-objet" id="contact-objet" required>
-							<option value="">---</option>
-							<option value="pour-soi">Envie de me faire plaisir</option>
-							<option value="pour-offrir">Pour offrir</option>
-						</select>
-					</div>
-
-					<div class="margin-m">
-						<label for="contact-message">Message</label>
-						<textarea name="contact-message" id="contact-message" placeholder="Ex : Bonjour, je souhaiterais prendre rdv pour un massage Californier le 14 février prochain. Si possible en matinée. Merci d'avance :)"></textarea>
-					</div>
-
-					
-					<div class="margin-s">
-						<label for="contact-name">Nom et prénom</label>
-						<input type="text" value="" name="contact-name" id="contact-name" placeholder="Ex : Rose Dupré" required />
-					</div>
-
-					<div class="flexbox col-in-mobile justify-content-space-between margin-s">
-						<div class="flex-2 margin-s">
-							<label for="contact-mail">Email</label>
-							<input type="email" value="" name="contact-mail" id="contact-mail" placeholder="Ex : rose.dupre@email.com" required />
-						</div>
-						<div> &nbsp; &nbsp; &nbsp; &nbsp; </div>
-						<div class="flex-1 margin-s">
-							<label for="contact-phone">Téléphone (optionnel)</label>
-							<input type="tel" value="" name="contact-phone" id="contact-phone" placeholder="Ex : 0601010101"  />
-						</div>
-					</div>
-
-					<div class="align-right"><input type="submit" value="Envoyer" name="submit" class="button button-primary" /></div>
-
-				</form>
+				{% include 'partial/form.twig' %}
+				
 			</div>
 
 			<div class="flex-1"></div>
