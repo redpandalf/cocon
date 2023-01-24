@@ -106,10 +106,12 @@
 
   //legal notice
   .legal-notice {
-    // desktop
-    @media screen and (max-width: @screen-m) {  
-      padding-top: @space-m;
-      padding-bottom: @space-m;
+    > * {
+      // desktop
+      @media screen and (max-width: @screen-m) {  
+        padding-top: @space-m;
+        padding-bottom: @space-m;
+      }
     }
   }
 
