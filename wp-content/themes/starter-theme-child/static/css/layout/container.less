@@ -130,13 +130,17 @@ body {
 // Container : Contact section
 //
 .contact-container {
-  background: url('../../img/cover-contact.jpg') no-repeat center right @color-secondary;
+  background: #ffe2c4 url('../../img/cover-contact-mobile.jpg') no-repeat center right;
   background-size: cover;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   min-height: 500px;
   position: relative;
+  //desktop
+  @media screen and (min-width: @screen-m) {
+    background-image: url('../../img/cover-contact.jpg');
+  }
   //tablet
   @media screen and (max-width: @screen-m) {
     background-position: 60% center;
