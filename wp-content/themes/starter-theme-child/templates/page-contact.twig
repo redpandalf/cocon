@@ -40,21 +40,24 @@
 	{# Form #}
 	<section>
 
-		<form class="row contact-formulaire">
+		<div class="row contact-formulaire">
 			<h2>Une question ?</h2>
 			<p class="sub-title margin-xl">je vous réponds...</p>
 	
+			<form class="row contact-formulaire">
+				<div class="margin-s">
+					<label for="contact-objet">Pour quel envie ?</label>
+					<select name="contact-objet" id="contact-objet" required>
+						<option value="">---</option>
+						<option value="pour-soi">Envie de me faire plaisir</option>
+						<option value="pour-offrir">Pour offrir</option>
+					</select>
+				</div>
 
-			<div class="margin-s">
-				<label for="contact-objet">Pour quel envie ?</label>
-				<select name="contact-objet" id="contact-objet" required>
-					<option value="">---</option>
-					<option value="pour-soi">Envie de me faire plaisir</option>
-					<option value="pour-offrir">Pour offrir</option>
-				</select>
-			</div>
+			</form>
+			
+		</div>
 
-		</form>
 	</section>
 
 	{# Legal notice #}
