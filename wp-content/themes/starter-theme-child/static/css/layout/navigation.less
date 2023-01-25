@@ -77,9 +77,19 @@ nav {
       }
       // first item 
       &:first-of-type {
-        border: 1px solid red;
         a {
-        
+          i {
+            // desktop
+            @media  screen and (min-width: @screen-l) {
+              margin-left: 8px;
+            }
+          }
+          span {
+            // Tablet
+            @media  screen and (min-width: @screen-m) and (max-width: @screen-l) {
+              display: none;
+            }
+          }
         } 
       }
       //
