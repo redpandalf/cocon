@@ -15,7 +15,7 @@
 {% for item in type.items %}
 		<li class="nav-main-item {{ item.classes|join(' ') }}">
 			<a class="nav-main-link" href="{{ item.link }}">
-				{% if loop.first %}<i class="fa-solid fa-house"></i>{% endif %}
+				{% if menu_type = 'main-menu' %}<i class="fa-solid fa-house"></i>{% endif %}
 				<span>{{ item.title }}</span>
 			</a>
 			{% if item.children %}
