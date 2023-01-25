@@ -53,6 +53,10 @@ nav {
 
       a, a:link, a:visited {        
         font-size: @font-size-base-mobile;
+        // Tablet
+        @media  screen and (max-width: @screen-l) {
+          font-size: 1.3rem;
+        }
       }
       
       // last item
@@ -64,7 +68,7 @@ nav {
             display: inline-block;
             // desktop
             @media  screen and (min-width: @screen-l) {
-              margin-left: 8px;
+              margin-left: 5px;
             }
             // Tablet
             @media  screen and (min-width: @screen-m) and (max-width: @screen-l) {
