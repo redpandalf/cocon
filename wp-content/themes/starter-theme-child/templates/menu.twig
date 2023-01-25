@@ -11,6 +11,7 @@
 #}
 
 <ul>
+*{{ type }}*
 	{% for item in type.items %}
 		<li class="nav-main-item {{ item.classes|join(' ') }}">
 			<a class="nav-main-link" href="{{ item.link }}">
