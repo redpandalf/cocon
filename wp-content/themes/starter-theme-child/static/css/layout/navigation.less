@@ -78,7 +78,25 @@ nav {
       // first item 
       &:first-of-type {
         border: 1px solid red;
+        a {
+          &:after {
+            content: "\f0e0";
+            font-family: "Font Awesome 6 Free";
+            display: inline-block;
+            // desktop
+            @media  screen and (min-width: @screen-l) {
+              margin-left: 8px;
+            }
+          }
+          span {
+            // Tablet
+            @media  screen and (min-width: @screen-m) and (max-width: @screen-l) {
+              display: none;
+            }
+          }
+        } 
       }
+      //
     }
     // li
   }
