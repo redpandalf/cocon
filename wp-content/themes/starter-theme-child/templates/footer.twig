@@ -13,7 +13,10 @@
     <div class="contact-block">{{ footer_block_contact }}</div>
     <div class="social-block">{{ footer_block_social }}</div>
 
-    <p class="legal-notice">{{"now"|date('Y')}} Cocon <span>|</span> Tous droits réservés <span>|</span> <a href="/" title="Mentions Légales">Mentions Légales</a></p>
+    <p class="legal-notice">
+      {{"now"|date('Y')}} Cocon <span>|</span> Tous droits réservés <span>|</span>
+      {{ footer_legal_notice }}
+    </p>
   </div>
   
 </div>

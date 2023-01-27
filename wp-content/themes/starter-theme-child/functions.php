@@ -254,5 +254,19 @@ function cocon_widgets_init() {
 		'after_sidebar' 	=> '',
 		'show_in_rest'   => false,
 	));
+	// Widget Footer Legal notice
+	register_sidebar(array(
+		'name' 						=> 'Footer : Ligne Mentions Legales',
+		'id'							=> 'footer_legal_notice',
+		'description'    => '',
+		'class'          => '',
+		'before_widget' 	=> '',
+		'after_widget' 		=> '',
+		'before_title' 		=> '',
+		'after_title' 		=> '',
+		'before_sidebar'	=> '',
+		'after_sidebar' 	=> '',
+		'show_in_rest'   => false,
+	));
 
 }
