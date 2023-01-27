@@ -33,8 +33,11 @@
 			{% include 'partial/contact.twig' %}
 		{% endblock %}
 
-		{% block footer %}
+		{% block prefooter %}
 			<div class="row align-center caption pre-footer">{{ prefooter_block_legal }}</div>
+		{% endblock %}
+
+		{% block footer %}
 			<footer id="footer" class="footer">
 				{% include 'footer.twig' %}
 			</footer>
