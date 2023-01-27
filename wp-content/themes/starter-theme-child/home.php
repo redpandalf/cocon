@@ -15,7 +15,7 @@ $context['post'] = $post;
 
 $context = Timber::get_context();
 
-var_dump('blop');
+var_dump($post);
 
 // Set a home page variable
 $context['is_front_page'] = 'true';
