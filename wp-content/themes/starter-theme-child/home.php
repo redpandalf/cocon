@@ -11,13 +11,9 @@
 
 
 $post = new Timber\Post();
-
-$context = Timber::get_context();
 $context['post'] = $post;
 
-
-
-//$context = Timber::get_context();
+$context = Timber::get_context();
 
 
 // Set a home page variable
