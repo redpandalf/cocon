@@ -213,7 +213,7 @@ body {
 // Page by default
 .page-template-default {
   .post-type {
-    max-width: 70%;
+    max-width: 1000px;
     margin: @space-xxl auto;
     //mobile
     @media screen and (max-width: @screen-m) {
@@ -222,6 +222,10 @@ body {
     h2 {
       margin-top: @space-l;
       margin-bottom: @space-m;
+      //mobile
+      @media screen and (max-width: @screen-m) {
+        font-size: @font-size-h4;
+      }
     }
   }
 
