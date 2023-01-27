@@ -9,9 +9,17 @@
  * @since    Timber 0.1
  */
 
-$post = new Timber\Post();
 
-$context = Timber::get_context();
+$post = new Timber\Post();
+if (isset($post->hero_image) && strlen($post->hero_image)){
+	$post->hero_image = new Timber\Image($post->hero_image);
+}
+$context = Timber::context();
+$context['post'] = $post;
+
+
+
+//$context = Timber::get_context();
 
 
 // Set a home page variable
