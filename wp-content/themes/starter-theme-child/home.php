@@ -9,15 +9,10 @@
  * @since    Timber 0.1
  */
 
+$context = Timber::context();
 
-$post = new Timber\Post();
-$context['post'] = $post;
-
-$context = Timber::get_context();
-
-var_dump($post);
-
-// Set a home page variable
 $context['is_front_page'] = 'true';
 
-Timber::render(array('home.twig'), $context);
+$timber_post     = new Timber\Post();
+$context['post'] = $timber_post;
+Timber::render( array( 'home.twig', 'page.twig' ), $context );
