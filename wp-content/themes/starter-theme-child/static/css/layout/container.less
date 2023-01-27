@@ -213,6 +213,11 @@ body {
 // Page by default
 .page-template-default {
   .post-type {
+    margin-top: @space-xxl;
+    //mobile
+    @media screen and (max-width: @screen-m) {
+      margin-top: @space-l;
+    }
     h2 {
       margin-top: @space-l;
       margin-bottom: @space-m;
