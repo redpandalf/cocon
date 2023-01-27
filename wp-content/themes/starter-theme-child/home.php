@@ -9,8 +9,10 @@
  * @since    Timber 0.1
  */
 
-$context = Timber::get_context();
 $post = new Timber\Post();
+
+$context = Timber::get_context();
+
 
 // Set a home page variable
 $context['is_front_page'] = 'true';
