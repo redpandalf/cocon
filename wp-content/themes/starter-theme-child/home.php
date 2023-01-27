@@ -11,9 +11,7 @@
 
 
 $post = new Timber\Post();
-if (isset($post->hero_image) && strlen($post->hero_image)){
-	$post->hero_image = new Timber\Image($post->hero_image);
-}
+
 $context = Timber::get_context();
 $context['post'] = $post;
 
