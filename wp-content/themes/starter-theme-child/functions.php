@@ -194,7 +194,7 @@ class StarterSite extends Timber\Site {
 
 			} else {
 				// by default
-				wp_enqueue_style('cocon-style', get_stylesheet_directory_uri() . '/static/css/styles.less');
+				wp_enqueue_style('cocon-default', get_stylesheet_directory_uri() . '/static/css/page/default.less');
 			}
 	 	});
 		 
