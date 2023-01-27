@@ -23,6 +23,10 @@
 
 $context = Timber::context();
 
+
+var_dump('allo');
+exit;
+
 $timber_post     = new Timber\Post();
 $context['post'] = $timber_post;
 Timber::render( array( 'page-' . $timber_post->post_name . '.twig', 'page.twig' ), $context );
