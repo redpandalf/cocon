@@ -9,7 +9,7 @@
 				<h1 class="title margin-s">{{ post.title }}</h1>
 				{{ post.content }}
 				
-				{% if post.meta('home_cover_button').url is not empty %}
+				{% if post.meta('home_cover_button').active == 1 %}
 					<br>
 					<a href="{{ post.meta('home_cover_button').url }}" title="{{ post.meta('home_cover_button').label }}" class="button button-rdv">
 						{{ post.meta('home_cover_button').label }}
