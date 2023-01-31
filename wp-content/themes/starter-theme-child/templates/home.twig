@@ -44,9 +44,13 @@
 			<div class="prestations-items flexbox col-in-mobile margin-l">
 				<div class="item margin-s">
 				
-					<img src="{{ post.meta('home_prestations_massages').image }}" alt="{{ post.meta('home_prestations_massages').title }}" />
+					{% if post.meta('home_prestations_massages').image is not empty %}
+						<img src="{{ post.meta('home_prestations_massages').image }}" alt="{{ post.meta('home_prestations_massages').title }}" />
+					{% endif %}
 					<div class="content">
-						<p class="badge">{{ post.meta('home_prestations_massages').badge }}</p>
+						{% if post.meta('home_prestations_massages').badge is not empty %}
+							<p class="badge">{{ post.meta('home_prestations_massages').badge }}</p>
+						{% endif %}
 						<h3 class="title h4 margin-s">{{ post.meta('home_prestations_massages').title }}</h3>
 						<p class="margin-s">{{ post.meta('home_prestations_massages').description }}</p>
 						<p><a href="{{ post.meta('home_prestations_massages').url }}" title="{{ post.meta('home_prestations_massages').title }}" class="read-more">En savoir plus...</a>
