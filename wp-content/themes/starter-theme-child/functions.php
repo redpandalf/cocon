@@ -202,15 +202,21 @@ class StarterSite extends Timber\Site {
 
 		return $twig;
 	}
-
-
 }
 
 new StarterSite();
 
+// Authorize SVG upload
+function add_file_types_to_uploads($file_types){
+	$new_filetypes = array();
+	$new_filetypes['svg'] = 'image/svg+xml';
+	$file_types = array_merge($file_types, $new_filetypes );
+	return $file_types;
+}
+add_filter('upload_mimes', 'add_file_types_to_uploads');
 
 
-// Width list
+// Widgets list
 function cocon_widgets_init() {
 	// Widget Pre Footer - legal notice
 	register_sidebar(array(
