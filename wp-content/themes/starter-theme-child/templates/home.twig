@@ -44,29 +44,35 @@
 			{% endif %}
 
 			<div class="prestations-items flexbox col-in-mobile margin-l">
-				<div class="item margin-s">
 				
-					{% if post.meta('home_prestations_massages').image is not empty %}
-						<img src="{{ post.meta('home_prestations_massages').image }}" alt="{{ post.meta('home_prestations_massages').title }}" />
-					{% endif %}
-					<div class="content">
-						{% if post.meta('home_prestations_massages').badge is not empty %}
-							<p class="badge">{{ post.meta('home_prestations_massages').badge }}</p>
+				{% if post.meta('home_prestations_massages').title is not empty 
+					 || post.meta('home_prestations_massages').description is not empty
+				%}
+					<div class="item margin-s">				
+						{% if post.meta('home_prestations_massages').image is not empty %}
+							<img src="{{ post.meta('home_prestations_massages').image }}" alt="{{ post.meta('home_prestations_massages').title }}" />
 						{% endif %}
+						<div class="content">
+							{% if post.meta('home_prestations_massages').badge is not empty %}
+								<p class="badge">{{ post.meta('home_prestations_massages').badge }}</p>
+							{% endif %}
 
-						{% if post.meta('home_prestations_massages').title is not empty %}
-							<h3 class="title h4 margin-s">{{ post.meta('home_prestations_massages').title }}</h3>
-						{% endif %}
+							{% if post.meta('home_prestations_massages').title is not empty %}
+								<h3 class="title h4 margin-s">{{ post.meta('home_prestations_massages').title }}</h3>
+							{% endif %}
 
-						{% if post.meta('home_prestations_massages').description is not empty %}
-							<p class="margin-s">{{ post.meta('home_prestations_massages').description }}</p>
-						{% endif %}
+							{% if post.meta('home_prestations_massages').description is not empty %}
+								<p class="margin-s">{{ post.meta('home_prestations_massages').description }}</p>
+							{% endif %}
 
-						{% if post.meta('home_prestations_massages').url is not empty %}
-							<p><a href="{{ post.meta('home_prestations_massages').url }}" title="{{ post.meta('home_prestations_massages').title }}" class="read-more">En savoir plus...</a>
-						{% endif %}
+							{% if post.meta('home_prestations_massages').url is not empty %}
+								<p><a href="{{ post.meta('home_prestations_massages').url }}" title="{{ post.meta('home_prestations_massages').title }}" class="read-more">En savoir plus...</a>
+							{% endif %}
+						</div>
 					</div>
-				</div>
+				{% endif %}
+
+
 				<div class="item margin-s">
 					<img src="https://picsum.photos/id/13/400/330" alt="" />
 					<div class="content">
