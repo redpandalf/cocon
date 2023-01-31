@@ -20,15 +20,17 @@
 		</div>
 	</div>
 
-	<div class="quote-block">
-		<div class="row align-center">
-			<img src="{{ site.theme.link }}/static/img/natural-illustration-4.svg" alt="" width="52" class="revert-vertical"/>
-			<br><br>
-			<p class="quote">"{{ post.meta('home_quote').quote }}"</p>
-			<p class="margin-m">{{ post.meta('home_quote').quote_author }}</p>
-			<img src="{{ site.theme.link }}/static/img/natural-illustration-4.svg" alt="" width="52" class=""/>
+	{% if post.meta('home_quote').quote is not empty %}
+		<div class="quote-block">
+			<div class="row align-center">
+				<img src="{{ site.theme.link }}/static/img/natural-illustration-4.svg" alt="" width="52" class="revert-vertical"/>
+				<br><br>
+				<p class="quote">{{ post.meta('home_quote').quote }}</p>
+				<p class="margin-m">{{ post.meta('home_quote').quote_author }}</p>
+				<img src="{{ site.theme.link }}/static/img/natural-illustration-4.svg" alt="" width="52" class=""/>
+			</div>
 		</div>
-	</div>
+	{% endif %}
 
 	<div class="background-dark-grey prestations-block">
 		<div class="row">
