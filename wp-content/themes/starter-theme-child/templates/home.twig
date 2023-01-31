@@ -73,6 +73,36 @@
 				{% endif %}
 
 
+
+				{% if post.meta('home_prestations_individual_relax').title is not empty 
+					 or post.meta('home_prestations_individual_relax').description is not empty
+				%}
+					<div class="item margin-s">				
+						{% if post.meta('home_prestations_individual_relax').image is not empty %}
+							<img src="{{ post.meta('home_prestations_individual_relax').image }}" alt="{{ post.meta('home_prestations_individual_relax').title }}" />
+						{% endif %}
+						<div class="content">
+							{% if post.meta('home_prestations_individual_relax').badge is not empty %}
+								<p class="badge">{{ post.meta('home_prestations_individual_relax').badge }}</p>
+							{% endif %}
+
+							{% if post.meta('home_prestations_individual_relax').title is not empty %}
+								<h3 class="title h4 margin-s">{{ post.meta('home_prestations_individual_relax').title }}</h3>
+							{% endif %}
+
+							{% if post.meta('home_prestations_individual_relax').description is not empty %}
+								<p class="margin-s">{{ post.meta('home_prestations_individual_relax').description }}</p>
+							{% endif %}
+
+							{% if post.meta('home_prestations_individual_relax').url is not empty %}
+								<p><a href="{{ post.meta('home_prestations_individual_relax').url }}" title="{{ post.meta('home_prestations_individual_relax').title }}" class="read-more">En savoir plus...</a>
+							{% endif %}
+						</div>
+					</div>
+				{% endif %}
+
+
+				<!--
 				<div class="item margin-s">
 					<img src="https://picsum.photos/id/13/400/330" alt="" />
 					<div class="content">
@@ -91,6 +121,7 @@
 						<p><a href="/relaxation-collective/" title="Les séances collectives" class="read-more">En savoir plus...</a>
 					</div>
 				</div>
+				-->
 			</div>
 
 			<div class="align-center"><img src="{{ site.theme.link }}/static/img/natural-illustration-2.svg" alt="" width="92"/></div>
