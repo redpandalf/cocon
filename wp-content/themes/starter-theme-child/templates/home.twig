@@ -172,19 +172,33 @@
 			<h2 class="block-title margin-auto align-center margin-l title">{{ post.meta('home_value_title') }}</h2>
 
 			<div class="engagements-items flexbox col-in-mobile margin-l">
-				<div class="align-center">
-					<img src="{{ post.meta('home_value_item_1').image }}" alt="" />
-					<p class="h4">{{ post.meta('home_value_item_1').text }}</p>
-					{{ post.meta('home_value_item_1').image }}
-				</div>
-				<div class="align-center">
-					<img src="{{ post.meta('home_value_item_2').image }}" alt="" />
-					<p class="h4">{{ post.meta('home_value_item_1').text }}</p>
-				</div>
-				<div class="align-center">
-					<img src="{{ post.meta('home_value_item_3').image }}" alt="" />
-					<p class="h4">{{ post.meta('home_value_item_1').text }}</p>
-				</div>
+				
+				{% if post.meta('home_value_item_1').text is not empty %}
+					<div class="align-center">
+						{% if post.meta('home_value_item_1').image is not empty %}
+							<img src="{{ post.meta('home_value_item_1').image }}" alt="{{ post.meta('home_value_item_1').text }}" />
+						{% endif %}
+						<p class="h4">{{ post.meta('home_value_item_1').text }}</p>
+					</div>
+				{% endif %}
+				
+				{% if post.meta('home_value_item_2').text is not empty %}
+					<div class="align-center">
+						{% if post.meta('home_value_item_2').image is not empty %}
+							<img src="{{ post.meta('home_value_item_2').image }}" alt="{{ post.meta('home_value_item_2').text }}" />
+						{% endif %}					
+						<p class="h4">{{ post.meta('home_value_item_2').text }}</p>
+					</div>
+				{% endif %}
+
+				{% if post.meta('home_value_item_3').text is not empty %}
+					<div class="align-center">
+						{% if post.meta('home_value_item_3').image is not empty %}
+							<img src="{{ post.meta('home_value_item_3').image }}" alt="{{ post.meta('home_value_item_3').text }}" />
+						{% endif %}					
+						<p class="h4">{{ post.meta('home_value_item_3').text }}</p>					
+					</div>
+				{% endif %}
 			</div>
 
 			{% if post.meta('home_value_button').url is not empty %}
