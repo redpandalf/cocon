@@ -32,131 +32,134 @@
 		</div>
 	{% endif %}
 
-	<div class="background-dark-grey prestations-block">
-		<div class="row">
 
-			{% if post.meta('home_prestations_title') is not empty %}
-				<div class="align-center flexbox col-in-mobile align-items-center justify-content-space-around">
-					<img src="{{ site.theme.link }}/static/img/natural-illustration-3.svg" alt="" width="150" class="margin-l"/>
-					<h2 class="align-center title margin-l">{{ post.meta('home_prestations_title') }}</h2>
-					<img src="{{ site.theme.link }}/static/img/natural-illustration-3.svg" alt="" width="150" class="revert-vertical margin-l"/>
-				</div>
-			{% endif %}
+	{% if post.meta('home_prestations_active') != 0 %}
+		<div class="background-dark-grey prestations-block">
+			<div class="row">
 
-			<div class="prestations-items flexbox col-in-mobile margin-l">
-				
-				{# Massages #}
-				{% if post.meta('home_prestations_massages').title is not empty 
-					 or post.meta('home_prestations_massages').description is not empty
-				%}
-					<div class="item margin-s">				
-						{% if post.meta('home_prestations_massages').image is not empty %}
-							<img src="{{ post.meta('home_prestations_massages').image }}" alt="{{ post.meta('home_prestations_massages').title }}" />
-						{% endif %}
-						<div class="content">
-							{% if post.meta('home_prestations_massages').badge is not empty %}
-								<p class="badge">{{ post.meta('home_prestations_massages').badge }}</p>
-							{% endif %}
-
-							{% if post.meta('home_prestations_massages').title is not empty %}
-								<h3 class="title h4 margin-s">{{ post.meta('home_prestations_massages').title }}</h3>
-							{% endif %}
-
-							{% if post.meta('home_prestations_massages').description is not empty %}
-								<p class="margin-s">{{ post.meta('home_prestations_massages').description }}</p>
-							{% endif %}
-
-							{% if post.meta('home_prestations_massages').url is not empty %}
-								<p><a href="{{ post.meta('home_prestations_massages').url }}" title="{{ post.meta('home_prestations_massages').title }}" class="read-more">En savoir plus...</a>
-							{% endif %}
-						</div>
+				{% if post.meta('home_prestations_title') is not empty %}
+					<div class="align-center flexbox col-in-mobile align-items-center justify-content-space-around">
+						<img src="{{ site.theme.link }}/static/img/natural-illustration-3.svg" alt="" width="150" class="margin-l"/>
+						<h2 class="align-center title margin-l">{{ post.meta('home_prestations_title') }}</h2>
+						<img src="{{ site.theme.link }}/static/img/natural-illustration-3.svg" alt="" width="150" class="revert-vertical margin-l"/>
 					</div>
 				{% endif %}
 
+				<div class="prestations-items flexbox col-in-mobile margin-l">
+					
+					{# Massages #}
+					{% if post.meta('home_prestations_massages').title is not empty 
+						or post.meta('home_prestations_massages').description is not empty
+					%}
+						<div class="item margin-s">				
+							{% if post.meta('home_prestations_massages').image is not empty %}
+								<img src="{{ post.meta('home_prestations_massages').image }}" alt="{{ post.meta('home_prestations_massages').title }}" />
+							{% endif %}
+							<div class="content">
+								{% if post.meta('home_prestations_massages').badge is not empty %}
+									<p class="badge">{{ post.meta('home_prestations_massages').badge }}</p>
+								{% endif %}
 
-				{# Individual #}
-				{% if post.meta('home_prestations_individual_relax').title is not empty 
-					 or post.meta('home_prestations_individual_relax').description is not empty
-				%}
-					<div class="item margin-s">				
-						{% if post.meta('home_prestations_individual_relax').image is not empty %}
-							<img src="{{ post.meta('home_prestations_individual_relax').image }}" alt="{{ post.meta('home_prestations_individual_relax').title }}" />
-						{% endif %}
+								{% if post.meta('home_prestations_massages').title is not empty %}
+									<h3 class="title h4 margin-s">{{ post.meta('home_prestations_massages').title }}</h3>
+								{% endif %}
+
+								{% if post.meta('home_prestations_massages').description is not empty %}
+									<p class="margin-s">{{ post.meta('home_prestations_massages').description }}</p>
+								{% endif %}
+
+								{% if post.meta('home_prestations_massages').url is not empty %}
+									<p><a href="{{ post.meta('home_prestations_massages').url }}" title="{{ post.meta('home_prestations_massages').title }}" class="read-more">En savoir plus...</a>
+								{% endif %}
+							</div>
+						</div>
+					{% endif %}
+
+
+					{# Individual #}
+					{% if post.meta('home_prestations_individual_relax').title is not empty 
+						or post.meta('home_prestations_individual_relax').description is not empty
+					%}
+						<div class="item margin-s">				
+							{% if post.meta('home_prestations_individual_relax').image is not empty %}
+								<img src="{{ post.meta('home_prestations_individual_relax').image }}" alt="{{ post.meta('home_prestations_individual_relax').title }}" />
+							{% endif %}
+							<div class="content">
+								{% if post.meta('home_prestations_individual_relax').badge is not empty %}
+									<p class="badge">{{ post.meta('home_prestations_individual_relax').badge }}</p>
+								{% endif %}
+
+								{% if post.meta('home_prestations_individual_relax').title is not empty %}
+									<h3 class="title h4 margin-s">{{ post.meta('home_prestations_individual_relax').title }}</h3>
+								{% endif %}
+
+								{% if post.meta('home_prestations_individual_relax').description is not empty %}
+									<p class="margin-s">{{ post.meta('home_prestations_individual_relax').description }}</p>
+								{% endif %}
+
+								{% if post.meta('home_prestations_individual_relax').url is not empty %}
+									<p><a href="{{ post.meta('home_prestations_individual_relax').url }}" title="{{ post.meta('home_prestations_individual_relax').title }}" class="read-more">En savoir plus...</a>
+								{% endif %}
+							</div>
+						</div>
+					{% endif %}
+
+					
+					{# Group #}
+					{% if post.meta('home_prestations_group_relax').title is not empty 
+						or post.meta('home_prestations_group_relax').description is not empty
+					%}
+						<div class="item margin-s">				
+							{% if post.meta('home_prestations_group_relax').image is not empty %}
+								<img src="{{ post.meta('home_prestations_group_relax').image }}" alt="{{ post.meta('home_prestations_group_relax').title }}" />
+							{% endif %}
+							<div class="content">
+								{% if post.meta('home_prestations_group_relax').badge is not empty %}
+									<p class="badge">{{ post.meta('home_prestations_group_relax').badge }}</p>
+								{% endif %}
+
+								{% if post.meta('home_prestations_group_relax').title is not empty %}
+									<h3 class="title h4 margin-s">{{ post.meta('home_prestations_group_relax').title }}</h3>
+								{% endif %}
+
+								{% if post.meta('home_prestations_group_relax').description is not empty %}
+									<p class="margin-s">{{ post.meta('home_prestations_group_relax').description }}</p>
+								{% endif %}
+
+								{% if post.meta('home_prestations_group_relax').url is not empty %}
+									<p><a href="{{ post.meta('home_prestations_group_relax').url }}" title="{{ post.meta('home_prestations_group_relax').title }}" class="read-more">En savoir plus...</a>
+								{% endif %}
+							</div>
+						</div>
+					{% endif %}
+
+					<!--
+					<div class="item margin-s">
+						<img src="https://picsum.photos/id/13/400/330" alt="" />
 						<div class="content">
-							{% if post.meta('home_prestations_individual_relax').badge is not empty %}
-								<p class="badge">{{ post.meta('home_prestations_individual_relax').badge }}</p>
-							{% endif %}
-
-							{% if post.meta('home_prestations_individual_relax').title is not empty %}
-								<h3 class="title h4 margin-s">{{ post.meta('home_prestations_individual_relax').title }}</h3>
-							{% endif %}
-
-							{% if post.meta('home_prestations_individual_relax').description is not empty %}
-								<p class="margin-s">{{ post.meta('home_prestations_individual_relax').description }}</p>
-							{% endif %}
-
-							{% if post.meta('home_prestations_individual_relax').url is not empty %}
-								<p><a href="{{ post.meta('home_prestations_individual_relax').url }}" title="{{ post.meta('home_prestations_individual_relax').title }}" class="read-more">En savoir plus...</a>
-							{% endif %}
+							<p class="badge">Relaxation</p>
+							<h3 class="title h4 margin-s">Les séances individuelles</h3>
+							<p class="margin-s">Suspendisse volutpat urna ac laoreet volutpat. Nulla egestas elit vitae commodo gravida? it vitae commodo gravida. <br>Lorem ipsum dolor sit amet, adipiscing elit.</p>
+							<p><a href="/relaxation-individuelle" title="Les séances individuelles" class="read-more">En savoir plus...</a>
 						</div>
 					</div>
-				{% endif %}
-
-				
-				{# Group #}
-				{% if post.meta('home_prestations_group_relax').title is not empty 
-					 or post.meta('home_prestations_group_relax').description is not empty
-				%}
-					<div class="item margin-s">				
-						{% if post.meta('home_prestations_group_relax').image is not empty %}
-							<img src="{{ post.meta('home_prestations_group_relax').image }}" alt="{{ post.meta('home_prestations_group_relax').title }}" />
-						{% endif %}
+					<div class="item margin-s">
+						<img src="https://picsum.photos/id/27/400/330" alt="" />
 						<div class="content">
-							{% if post.meta('home_prestations_group_relax').badge is not empty %}
-								<p class="badge">{{ post.meta('home_prestations_group_relax').badge }}</p>
-							{% endif %}
-
-							{% if post.meta('home_prestations_group_relax').title is not empty %}
-								<h3 class="title h4 margin-s">{{ post.meta('home_prestations_group_relax').title }}</h3>
-							{% endif %}
-
-							{% if post.meta('home_prestations_group_relax').description is not empty %}
-								<p class="margin-s">{{ post.meta('home_prestations_group_relax').description }}</p>
-							{% endif %}
-
-							{% if post.meta('home_prestations_group_relax').url is not empty %}
-								<p><a href="{{ post.meta('home_prestations_group_relax').url }}" title="{{ post.meta('home_prestations_group_relax').title }}" class="read-more">En savoir plus...</a>
-							{% endif %}
+							<p class="badge">Relaxation</p>
+							<h3 class="title h4 margin-s">Les séances collectives</h3>
+							<p class="margin-s">Nulla egestas elit vitae commodo gravida. Sed euismod a est a lobortis. <br><br>Etiam mattis, elit mi, fusce congue purus eget nulla dictum.</p>
+							<p><a href="/relaxation-collective/" title="Les séances collectives" class="read-more">En savoir plus...</a>
 						</div>
 					</div>
-				{% endif %}
+					-->
+				</div>
 
-				<!--
-				<div class="item margin-s">
-					<img src="https://picsum.photos/id/13/400/330" alt="" />
-					<div class="content">
-						<p class="badge">Relaxation</p>
-						<h3 class="title h4 margin-s">Les séances individuelles</h3>
-						<p class="margin-s">Suspendisse volutpat urna ac laoreet volutpat. Nulla egestas elit vitae commodo gravida? it vitae commodo gravida. <br>Lorem ipsum dolor sit amet, adipiscing elit.</p>
-						<p><a href="/relaxation-individuelle" title="Les séances individuelles" class="read-more">En savoir plus...</a>
-					</div>
-				</div>
-				<div class="item margin-s">
-					<img src="https://picsum.photos/id/27/400/330" alt="" />
-					<div class="content">
-						<p class="badge">Relaxation</p>
-						<h3 class="title h4 margin-s">Les séances collectives</h3>
-						<p class="margin-s">Nulla egestas elit vitae commodo gravida. Sed euismod a est a lobortis. <br><br>Etiam mattis, elit mi, fusce congue purus eget nulla dictum.</p>
-						<p><a href="/relaxation-collective/" title="Les séances collectives" class="read-more">En savoir plus...</a>
-					</div>
-				</div>
-				-->
+				<div class="align-center"><img src="{{ site.theme.link }}/static/img/natural-illustration-2.svg" alt="" width="92"/></div>
+
 			</div>
-
-			<div class="align-center"><img src="{{ site.theme.link }}/static/img/natural-illustration-2.svg" alt="" width="92"/></div>
-
 		</div>
-	</div>
+	{% endif %}
 
 	
 	<div class="row engagements-block">
