@@ -161,37 +161,41 @@
 		</div>
 	{% endif %}
 
-	
-	<div class="row engagements-block">
 
-		<div class="align-center margin-l">
-			<img src="{{ site.theme.link }}/static/img/natural-illustration-1.svg" alt="" width="160" class="revert-vertical"/>
-		</div>
+	{% if post.meta('home_value_active') != 0 %}
+		<div class="row engagements-block">
 
-		<h2 class="block-title margin-auto align-center margin-l title">Mes valeurs & mes engagements</h2>
-
-		<div class="engagements-items flexbox col-in-mobile margin-l">
-			<div class="align-center">
-				<img src="{{ site.theme.link }}/static/img/engagement-illustration-1.svg" alt="" />
-				<p class="h4">Bienveillance <br>& écoute</p>
+			<div class="align-center margin-l">
+				<img src="{{ site.theme.link }}/static/img/natural-illustration-1.svg" alt="" width="160" class="revert-vertical"/>
 			</div>
-			<div class="align-center">
-				<img src="{{ site.theme.link }}/static/img/engagement-illustration-2.svg" alt="" />
-				<p class="h4">Environnemental<br> & écologique</p>
+
+			<h2 class="block-title margin-auto align-center margin-l title">{{ post.meta('home_value_title') }}</h2>
+
+			<div class="engagements-items flexbox col-in-mobile margin-l">
+				<div class="align-center">
+					<img src="{{ site.theme.link }}/static/img/engagement-illustration-1.svg" alt="" />
+					<p class="h4">Bienveillance <br>& écoute</p>
+				</div>
+				<div class="align-center">
+					<img src="{{ site.theme.link }}/static/img/engagement-illustration-2.svg" alt="" />
+					<p class="h4">Environnemental<br> & écologique</p>
+				</div>
+				<div class="align-center">
+					<img src="{{ site.theme.link }}/static/img/engagement-illustration-3.svg" alt="" />
+					<p class="h4">Reconnexion à<br> soi garantie</p>
+				</div>
 			</div>
-			<div class="align-center">
-				<img src="{{ site.theme.link }}/static/img/engagement-illustration-3.svg" alt="" />
-				<p class="h4">Reconnexion à<br> soi garantie</p>
-			</div>
+
+			{% if post.meta('home_value_button').url is not empty %}
+				<div class="align-center margin-l">
+					<a href="{{ post.meta('home_value_button').url }}" title="{{ post.meta('home_value_button').label }}" class="button button-secondary">{{ post.meta('home_value_button').label }}</a>
+				</div>
+			{% endif %}
+
+			<div class="align-center"><img src="{{ site.theme.link }}/static/img/natural-illustration-1.svg" alt="" width="160" class=""/></div>
+
 		</div>
-
-		<div class="align-center margin-l">
-			<a href="/qui-suis-je" title="A propos de moi" class="button button-secondary">En savoir plus à propos de moi</a>
-		</div>
-
-		<div class="align-center"><img src="{{ site.theme.link }}/static/img/natural-illustration-1.svg" alt="" width="160" class=""/></div>
-
-	</div>
+	{% endif %}
 
 	{# 
 		<h2>{{ foo }}</h2>
