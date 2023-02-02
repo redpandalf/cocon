@@ -10,6 +10,10 @@
   //
   .cover {
     background-size: cover;
+    // mobile
+    @media screen and (max-width: @screen-m) {
+      background-position: unset;
+    }
     //desktop
     @media screen and (min-width: @screen-l) {
       min-height: 500px;
@@ -190,21 +194,4 @@
   }
 
 
-}
-
-
-
-
-// Page Massages 
-//
-.page-template-page-massages {
-  .cover {
-    //background: url('../../img/cover-massages.jpg') no-repeat center;
-    background-size: cover;
-    // mobile
-    @media screen and (max-width: @screen-m) {
-      height:  30vh;
-      background-position: unset;
-    }
-  }
 }
