@@ -50,7 +50,7 @@
 								<h2 class="title h4 margin-xs">{{ post.meta('prestastions_items_list_item_1').title }}</h2>
 								<p>{{ post.meta('prestastions_items_list_item_1').description }}</p>
 							</div>
-							
+
 							{% if post.meta('prestastions_items_list_item_1').benefits is not empty %}
 								<div class="margin-m">
 									<p class="badge margin-xs">Bienfaits</p>
@@ -221,7 +221,7 @@
 				{% endif %}
 
 				{% if post.meta('prestastions_items_list_item_plus').active == 1 %}
-					<div>
+					<div class="highlight background-sweet-orange">
 						{% if post.meta('prestastions_items_list_item_plus').illustration is not empty %}
 							<center class="margin-s"><img src="{{ post.meta('prestastions_items_list_item_plus').illustration }}" alt="{{ post.meta('prestastions_items_list_item_plus').title }}" /></center>
 						{% endif %}
@@ -239,19 +239,20 @@
 							{% endif %}
 
 							{% if post.meta('prestastions_items_list_item_plus').duration is not empty or post.meta('prestastions_items_list_item_plus').price is not empty %}
-								<p class="badge margin-xs">Durée & tarif</p>
+								<div class="detail flexbox flex-wrap">
+									{% if post.meta('prestastions_items_list_item_plus').duration is not empty %}
+										<p class="detail">
+											<i class="fa-regular fa-clock"></i> <span class="h6">{{ post.meta('prestastions_items_list_item_plus').duration }}</span>
+										</p>
+									{% endif %}
+									{% if post.meta('prestastions_items_list_item_plus').price is not empty %}
+										<p class="detail">
+											<i class="fa-solid fa-tag"></i> <span class="h6">{{ post.meta('prestastions_items_list_item_plus').price }}</span>
+										</p>
+									{% endif %}
+								</div>
 							{% endif %}
 
-							{% if post.meta('prestastions_items_list_item_plus').duration is not empty %}
-								<p class="detail">
-									<i class="fa-regular fa-clock"></i> <span class="h6">{{ post.meta('prestastions_items_list_item_plus').duration }}</span>
-								</p>
-							{% endif %}
-							{% if post.meta('prestastions_items_list_item_plus').price is not empty %}
-								<p class="detail">
-									<i class="fa-solid fa-tag"></i> <span class="h6">{{ post.meta('prestastions_items_list_item_plus').price }}</span>
-								</p>
-							{% endif %}
 						</div>
 					</div>
 				{% endif %}
