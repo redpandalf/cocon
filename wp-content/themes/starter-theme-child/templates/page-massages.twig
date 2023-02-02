@@ -39,28 +39,35 @@
 
 			<div class="margin-l flexbox flex-wrap justify-content-center list-items">
 
-				<div>
-					<center class="margin-s"><img src="{{ post.meta('prestastions_items_list_item_1').illustration }}" alt="{{ post.meta('prestastions_items_list_item_1').title }}" /></center>
+
+				{% if post.meta('prestastions_items_list_item_1').active == 1 %}
 					<div>
-						<div class="margin-m">
-							<h2 class="title h4 margin-xs">{{ post.meta('prestastions_items_list_item_1').title }}</h2>
-							<p>{{ post.meta('prestastions_items_list_item_1').description }}</p>
-						</div>
+						<center class="margin-s"><img src="{{ post.meta('prestastions_items_list_item_1').illustration }}" alt="{{ post.meta('prestastions_items_list_item_1').title }}" /></center>
+						<div>
+							<div class="margin-m">
+								<h2 class="title h4 margin-xs">{{ post.meta('prestastions_items_list_item_1').title }}</h2>
+								<p>{{ post.meta('prestastions_items_list_item_1').description }}</p>
+							</div>
 
-						<div class="margin-m">
-							<p class="badge margin-xs">Bienfaits</p>
-							<p>{{ post.meta('prestastions_items_list_item_1').benefits }}</p>
-						</div>
+							<div class="margin-m">
+								<p class="badge margin-xs">Bienfaits</p>
+								<p>{{ post.meta('prestastions_items_list_item_1').benefits }}</p>
+							</div>
 
-						<p class="badge margin-xs">Durée & tarif</p>
-						<p class="detail">
-							<i class="fa-regular fa-clock"></i> <span class="h6">{{ post.meta('prestastions_items_list_item_1').duration }}</span>
-						</p>
-						<p class="detail">
-							<i class="fa-solid fa-tag"></i> <span class="h6">{{ post.meta('prestastions_items_list_item_1').price }}</span>
-						</p>
+							<p class="badge margin-xs">Durée & tarif</p>
+							<p class="detail">
+								<i class="fa-regular fa-clock"></i> <span class="h6">{{ post.meta('prestastions_items_list_item_1').duration }}</span>
+							</p>
+							<p class="detail">
+								<i class="fa-solid fa-tag"></i> <span class="h6">{{ post.meta('prestastions_items_list_item_1').price }}</span>
+							</p>
+						</div>
 					</div>
-				</div>
+				{% endif %}
+
+				{% if post.meta('prestastions_items_list_item_2').active == 1 %}
+				blop
+				{% endif %}
 
 
 				{#
