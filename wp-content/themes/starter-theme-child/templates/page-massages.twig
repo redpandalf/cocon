@@ -475,23 +475,28 @@
 
 
 	{# Formulaire contact #}
-	<div class="background-white contact-section">
-		<div class="row flexbox col-in-mobile">
-		
-			<div class="flex-1 content">
-				<p class="h2 margin-s">{{ post.meta('prestastions_contact_title') }}</p>
-				<p>{{ post.meta('prestastions_contact_text') }}</p>
+	{% if post.meta('prestastions_contact_active') == 1 %}
+		<div class="background-white contact-section">
+			<div class="row flexbox col-in-mobile">
+			
+				<div class="flex-1 content">
+					{% if post.meta('prestastions_contact_title') is not empty %}
+						<p class="h2 margin-s">{{ post.meta('prestastions_contact_title') }}</p>
+					{% endif %}
+					{% if post.meta('prestastions_contact_text') is not empty %}
+						<p>{{ post.meta('prestastions_contact_text') }}</p>
+					{% endif %}
 
-				<br><br>
+					<br><br>
 
-				{% include 'partial/form.twig' %}
+					{% include 'partial/form.twig' %}
+				</div>
+
+				<div class="flex-1"></div>
 
 			</div>
-
-			<div class="flex-1"></div>
-
 		</div>
-	</div>
+	{% endif %}
 	 
 
 
