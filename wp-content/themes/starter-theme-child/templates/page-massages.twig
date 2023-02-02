@@ -406,12 +406,14 @@
 						<h3 class="title h5 margin-s">{{ post.meta('prestastions_process_outfit_material').title }}</h3>
 						<p>{{ post.meta('prestastions_process_outfit_material').text }}</p>
 					</div>
+
+					<div class="align-center"><img src="{{ site.theme.link }}/static/img/natural-illustration-4.svg" alt="" width="83" class="filter-invert" /></div>
 				{% endif %}
 
-				<div class="align-center"><img src="{{ site.theme.link }}/static/img/natural-illustration-4.svg" alt="" width="83" class="filter-invert" /></div>
-				<div class="align-center"><img src="{{ site.theme.link }}/static/img/natural-illustration-4.svg" alt="" width="83" class="filter-invert revert-vertical" /></div>
 
 				{% if post.meta('prestastions_process_before').title is not empty %}
+					<div class="align-center"><img src="{{ site.theme.link }}/static/img/natural-illustration-4.svg" alt="" width="83" class="filter-invert revert-vertical" /></div>
+
 					<div>
 						<h3 class="title h5 margin-s">{{ post.meta('prestastions_process_before').title }}</h3>
 						<p>{{ post.meta('prestastions_process_before').text }}</p>
@@ -424,14 +426,13 @@
 						<p>{{ post.meta('prestastions_process_after').text }}</p>
 					</div>
 				{% endif %}
-
-		
-				<div class="align-center margin-auto">
-					<img src="{{ site.theme.link }}/static/img/natural-illustration-4.svg" alt="" width="83" class="filter-invert revert-vertical" />
-					<img src="{{ site.theme.link }}/static/img/natural-illustration-4.svg" alt="" width="83" class="filter-invert" />					
-				</div>
 				
 				{% if post.meta('prestastions_process_counter_indications').title is not empty %}
+					<div class="align-center margin-auto">
+						<img src="{{ site.theme.link }}/static/img/natural-illustration-4.svg" alt="" width="83" class="filter-invert revert-vertical" />
+						<img src="{{ site.theme.link }}/static/img/natural-illustration-4.svg" alt="" width="83" class="filter-invert" />					
+					</div>
+					
 					<div>
 						<h3 class="title h5 margin-s">{{ post.meta('prestastions_process_counter_indications').title }}</h3>
 						<p>{{ post.meta('prestastions_process_counter_indications').text }}</p>
