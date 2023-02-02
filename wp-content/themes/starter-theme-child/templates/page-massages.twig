@@ -90,13 +90,20 @@
 								<p>{{ post.meta('prestastions_items_list_item_2').benefits }}</p>
 							</div>
 
-							<p class="badge margin-xs">Durée & tarif</p>
-							<p class="detail">
-								<i class="fa-regular fa-clock"></i> <span class="h6">{{ post.meta('prestastions_items_list_item_2').duration }}</span>
-							</p>
-							<p class="detail">
-								<i class="fa-solid fa-tag"></i> <span class="h6">{{ post.meta('prestastions_items_list_item_2').price }}</span>
-							</p>
+							{% if post.meta('prestastions_items_list_item_2').duration is not empty or post.meta('prestastions_items_list_item_2').price is not empty %}
+								<p class="badge margin-xs">Durée & tarif</p>
+							{% endif %}
+
+							{% if post.meta('prestastions_items_list_item_2').duration is not empty %}
+								<p class="detail">
+									<i class="fa-regular fa-clock"></i> <span class="h6">{{ post.meta('prestastions_items_list_item_2').duration }}</span>
+								</p>
+							{% endif %}
+							{% if post.meta('prestastions_items_list_item_2').price is not empty %}
+								<p class="detail">
+									<i class="fa-solid fa-tag"></i> <span class="h6">{{ post.meta('prestastions_items_list_item_2').price }}</span>
+								</p>
+							{% endif %}
 						</div>
 					</div>
 				{% endif %}
@@ -117,13 +124,20 @@
 								<p>{{ post.meta('prestastions_items_list_item_3').benefits }}</p>
 							</div>
 
-							<p class="badge margin-xs">Durée & tarif</p>
-							<p class="detail">
-								<i class="fa-regular fa-clock"></i> <span class="h6">{{ post.meta('prestastions_items_list_item_3').duration }}</span>
-							</p>
-							<p class="detail">
-								<i class="fa-solid fa-tag"></i> <span class="h6">{{ post.meta('prestastions_items_list_item_3').price }}</span>
-							</p>
+							{% if post.meta('prestastions_items_list_item_3').duration is not empty or post.meta('prestastions_items_list_item_3').price is not empty %}
+								<p class="badge margin-xs">Durée & tarif</p>
+							{% endif %}
+
+							{% if post.meta('prestastions_items_list_item_3').duration is not empty %}
+								<p class="detail">
+									<i class="fa-regular fa-clock"></i> <span class="h6">{{ post.meta('prestastions_items_list_item_3').duration }}</span>
+								</p>
+							{% endif %}
+							{% if post.meta('prestastions_items_list_item_3').price is not empty %}
+								<p class="detail">
+									<i class="fa-solid fa-tag"></i> <span class="h6">{{ post.meta('prestastions_items_list_item_3').price }}</span>
+								</p>
+							{% endif %}
 						</div>
 					</div>
 				{% endif %}
@@ -144,13 +158,20 @@
 								<p>{{ post.meta('prestastions_items_list_item_4').benefits }}</p>
 							</div>
 
-							<p class="badge margin-xs">Durée & tarif</p>
-							<p class="detail">
-								<i class="fa-regular fa-clock"></i> <span class="h6">{{ post.meta('prestastions_items_list_item_4').duration }}</span>
-							</p>
-							<p class="detail">
-								<i class="fa-solid fa-tag"></i> <span class="h6">{{ post.meta('prestastions_items_list_item_4').price }}</span>
-							</p>
+							{% if post.meta('prestastions_items_list_item_4').duration is not empty or post.meta('prestastions_items_list_item_4').price is not empty %}
+								<p class="badge margin-xs">Durée & tarif</p>
+							{% endif %}
+
+							{% if post.meta('prestastions_items_list_item_4').duration is not empty %}
+								<p class="detail">
+									<i class="fa-regular fa-clock"></i> <span class="h6">{{ post.meta('prestastions_items_list_item_4').duration }}</span>
+								</p>
+							{% endif %}
+							{% if post.meta('prestastions_items_list_item_4').price is not empty %}
+								<p class="detail">
+									<i class="fa-solid fa-tag"></i> <span class="h6">{{ post.meta('prestastions_items_list_item_4').price }}</span>
+								</p>
+							{% endif %}
 						</div>
 					</div>
 				{% endif %}
@@ -171,13 +192,20 @@
 								<p>{{ post.meta('prestastions_items_list_item_5').benefits }}</p>
 							</div>
 
-							<p class="badge margin-xs">Durée & tarif</p>
-							<p class="detail">
-								<i class="fa-regular fa-clock"></i> <span class="h6">{{ post.meta('prestastions_items_list_item_5').duration }}</span>
-							</p>
-							<p class="detail">
-								<i class="fa-solid fa-tag"></i> <span class="h6">{{ post.meta('prestastions_items_list_item_5').price }}</span>
-							</p>
+							{% if post.meta('prestastions_items_list_item_5').duration is not empty or post.meta('prestastions_items_list_item_5').price is not empty %}
+								<p class="badge margin-xs">Durée & tarif</p>
+							{% endif %}
+
+							{% if post.meta('prestastions_items_list_item_5').duration is not empty %}
+								<p class="detail">
+									<i class="fa-regular fa-clock"></i> <span class="h6">{{ post.meta('prestastions_items_list_item_5').duration }}</span>
+								</p>
+							{% endif %}
+							{% if post.meta('prestastions_items_list_item_5').price is not empty %}
+								<p class="detail">
+									<i class="fa-solid fa-tag"></i> <span class="h6">{{ post.meta('prestastions_items_list_item_5').price }}</span>
+								</p>
+							{% endif %}
 						</div>
 					</div>
 				{% endif %}
@@ -198,13 +226,20 @@
 								<p>{{ post.meta('prestastions_items_list_item_plus').benefits }}</p>
 							</div>
 
-							<p class="badge margin-xs">Durée & tarif</p>
-							<p class="detail">
-								<i class="fa-regular fa-clock"></i> <span class="h6">{{ post.meta('prestastions_items_list_item_plus').duration }}</span>
-							</p>
-							<p class="detail">
-								<i class="fa-solid fa-tag"></i> <span class="h6">{{ post.meta('prestastions_items_list_item_plus').price }}</span>
-							</p>
+							{% if post.meta('prestastions_items_list_item_plus').duration is not empty or post.meta('prestastions_items_list_item_plus').price is not empty %}
+								<p class="badge margin-xs">Durée & tarif</p>
+							{% endif %}
+
+							{% if post.meta('prestastions_items_list_item_plus').duration is not empty %}
+								<p class="detail">
+									<i class="fa-regular fa-clock"></i> <span class="h6">{{ post.meta('prestastions_items_list_item_plus').duration }}</span>
+								</p>
+							{% endif %}
+							{% if post.meta('prestastions_items_list_item_plus').price is not empty %}
+								<p class="detail">
+									<i class="fa-solid fa-tag"></i> <span class="h6">{{ post.meta('prestastions_items_list_item_plus').price }}</span>
+								</p>
+							{% endif %}
 						</div>
 					</div>
 				{% endif %}
