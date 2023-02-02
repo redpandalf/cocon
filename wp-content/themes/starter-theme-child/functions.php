@@ -93,6 +93,8 @@ class StarterSite extends Timber\Site {
     $context['footer_menu'] = new Timber\Menu('Footer Menu');
 
 		// Widgets 
+		$context['contact_block_bottom'] = Timber::get_widgets('contact_block_bottom');
+		
 		$context['prefooter_block_legal'] = Timber::get_widgets('prefooter_block_legal');
 
 		$context['footer_block_contact'] 	= Timber::get_widgets('footer_block_contact');
@@ -209,6 +211,22 @@ new StarterSite();
 
 // Widgets list
 function cocon_widgets_init() {
+
+	// Widget Contact Block
+	register_sidebar(array(
+		'name' 						=> 'Bloc Contact (bas de page)',
+		'id'							=> 'contact_block_bottom',
+		'description'    => '',
+		'class'          => '',
+		'before_widget' 	=> '',
+		'after_widget' 		=> '',
+		'before_title' 		=> '',
+		'after_title' 		=> '',
+		'before_sidebar'	=> '',
+		'after_sidebar' 	=> '',
+		'show_in_rest'   => false,
+	));
+
 	// Widget Pre Footer - legal notice
 	register_sidebar(array(
 		'name' 						=> 'Pre Footer : Bloc Mentions Légales',
