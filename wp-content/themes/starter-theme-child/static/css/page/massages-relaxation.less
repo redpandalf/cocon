@@ -24,8 +24,11 @@
   // Liste des Massages
   .massages-list-section {
     > * {
-      padding-right: 0;
-      padding-left: 0;
+      // DESKTOP
+      @media screen and (min-width: @screen-s) {
+        padding-right: 0;
+        padding-left: 0;
+      }
       // list item
       .list-items {
         > * {
