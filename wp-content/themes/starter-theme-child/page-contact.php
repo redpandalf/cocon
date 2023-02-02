@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Contact
+ * Template Name: Page Contact
  *
  * Displays the Business Template of the theme.
  *

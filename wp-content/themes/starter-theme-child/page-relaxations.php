@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Relaxations
+ * Template Name: Page Relaxations
  *
  * Displays the Business Template of the theme.
  *

@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: A propos
+ * Template Name: Page à propos
  *
  * Displays the Business Template of the theme.
  *
