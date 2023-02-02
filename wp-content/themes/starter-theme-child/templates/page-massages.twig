@@ -386,46 +386,44 @@
 	</div>
 	
 
-	{# Deroulement 
+	{# Deroulement #}
 	<div class="background-dark-grey process-section" id="deroulement-de-seance">
 		<div class="row">
 
-			<h2 class="title margin-l align-center">Le déroulement</h2>
+			<h2 class="title margin-l align-center">{{ post.meta('prestastions_process_title') }}</h2>
 
 			<div class="flexbox flex-wrap process-items">
-				<div>
-					<h3 class="title h5 margin-s">Le lieu & le temps</h3>
-					<p>Une petite pièce est suffisante pour recevoir un massage. <br>
-					Il faut seulement prévoir assez d’espace pour que je puisse me déplacer autour de la table de massage.</p>
 
-					<p>Pensez à chauffer un peu votre pièce lorsque la température est fraîche.</p>
+				{% if post.meta('prestastions_process_place_time').title is not empty %}
+					<div>
+						<h3 class="title h5 margin-s">{{ post.meta('prestastions_process_place_time').title }}</h3>
+						<p>{{ post.meta('prestastions_process_place_time').text }}</p>
+					</div>
+				{% endif %}
 
-					<p>révoir entre 45 et 60 minutes. <br>
-					Prévoir 30 minutes de plus pour l’avant et l’après massage.</p>
-				</div>
-
-
-				<div>
-					<h3 class="title h5 margin-s">La tenue & le matériel</h3>
-					<p>Recouvert d’un drap, seule la partie massé sera visible.<br>
-					A vous de choisir si vous préférez restez en sous-vêtement, ou en maillot de bain. </p>
-
-					<p>Pour les femmes, la poitrine reste couverte tout au long du massage. </p>
-				</div>
+				{% if post.meta('prestastions_process_outfit_material').title is not empty %}
+					<div>
+						<h3 class="title h5 margin-s">{{ post.meta('prestastions_process_outfit_material').title }}</h3>
+						<p>{{ post.meta('prestastions_process_outfit_material').text }}</p>
+					</div>
+				{% endif %}
 
 				<div class="align-center"><img src="{{ site.theme.link }}/static/img/natural-illustration-4.svg" alt="" width="83" class="filter-invert" /></div>
 				<div class="align-center"><img src="{{ site.theme.link }}/static/img/natural-illustration-4.svg" alt="" width="83" class="filter-invert revert-vertical" /></div>
 
-				<div>
-					<h3 class="title h5 margin-s">Avant le massage</h3>
-					<p>L'installation de votre cocon ne prend que 10 minutes. Pendant ce temps, je vous laisse le soin de vous préparer à recevoir votre massage.</p>
-				</div>
+				{% if post.meta('prestastions_process_before').title is not empty %}
+					<div>
+						<h3 class="title h5 margin-s">{{ post.meta('prestastions_process_before').title }}</h3>
+						<p>{{ post.meta('prestastions_process_before').text }}</p>
+					</div>
+				{% endif %}
 
-
-				<div>
-					<h3 class="title h5 margin-s">Après le massage</h3>
-					<p>Vous aurez le temps de vous éveiller tranquillement de votre massage. <br>Si vous le souhaitez, nous prendrons quelques instants ensemble pour partager une boisson chaude et échanger sur votre expérience.</p>
-				</div>
+				{% if post.meta('prestastions_process_after').title is not empty %}
+					<div>
+						<h3 class="title h5 margin-s">{{ post.meta('prestastions_process_after').text }}</h3>
+						<p>{{ post.meta('prestastions_process_after').text }}</p>
+					</div>
+				{% endif %}
 
 
 				<div class="align-center margin-auto">
@@ -443,7 +441,7 @@
 
 		</div>
 	</div>
-	#}
+	
 
 
 	{# Bienfaits
