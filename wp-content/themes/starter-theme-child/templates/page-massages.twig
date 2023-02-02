@@ -90,6 +90,31 @@
 					</div>
 				{% endif %}
 
+				{% if post.meta('prestastions_items_list_item_3').active == 1 %}
+					<div>
+						<center class="margin-s"><img src="{{ post.meta('prestastions_items_list_item_3').illustration }}" alt="{{ post.meta('prestastions_items_list_item_3').title }}" /></center>
+						<div>
+							<div class="margin-m">
+								<h2 class="title h4 margin-xs">{{ post.meta('prestastions_items_list_item_3').title }}</h2>
+								<p>{{ post.meta('prestastions_items_list_item_3').description }}</p>
+							</div>
+
+							<div class="margin-m">
+								<p class="badge margin-xs">Bienfaits</p>
+								<p>{{ post.meta('prestastions_items_list_item_3').benefits }}</p>
+							</div>
+
+							<p class="badge margin-xs">Durée & tarif</p>
+							<p class="detail">
+								<i class="fa-regular fa-clock"></i> <span class="h6">{{ post.meta('prestastions_items_list_item_3').duration }}</span>
+							</p>
+							<p class="detail">
+								<i class="fa-solid fa-tag"></i> <span class="h6">{{ post.meta('prestastions_items_list_item_3').price }}</span>
+							</p>
+						</div>
+					</div>
+				{% endif %}
+
 
 				{#
 				<div>
