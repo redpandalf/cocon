@@ -11,7 +11,7 @@
 				<h1 class="title margin-l">{{ post.title }}</h1>
 
 				{% if post.content is not empty %}
-					<p>{{ post.content }}</p>
+					<div class="margin-m">{{ post.content }}</div>
 				{% endif %}
 
 				{% if post.meta('prestastions_cover_primary_button').url is not empty %}
