@@ -50,11 +50,13 @@
 								<h2 class="title h4 margin-xs">{{ post.meta('prestastions_items_list_item_1').title }}</h2>
 								<p>{{ post.meta('prestastions_items_list_item_1').description }}</p>
 							</div>
-
-							<div class="margin-m">
-								<p class="badge margin-xs">Bienfaits</p>
-								<p>{{ post.meta('prestastions_items_list_item_1').benefits }}</p>
-							</div>
+							
+							{% if post.meta('prestastions_items_list_item_1').benefits is not empty %}
+								<div class="margin-m">
+									<p class="badge margin-xs">Bienfaits</p>
+									<p>{{ post.meta('prestastions_items_list_item_1').benefits }}</p>
+								</div>
+							{% endif %}
 
 							{% if post.meta('prestastions_items_list_item_1').duration is not empty or post.meta('prestastions_items_list_item_1').price is not empty %}
 								<p class="badge margin-xs">Durée & tarif</p>
@@ -85,10 +87,12 @@
 								<p>{{ post.meta('prestastions_items_list_item_2').description }}</p>
 							</div>
 
-							<div class="margin-m">
-								<p class="badge margin-xs">Bienfaits</p>
-								<p>{{ post.meta('prestastions_items_list_item_2').benefits }}</p>
-							</div>
+							{% if post.meta('prestastions_items_list_item_2').benefits is not empty %}
+								<div class="margin-m">
+									<p class="badge margin-xs">Bienfaits</p>
+									<p>{{ post.meta('prestastions_items_list_item_2').benefits }}</p>
+								</div>
+							{% endif %}
 
 							{% if post.meta('prestastions_items_list_item_2').duration is not empty or post.meta('prestastions_items_list_item_2').price is not empty %}
 								<p class="badge margin-xs">Durée & tarif</p>
@@ -119,10 +123,12 @@
 								<p>{{ post.meta('prestastions_items_list_item_3').description }}</p>
 							</div>
 
-							<div class="margin-m">
-								<p class="badge margin-xs">Bienfaits</p>
-								<p>{{ post.meta('prestastions_items_list_item_3').benefits }}</p>
-							</div>
+							{% if post.meta('prestastions_items_list_item_3').benefits is not empty %}
+								<div class="margin-m">
+									<p class="badge margin-xs">Bienfaits</p>
+									<p>{{ post.meta('prestastions_items_list_item_3').benefits }}</p>
+								</div>
+							{% endif %}
 
 							{% if post.meta('prestastions_items_list_item_3').duration is not empty or post.meta('prestastions_items_list_item_3').price is not empty %}
 								<p class="badge margin-xs">Durée & tarif</p>
@@ -153,10 +159,12 @@
 								<p>{{ post.meta('prestastions_items_list_item_4').description }}</p>
 							</div>
 
-							<div class="margin-m">
-								<p class="badge margin-xs">Bienfaits</p>
-								<p>{{ post.meta('prestastions_items_list_item_4').benefits }}</p>
-							</div>
+							{% if post.meta('prestastions_items_list_item_4').benefits is not empty %}
+								<div class="margin-m">
+									<p class="badge margin-xs">Bienfaits</p>
+									<p>{{ post.meta('prestastions_items_list_item_4').benefits }}</p>
+								</div>
+							{% endif %}
 
 							{% if post.meta('prestastions_items_list_item_4').duration is not empty or post.meta('prestastions_items_list_item_4').price is not empty %}
 								<p class="badge margin-xs">Durée & tarif</p>
@@ -187,10 +195,12 @@
 								<p>{{ post.meta('prestastions_items_list_item_5').description }}</p>
 							</div>
 
-							<div class="margin-m">
-								<p class="badge margin-xs">Bienfaits</p>
-								<p>{{ post.meta('prestastions_items_list_item_5').benefits }}</p>
-							</div>
+							{% if post.meta('prestastions_items_list_item_5').benefits is not empty %}
+								<div class="margin-m">
+									<p class="badge margin-xs">Bienfaits</p>
+									<p>{{ post.meta('prestastions_items_list_item_5').benefits }}</p>
+								</div>
+							{% endif %}
 
 							{% if post.meta('prestastions_items_list_item_5').duration is not empty or post.meta('prestastions_items_list_item_5').price is not empty %}
 								<p class="badge margin-xs">Durée & tarif</p>
@@ -221,10 +231,12 @@
 								<p>{{ post.meta('prestastions_items_list_item_plus').description }}</p>
 							</div>
 
-							<div class="margin-m">
-								<p class="badge margin-xs">Bienfaits</p>
-								<p>{{ post.meta('prestastions_items_list_item_plus').benefits }}</p>
-							</div>
+							{% if post.meta('prestastions_items_list_item_plus').benefits is not empty %}
+								<div class="margin-m">
+									<p class="badge margin-xs">Bienfaits</p>
+									<p>{{ post.meta('prestastions_items_list_item_plus').benefits }}</p>
+								</div>
+							{% endif %}
 
 							{% if post.meta('prestastions_items_list_item_plus').duration is not empty or post.meta('prestastions_items_list_item_plus').price is not empty %}
 								<p class="badge margin-xs">Durée & tarif</p>
