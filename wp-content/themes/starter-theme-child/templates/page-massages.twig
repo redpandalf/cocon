@@ -32,358 +32,360 @@
 	
 
 	{# Liste des massages #}
-	<div class="margin-xxl massages-list-section" id="decouvrir-les-massages">
-		<div class="row">
-			
-			<div class="align-center margin-l"><img src="{{ site.theme.link }}/static/img/arabesque-1.svg" alt="" width="400"/></div>
+	{% if post.meta('prestastions_items_list_active') == 1 %}
+		<div class="margin-xxl massages-list-section" id="decouvrir-les-massages">
+			<div class="row">
+				
+				<div class="align-center margin-l"><img src="{{ site.theme.link }}/static/img/arabesque-1.svg" alt="" width="400"/></div>
 
-			<div class="margin-l flexbox flex-wrap justify-content-center align-items-start list-items">
+				<div class="margin-l flexbox flex-wrap justify-content-center align-items-start list-items">
 
 
-				{% if post.meta('prestastions_items_list_item_1').active == 1 %}
+					{% if post.meta('prestastions_items_list_item_1').active == 1 %}
+						<div>
+							{% if post.meta('prestastions_items_list_item_1').illustration is not empty %}
+								<center class="margin-s"><img src="{{ post.meta('prestastions_items_list_item_1').illustration }}" alt="{{ post.meta('prestastions_items_list_item_1').title }}" /></center>
+							{% endif %}
+							<div>
+								<div class="margin-m">
+									<h2 class="title h4 margin-xs">{{ post.meta('prestastions_items_list_item_1').title }}</h2>
+									<p>{{ post.meta('prestastions_items_list_item_1').description }}</p>
+								</div>
+
+								{% if post.meta('prestastions_items_list_item_1').benefits is not empty %}
+									<div class="margin-m">
+										<p class="badge margin-xs">Bienfaits</p>
+										<p>{{ post.meta('prestastions_items_list_item_1').benefits }}</p>
+									</div>
+								{% endif %}
+
+								{% if post.meta('prestastions_items_list_item_1').duration is not empty or post.meta('prestastions_items_list_item_1').price is not empty %}
+									<p class="badge margin-xs">Durée & tarif</p>
+								{% endif %}
+
+								{% if post.meta('prestastions_items_list_item_1').duration is not empty %}
+									<p class="detail">
+										<i class="fa-regular fa-clock"></i> <span class="h6">{{ post.meta('prestastions_items_list_item_1').duration }}</span>
+									</p>
+								{% endif %}
+								{% if post.meta('prestastions_items_list_item_1').price is not empty %}
+									<p class="detail">
+										<i class="fa-solid fa-tag"></i> <span class="h6">{{ post.meta('prestastions_items_list_item_1').price }}</span>
+									</p>
+								{% endif %}
+							</div>
+						</div>
+					{% endif %}
+
+					{% if post.meta('prestastions_items_list_item_2').active == 1 %}
+						<div>
+							{% if post.meta('prestastions_items_list_item_2').illustration is not empty %}
+								<center class="margin-s"><img src="{{ post.meta('prestastions_items_list_item_2').illustration }}" alt="{{ post.meta('prestastions_items_list_item_2').title }}" /></center>
+							{% endif %}
+							<div>
+								<div class="margin-m">
+									<h2 class="title h4 margin-xs">{{ post.meta('prestastions_items_list_item_2').title }}</h2>
+									<p>{{ post.meta('prestastions_items_list_item_2').description }}</p>
+								</div>
+
+								{% if post.meta('prestastions_items_list_item_2').benefits is not empty %}
+									<div class="margin-m">
+										<p class="badge margin-xs">Bienfaits</p>
+										<p>{{ post.meta('prestastions_items_list_item_2').benefits }}</p>
+									</div>
+								{% endif %}
+
+								{% if post.meta('prestastions_items_list_item_2').duration is not empty or post.meta('prestastions_items_list_item_2').price is not empty %}
+									<p class="badge margin-xs">Durée & tarif</p>
+								{% endif %}
+
+								{% if post.meta('prestastions_items_list_item_2').duration is not empty %}
+									<p class="detail">
+										<i class="fa-regular fa-clock"></i> <span class="h6">{{ post.meta('prestastions_items_list_item_2').duration }}</span>
+									</p>
+								{% endif %}
+								{% if post.meta('prestastions_items_list_item_2').price is not empty %}
+									<p class="detail">
+										<i class="fa-solid fa-tag"></i> <span class="h6">{{ post.meta('prestastions_items_list_item_2').price }}</span>
+									</p>
+								{% endif %}
+							</div>
+						</div>
+					{% endif %}
+
+					{% if post.meta('prestastions_items_list_item_3').active == 1 %}
+						<div>
+							{% if post.meta('prestastions_items_list_item_3').illustration is not empty %}
+								<center class="margin-s"><img src="{{ post.meta('prestastions_items_list_item_3').illustration }}" alt="{{ post.meta('prestastions_items_list_item_3').title }}" /></center>
+							{% endif %}
+							<div>
+								<div class="margin-m">
+									<h2 class="title h4 margin-xs">{{ post.meta('prestastions_items_list_item_3').title }}</h2>
+									<p>{{ post.meta('prestastions_items_list_item_3').description }}</p>
+								</div>
+
+								{% if post.meta('prestastions_items_list_item_3').benefits is not empty %}
+									<div class="margin-m">
+										<p class="badge margin-xs">Bienfaits</p>
+										<p>{{ post.meta('prestastions_items_list_item_3').benefits }}</p>
+									</div>
+								{% endif %}
+
+								{% if post.meta('prestastions_items_list_item_3').duration is not empty or post.meta('prestastions_items_list_item_3').price is not empty %}
+									<p class="badge margin-xs">Durée & tarif</p>
+								{% endif %}
+
+								{% if post.meta('prestastions_items_list_item_3').duration is not empty %}
+									<p class="detail">
+										<i class="fa-regular fa-clock"></i> <span class="h6">{{ post.meta('prestastions_items_list_item_3').duration }}</span>
+									</p>
+								{% endif %}
+								{% if post.meta('prestastions_items_list_item_3').price is not empty %}
+									<p class="detail">
+										<i class="fa-solid fa-tag"></i> <span class="h6">{{ post.meta('prestastions_items_list_item_3').price }}</span>
+									</p>
+								{% endif %}
+							</div>
+						</div>
+					{% endif %}
+
+					{% if post.meta('prestastions_items_list_item_4').active == 1 %}
+						<div>
+							{% if post.meta('prestastions_items_list_item_4').illustration is not empty %}
+								<center class="margin-s"><img src="{{ post.meta('prestastions_items_list_item_4').illustration }}" alt="{{ post.meta('prestastions_items_list_item_4').title }}" /></center>
+							{% endif %}
+							<div>
+								<div class="margin-m">
+									<h2 class="title h4 margin-xs">{{ post.meta('prestastions_items_list_item_4').title }}</h2>
+									<p>{{ post.meta('prestastions_items_list_item_4').description }}</p>
+								</div>
+
+								{% if post.meta('prestastions_items_list_item_4').benefits is not empty %}
+									<div class="margin-m">
+										<p class="badge margin-xs">Bienfaits</p>
+										<p>{{ post.meta('prestastions_items_list_item_4').benefits }}</p>
+									</div>
+								{% endif %}
+
+								{% if post.meta('prestastions_items_list_item_4').duration is not empty or post.meta('prestastions_items_list_item_4').price is not empty %}
+									<p class="badge margin-xs">Durée & tarif</p>
+								{% endif %}
+
+								{% if post.meta('prestastions_items_list_item_4').duration is not empty %}
+									<p class="detail">
+										<i class="fa-regular fa-clock"></i> <span class="h6">{{ post.meta('prestastions_items_list_item_4').duration }}</span>
+									</p>
+								{% endif %}
+								{% if post.meta('prestastions_items_list_item_4').price is not empty %}
+									<p class="detail">
+										<i class="fa-solid fa-tag"></i> <span class="h6">{{ post.meta('prestastions_items_list_item_4').price }}</span>
+									</p>
+								{% endif %}
+							</div>
+						</div>
+					{% endif %}
+
+					{% if post.meta('prestastions_items_list_item_5').active == 1 %}
+						<div>
+							{% if post.meta('prestastions_items_list_item_5').illustration is not empty %}
+								<center class="margin-s"><img src="{{ post.meta('prestastions_items_list_item_5').illustration }}" alt="{{ post.meta('prestastions_items_list_item_5').title }}" /></center>
+							{% endif %}
+							<div>
+								<div class="margin-m">
+									<h2 class="title h4 margin-xs">{{ post.meta('prestastions_items_list_item_5').title }}</h2>
+									<p>{{ post.meta('prestastions_items_list_item_5').description }}</p>
+								</div>
+
+								{% if post.meta('prestastions_items_list_item_5').benefits is not empty %}
+									<div class="margin-m">
+										<p class="badge margin-xs">Bienfaits</p>
+										<p>{{ post.meta('prestastions_items_list_item_5').benefits }}</p>
+									</div>
+								{% endif %}
+
+								{% if post.meta('prestastions_items_list_item_5').duration is not empty or post.meta('prestastions_items_list_item_5').price is not empty %}
+									<p class="badge margin-xs">Durée & tarif</p>
+								{% endif %}
+
+								{% if post.meta('prestastions_items_list_item_5').duration is not empty %}
+									<p class="detail">
+										<i class="fa-regular fa-clock"></i> <span class="h6">{{ post.meta('prestastions_items_list_item_5').duration }}</span>
+									</p>
+								{% endif %}
+								{% if post.meta('prestastions_items_list_item_5').price is not empty %}
+									<p class="detail">
+										<i class="fa-solid fa-tag"></i> <span class="h6">{{ post.meta('prestastions_items_list_item_5').price }}</span>
+									</p>
+								{% endif %}
+							</div>
+						</div>
+					{% endif %}
+
+					{% if post.meta('prestastions_items_list_item_plus').active == 1 %}
+						<div class="highlight background-sweet-orange">
+							{% if post.meta('prestastions_items_list_item_plus').illustration is not empty %}
+								<center class="margin-s"><img src="{{ post.meta('prestastions_items_list_item_plus').illustration }}" alt="{{ post.meta('prestastions_items_list_item_plus').title }}" /></center>
+							{% endif %}
+							<div>
+								<div class="margin-m">
+									<h2 class="title h4 margin-xs">{{ post.meta('prestastions_items_list_item_plus').title }}</h2>
+									<p>{{ post.meta('prestastions_items_list_item_plus').description }}</p>
+								</div>
+
+								{% if post.meta('prestastions_items_list_item_plus').benefits is not empty %}
+									<div class="margin-m">
+										<p class="badge margin-xs">Bienfaits</p>
+										<p>{{ post.meta('prestastions_items_list_item_plus').benefits }}</p>
+									</div>
+								{% endif %}
+
+								{% if post.meta('prestastions_items_list_item_plus').duration is not empty or post.meta('prestastions_items_list_item_plus').price is not empty %}
+									<div class="detail flexbox flex-wrap">
+										{% if post.meta('prestastions_items_list_item_plus').duration is not empty %}
+											<p class="detail">
+												<i class="fa-regular fa-clock"></i> <span class="h6">{{ post.meta('prestastions_items_list_item_plus').duration }}</span>
+											</p>
+										{% endif %}
+										{% if post.meta('prestastions_items_list_item_plus').price is not empty %}
+											<p class="detail">
+												<i class="fa-solid fa-tag"></i> <span class="h6">{{ post.meta('prestastions_items_list_item_plus').price }}</span>
+											</p>
+										{% endif %}
+									</div>
+								{% endif %}
+
+							</div>
+						</div>
+					{% endif %}
+
+
+					{#
 					<div>
-						{% if post.meta('prestastions_items_list_item_1').illustration is not empty %}
-							<center class="margin-s"><img src="{{ post.meta('prestastions_items_list_item_1').illustration }}" alt="{{ post.meta('prestastions_items_list_item_1').title }}" /></center>
-						{% endif %}
+						<center class="margin-s"><img src="{{ site.theme.link }}/static/img/massages/illu-suedois.svg" alt="" /></center>
+
 						<div>
 							<div class="margin-m">
-								<h2 class="title h4 margin-xs">{{ post.meta('prestastions_items_list_item_1').title }}</h2>
-								<p>{{ post.meta('prestastions_items_list_item_1').description }}</p>
+								<h2 class="title h4 margin-xs">Le Suédois sportif</h2>
+								<p>Sportif.ve ? En préparation ou récupération d’un évènement sportif ? Ou juste l'envie d’un massage dynamique ? Optez pour la version dynamique de ce massage ! </p>
 							</div>
 
-							{% if post.meta('prestastions_items_list_item_1').benefits is not empty %}
-								<div class="margin-m">
-									<p class="badge margin-xs">Bienfaits</p>
-									<p>{{ post.meta('prestastions_items_list_item_1').benefits }}</p>
-								</div>
-							{% endif %}
+							<div class="margin-m">
+								<p class="badge margin-xs">Bienfaits</p>
+								<p>Lorem ipsum damet ic for salutant.</p>
+							</div>
 
-							{% if post.meta('prestastions_items_list_item_1').duration is not empty or post.meta('prestastions_items_list_item_1').price is not empty %}
-								<p class="badge margin-xs">Durée & tarif</p>
-							{% endif %}
-
-							{% if post.meta('prestastions_items_list_item_1').duration is not empty %}
-								<p class="detail">
-									<i class="fa-regular fa-clock"></i> <span class="h6">{{ post.meta('prestastions_items_list_item_1').duration }}</span>
-								</p>
-							{% endif %}
-							{% if post.meta('prestastions_items_list_item_1').price is not empty %}
-								<p class="detail">
-									<i class="fa-solid fa-tag"></i> <span class="h6">{{ post.meta('prestastions_items_list_item_1').price }}</span>
-								</p>
-							{% endif %}
+							<p class="badge margin-xs">Durée & tarif</p>
+							<p class="detail">
+								<i class="fa-regular fa-clock"></i> <span class="h6">45min</span>
+							</p>
+							<p class="detail">
+								<i class="fa-solid fa-tag"></i> <span class="h6">75€</span>
+							</p>
 						</div>
 					</div>
-				{% endif %}
 
-				{% if post.meta('prestastions_items_list_item_2').active == 1 %}
 					<div>
-						{% if post.meta('prestastions_items_list_item_2').illustration is not empty %}
-							<center class="margin-s"><img src="{{ post.meta('prestastions_items_list_item_2').illustration }}" alt="{{ post.meta('prestastions_items_list_item_2').title }}" /></center>
-						{% endif %}
+						<center class="margin-s"><img src="{{ site.theme.link }}/static/img/massages/illu-ayurveda.svg" alt="" /></center>
+
 						<div>
 							<div class="margin-m">
-								<h2 class="title h4 margin-xs">{{ post.meta('prestastions_items_list_item_2').title }}</h2>
-								<p>{{ post.meta('prestastions_items_list_item_2').description }}</p>
+								<h2 class="title h4 margin-xs">L'Ayurvéda Abhyanga</h2>
+								<p>Fatigué.e ? Manque d’équilibre ? Besoin d’éliminer les toxines ? Optez pour ce massage de tradition indienne pour rééquilibrer vos Doshas.</p>
 							</div>
 
-							{% if post.meta('prestastions_items_list_item_2').benefits is not empty %}
-								<div class="margin-m">
-									<p class="badge margin-xs">Bienfaits</p>
-									<p>{{ post.meta('prestastions_items_list_item_2').benefits }}</p>
-								</div>
-							{% endif %}
+							<div class="margin-m">
+								<p class="badge margin-xs">Bienfaits</p>
+								<p>Lorem ipsum damet ic for salutant.</p>
+							</div>
 
-							{% if post.meta('prestastions_items_list_item_2').duration is not empty or post.meta('prestastions_items_list_item_2').price is not empty %}
-								<p class="badge margin-xs">Durée & tarif</p>
-							{% endif %}
-
-							{% if post.meta('prestastions_items_list_item_2').duration is not empty %}
-								<p class="detail">
-									<i class="fa-regular fa-clock"></i> <span class="h6">{{ post.meta('prestastions_items_list_item_2').duration }}</span>
-								</p>
-							{% endif %}
-							{% if post.meta('prestastions_items_list_item_2').price is not empty %}
-								<p class="detail">
-									<i class="fa-solid fa-tag"></i> <span class="h6">{{ post.meta('prestastions_items_list_item_2').price }}</span>
-								</p>
-							{% endif %}
+							<p class="badge margin-xs">Durée & tarif</p>
+							<p class="detail">
+								<i class="fa-regular fa-clock"></i> <span class="h6">45min</span>
+							</p>
+							<p class="detail">
+								<i class="fa-solid fa-tag"></i> <span class="h6">75€</span>
+							</p>
 						</div>
 					</div>
-				{% endif %}
 
-				{% if post.meta('prestastions_items_list_item_3').active == 1 %}
 					<div>
-						{% if post.meta('prestastions_items_list_item_3').illustration is not empty %}
-							<center class="margin-s"><img src="{{ post.meta('prestastions_items_list_item_3').illustration }}" alt="{{ post.meta('prestastions_items_list_item_3').title }}" /></center>
-						{% endif %}
+						<center class="margin-s"><img src="{{ site.theme.link }}/static/img/massages/illu-head-neck.svg" alt="" /></center>
 						<div>
 							<div class="margin-m">
-								<h2 class="title h4 margin-xs">{{ post.meta('prestastions_items_list_item_3').title }}</h2>
-								<p>{{ post.meta('prestastions_items_list_item_3').description }}</p>
+								<h2 class="title h4 margin-xs">Head-Neck & Shoulders</h2>
+								<p>Optez pour une détente complète du haut du dos et de la nuque.</p>
 							</div>
 
-							{% if post.meta('prestastions_items_list_item_3').benefits is not empty %}
-								<div class="margin-m">
-									<p class="badge margin-xs">Bienfaits</p>
-									<p>{{ post.meta('prestastions_items_list_item_3').benefits }}</p>
-								</div>
-							{% endif %}
+							<div class="margin-m">
+								<p class="badge margin-xs">Bienfaits</p>
+								<p>Lorem ipsum damet ic for salutant. Plebiscité nam oc oricilus plebissa. Ore militant damet bellum !</p>
+							</div>
 
-							{% if post.meta('prestastions_items_list_item_3').duration is not empty or post.meta('prestastions_items_list_item_3').price is not empty %}
-								<p class="badge margin-xs">Durée & tarif</p>
-							{% endif %}
-
-							{% if post.meta('prestastions_items_list_item_3').duration is not empty %}
-								<p class="detail">
-									<i class="fa-regular fa-clock"></i> <span class="h6">{{ post.meta('prestastions_items_list_item_3').duration }}</span>
-								</p>
-							{% endif %}
-							{% if post.meta('prestastions_items_list_item_3').price is not empty %}
-								<p class="detail">
-									<i class="fa-solid fa-tag"></i> <span class="h6">{{ post.meta('prestastions_items_list_item_3').price }}</span>
-								</p>
-							{% endif %}
+							<p class="badge margin-xs">Durée & tarif</p>
+							<p class="detail">
+								<i class="fa-regular fa-clock"></i> <span class="h6">35min</span>
+							</p>
+							<p class="detail">
+								<i class="fa-solid fa-tag"></i> <span class="h6">45€</span>
+							</p>
 						</div>
 					</div>
-				{% endif %}
 
-				{% if post.meta('prestastions_items_list_item_4').active == 1 %}
 					<div>
-						{% if post.meta('prestastions_items_list_item_4').illustration is not empty %}
-							<center class="margin-s"><img src="{{ post.meta('prestastions_items_list_item_4').illustration }}" alt="{{ post.meta('prestastions_items_list_item_4').title }}" /></center>
-						{% endif %}
+						<center class="margin-s"><img src="{{ site.theme.link }}/static/img/massages/illu-nuad-thai.svg" alt="" /></center>
 						<div>
 							<div class="margin-m">
-								<h2 class="title h4 margin-xs">{{ post.meta('prestastions_items_list_item_4').title }}</h2>
-								<p>{{ post.meta('prestastions_items_list_item_4').description }}</p>
+								<h2 class="title h4 margin-xs">Le Nuad Thai</h2>
+								<p>Raideurs corporelles ? Besoin d’étirement après ou avant un évènement sportif ? <br>Optez pour ce massage qui va réveiller votre corps ! </p>
 							</div>
 
-							{% if post.meta('prestastions_items_list_item_4').benefits is not empty %}
-								<div class="margin-m">
-									<p class="badge margin-xs">Bienfaits</p>
-									<p>{{ post.meta('prestastions_items_list_item_4').benefits }}</p>
-								</div>
-							{% endif %}
-
-							{% if post.meta('prestastions_items_list_item_4').duration is not empty or post.meta('prestastions_items_list_item_4').price is not empty %}
-								<p class="badge margin-xs">Durée & tarif</p>
-							{% endif %}
-
-							{% if post.meta('prestastions_items_list_item_4').duration is not empty %}
-								<p class="detail">
-									<i class="fa-regular fa-clock"></i> <span class="h6">{{ post.meta('prestastions_items_list_item_4').duration }}</span>
-								</p>
-							{% endif %}
-							{% if post.meta('prestastions_items_list_item_4').price is not empty %}
-								<p class="detail">
-									<i class="fa-solid fa-tag"></i> <span class="h6">{{ post.meta('prestastions_items_list_item_4').price }}</span>
-								</p>
-							{% endif %}
-						</div>
-					</div>
-				{% endif %}
-
-				{% if post.meta('prestastions_items_list_item_5').active == 1 %}
-					<div>
-						{% if post.meta('prestastions_items_list_item_5').illustration is not empty %}
-							<center class="margin-s"><img src="{{ post.meta('prestastions_items_list_item_5').illustration }}" alt="{{ post.meta('prestastions_items_list_item_5').title }}" /></center>
-						{% endif %}
-						<div>
 							<div class="margin-m">
-								<h2 class="title h4 margin-xs">{{ post.meta('prestastions_items_list_item_5').title }}</h2>
-								<p>{{ post.meta('prestastions_items_list_item_5').description }}</p>
+								<p class="badge margin-xs">Bienfaits</p>
+								<p>Lorem ipsum damet ic for salutant.</p>
 							</div>
 
-							{% if post.meta('prestastions_items_list_item_5').benefits is not empty %}
-								<div class="margin-m">
-									<p class="badge margin-xs">Bienfaits</p>
-									<p>{{ post.meta('prestastions_items_list_item_5').benefits }}</p>
-								</div>
-							{% endif %}
-
-							{% if post.meta('prestastions_items_list_item_5').duration is not empty or post.meta('prestastions_items_list_item_5').price is not empty %}
-								<p class="badge margin-xs">Durée & tarif</p>
-							{% endif %}
-
-							{% if post.meta('prestastions_items_list_item_5').duration is not empty %}
-								<p class="detail">
-									<i class="fa-regular fa-clock"></i> <span class="h6">{{ post.meta('prestastions_items_list_item_5').duration }}</span>
-								</p>
-							{% endif %}
-							{% if post.meta('prestastions_items_list_item_5').price is not empty %}
-								<p class="detail">
-									<i class="fa-solid fa-tag"></i> <span class="h6">{{ post.meta('prestastions_items_list_item_5').price }}</span>
-								</p>
-							{% endif %}
+							<p class="badge margin-xs">Durée & tarif</p>
+							<p class="detail">
+								<i class="fa-regular fa-clock"></i> <span class="h6">60min</span>
+							</p>
+							<p class="detail">
+								<i class="fa-solid fa-tag"></i> <span class="h6">85€</span>
+							</p>
 						</div>
 					</div>
-				{% endif %}
 
-				{% if post.meta('prestastions_items_list_item_plus').active == 1 %}
 					<div class="highlight background-sweet-orange">
-						{% if post.meta('prestastions_items_list_item_plus').illustration is not empty %}
-							<center class="margin-s"><img src="{{ post.meta('prestastions_items_list_item_plus').illustration }}" alt="{{ post.meta('prestastions_items_list_item_plus').title }}" /></center>
-						{% endif %}
+						<center class="margin-s"><img src="{{ site.theme.link }}/static/img/massages/illu-plus.svg" alt="" /></center>
 						<div>
 							<div class="margin-m">
-								<h2 class="title h4 margin-xs">{{ post.meta('prestastions_items_list_item_plus').title }}</h2>
-								<p>{{ post.meta('prestastions_items_list_item_plus').description }}</p>
+								<h2 class="title h4 margin-xs">Le petit plus... </h2>
+								<p>Pour plus de bénéfice du massage, une relaxation guidée de 5 minutes est proposée gratuitement avant le massage.</p>
 							</div>
 
-							{% if post.meta('prestastions_items_list_item_plus').benefits is not empty %}
-								<div class="margin-m">
-									<p class="badge margin-xs">Bienfaits</p>
-									<p>{{ post.meta('prestastions_items_list_item_plus').benefits }}</p>
-								</div>
-							{% endif %}
+							<div class="margin-m">
+								<p class="badge margin-xs">Bienfaits</p>
+								<p>Lorem ipsum damet ic for salutant. Vel dol ores exercitationem est dignis simos dolor.</p>
+							</div>
 
-							{% if post.meta('prestastions_items_list_item_plus').duration is not empty or post.meta('prestastions_items_list_item_plus').price is not empty %}
-								<div class="detail flexbox flex-wrap">
-									{% if post.meta('prestastions_items_list_item_plus').duration is not empty %}
-										<p class="detail">
-											<i class="fa-regular fa-clock"></i> <span class="h6">{{ post.meta('prestastions_items_list_item_plus').duration }}</span>
-										</p>
-									{% endif %}
-									{% if post.meta('prestastions_items_list_item_plus').price is not empty %}
-										<p class="detail">
-											<i class="fa-solid fa-tag"></i> <span class="h6">{{ post.meta('prestastions_items_list_item_plus').price }}</span>
-										</p>
-									{% endif %}
-								</div>
-							{% endif %}
-
+							<div class="detail flexbox flex-wrap">
+								<p>
+									<i class="fa-regular fa-clock"></i> <span class="h6">5min</span>
+								</p>
+								<p>
+									<i class="fa-solid fa-tag"></i> <span class="h6">Gratuit</span>
+								</p>
+							</div>
 						</div>
 					</div>
-				{% endif %}
+					#}
 
-
-				{#
-				<div>
-					<center class="margin-s"><img src="{{ site.theme.link }}/static/img/massages/illu-suedois.svg" alt="" /></center>
-
-					<div>
-						<div class="margin-m">
-							<h2 class="title h4 margin-xs">Le Suédois sportif</h2>
-							<p>Sportif.ve ? En préparation ou récupération d’un évènement sportif ? Ou juste l'envie d’un massage dynamique ? Optez pour la version dynamique de ce massage ! </p>
-						</div>
-
-						<div class="margin-m">
-							<p class="badge margin-xs">Bienfaits</p>
-							<p>Lorem ipsum damet ic for salutant.</p>
-						</div>
-
-						<p class="badge margin-xs">Durée & tarif</p>
-						<p class="detail">
-							<i class="fa-regular fa-clock"></i> <span class="h6">45min</span>
-						</p>
-						<p class="detail">
-							<i class="fa-solid fa-tag"></i> <span class="h6">75€</span>
-						</p>
-					</div>
 				</div>
 
-				<div>
-					<center class="margin-s"><img src="{{ site.theme.link }}/static/img/massages/illu-ayurveda.svg" alt="" /></center>
-
-					<div>
-						<div class="margin-m">
-							<h2 class="title h4 margin-xs">L'Ayurvéda Abhyanga</h2>
-							<p>Fatigué.e ? Manque d’équilibre ? Besoin d’éliminer les toxines ? Optez pour ce massage de tradition indienne pour rééquilibrer vos Doshas.</p>
-						</div>
-
-						<div class="margin-m">
-							<p class="badge margin-xs">Bienfaits</p>
-							<p>Lorem ipsum damet ic for salutant.</p>
-						</div>
-
-						<p class="badge margin-xs">Durée & tarif</p>
-						<p class="detail">
-							<i class="fa-regular fa-clock"></i> <span class="h6">45min</span>
-						</p>
-						<p class="detail">
-							<i class="fa-solid fa-tag"></i> <span class="h6">75€</span>
-						</p>
-					</div>
-				</div>
-
-				<div>
-					<center class="margin-s"><img src="{{ site.theme.link }}/static/img/massages/illu-head-neck.svg" alt="" /></center>
-					<div>
-						<div class="margin-m">
-							<h2 class="title h4 margin-xs">Head-Neck & Shoulders</h2>
-							<p>Optez pour une détente complète du haut du dos et de la nuque.</p>
-						</div>
-
-						<div class="margin-m">
-							<p class="badge margin-xs">Bienfaits</p>
-							<p>Lorem ipsum damet ic for salutant. Plebiscité nam oc oricilus plebissa. Ore militant damet bellum !</p>
-						</div>
-
-						<p class="badge margin-xs">Durée & tarif</p>
-						<p class="detail">
-							<i class="fa-regular fa-clock"></i> <span class="h6">35min</span>
-						</p>
-						<p class="detail">
-							<i class="fa-solid fa-tag"></i> <span class="h6">45€</span>
-						</p>
-					</div>
-				</div>
-
-				<div>
-					<center class="margin-s"><img src="{{ site.theme.link }}/static/img/massages/illu-nuad-thai.svg" alt="" /></center>
-					<div>
-						<div class="margin-m">
-							<h2 class="title h4 margin-xs">Le Nuad Thai</h2>
-							<p>Raideurs corporelles ? Besoin d’étirement après ou avant un évènement sportif ? <br>Optez pour ce massage qui va réveiller votre corps ! </p>
-						</div>
-
-						<div class="margin-m">
-							<p class="badge margin-xs">Bienfaits</p>
-							<p>Lorem ipsum damet ic for salutant.</p>
-						</div>
-
-						<p class="badge margin-xs">Durée & tarif</p>
-						<p class="detail">
-							<i class="fa-regular fa-clock"></i> <span class="h6">60min</span>
-						</p>
-						<p class="detail">
-							<i class="fa-solid fa-tag"></i> <span class="h6">85€</span>
-						</p>
-					</div>
-				</div>
-
-				<div class="highlight background-sweet-orange">
-					<center class="margin-s"><img src="{{ site.theme.link }}/static/img/massages/illu-plus.svg" alt="" /></center>
-					<div>
-						<div class="margin-m">
-							<h2 class="title h4 margin-xs">Le petit plus... </h2>
-							<p>Pour plus de bénéfice du massage, une relaxation guidée de 5 minutes est proposée gratuitement avant le massage.</p>
-						</div>
-
-						<div class="margin-m">
-							<p class="badge margin-xs">Bienfaits</p>
-							<p>Lorem ipsum damet ic for salutant. Vel dol ores exercitationem est dignis simos dolor.</p>
-						</div>
-
-						<div class="detail flexbox flex-wrap">
-							<p>
-								<i class="fa-regular fa-clock"></i> <span class="h6">5min</span>
-							</p>
-							<p>
-								<i class="fa-solid fa-tag"></i> <span class="h6">Gratuit</span>
-							</p>
-						</div>
-					</div>
-				</div>
-				 #}
-
+				<div class="align-center"><img src="{{ site.theme.link }}/static/img/arabesque-1.svg" alt="" width="400" class="revert-vertical" /></div>
+			
 			</div>
-
-			<div class="align-center"><img src="{{ site.theme.link }}/static/img/arabesque-1.svg" alt="" width="400" class="revert-vertical" /></div>
-		
 		</div>
-	</div>
+	{% endif %}
 	
 
 	{# Deroulement #}
