@@ -425,17 +425,18 @@
 					</div>
 				{% endif %}
 
-
+		
 				<div class="align-center margin-auto">
 					<img src="{{ site.theme.link }}/static/img/natural-illustration-4.svg" alt="" width="83" class="filter-invert revert-vertical" />
 					<img src="{{ site.theme.link }}/static/img/natural-illustration-4.svg" alt="" width="83" class="filter-invert" />					
 				</div>
-
-				<div>
-					<h3 class="title h5 margin-s">Les contres indications</h3>
-					<p>Fièvre – Maladie contagieuse et infectieuse – Hémophilie – Trouble cardiaque – Cancer – Phlébite – Grossesse. </p>
-					<p>Si vous avez des doutes sur une pathologie, nous pouvons en discuter pour savoir ce qui sera le plus adapté pour vous ou demander conseil à votre médecin. </p>
-				</div>
+				
+				{% if post.meta('prestastions_process_counter_indications').title is not empty %}
+					<div>
+						<h3 class="title h5 margin-s">{{ post.meta('prestastions_process_counter_indications').title }}</h3>
+						<p>{{ post.meta('prestastions_process_counter_indications').text }}</p>
+					</div>
+				{% endif %}
 
 			</div>
 
