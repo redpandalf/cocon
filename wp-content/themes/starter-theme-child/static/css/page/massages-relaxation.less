@@ -201,7 +201,10 @@
 .page-template-page-relaxations {
   .cover {
     .block-title {
-      max-width: 85%;
+      // mobile
+      @media screen and (min-width: @screen-m) {
+        max-width: 85%;
+      }
     }
   }  
 }
