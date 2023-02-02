@@ -4,14 +4,27 @@
 
 	{# Cover #}
 	<div class="margin-xxl flexbox align-items-center background-dark-grey cover" 
-	style="background-image: url('{{ post.meta('prestastions_cover_background') }}');">
+			 style="background-image: url('{{ post.meta('prestastions_cover_background') }}');">
 		<div class="row">
 
 			<div class="block-title">
 				<h1 class="title margin-l">{{ post.title }}</h1>
 
-				<a href="#decouvrir-les-massages" title="Découvrir les massages" class="button button-primary">Découvrir les massages</a>
-				<a href="#deroulement-de-seance" title="Comment se déroule une séance ?" class="button button-secondary">Comment se déroule une séance ?</a>
+				{% if post.content is not empty %}
+					<p>{{ post.content }}</p>
+				{% endif %}
+
+				{% if post.meta('prestastions_cover_primary_button').url is not empty %}
+					<a href="{{ post.meta('prestastions_cover_primary_button').url }}" title="{{ post.meta('prestastions_cover_primary_button').label }}" class="button button-primary">
+						{{ post.meta('prestastions_cover_primary_button').label }}
+					</a>
+				{% endif %}
+
+				{% if post.meta('prestastions_cover_secondary_button').url is not empty %}
+					<a href="{{ post.meta('prestastions_cover_secondary_button').url }}" title="{{ post.meta('prestastions_cover_secondary_button').label }}" class="button button-secondary">
+						{{ post.meta('prestastions_cover_secondary_button').label }}
+					</a>
+				{% endif %}
 			</div> 
 
 		</div>
