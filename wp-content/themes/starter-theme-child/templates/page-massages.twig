@@ -69,7 +69,7 @@
 
 				{% if post.meta('prestastions_items_list_item_2').active == 1 %}
 					<div>
-						{% if post.meta('prestastions_items_list_item_3').illustration is not empty %}
+						{% if post.meta('prestastions_items_list_item_2').illustration is not empty %}
 							<center class="margin-s"><img src="{{ post.meta('prestastions_items_list_item_2').illustration }}" alt="{{ post.meta('prestastions_items_list_item_2').title }}" /></center>
 						{% endif %}
 						<div>
@@ -116,6 +116,87 @@
 							</p>
 							<p class="detail">
 								<i class="fa-solid fa-tag"></i> <span class="h6">{{ post.meta('prestastions_items_list_item_3').price }}</span>
+							</p>
+						</div>
+					</div>
+				{% endif %}
+
+				{% if post.meta('prestastions_items_list_item_4').active == 1 %}
+					<div>
+						{% if post.meta('prestastions_items_list_item_4').illustration is not empty %}
+							<center class="margin-s"><img src="{{ post.meta('prestastions_items_list_item_4').illustration }}" alt="{{ post.meta('prestastions_items_list_item_4').title }}" /></center>
+						{% endif %}
+						<div>
+							<div class="margin-m">
+								<h2 class="title h4 margin-xs">{{ post.meta('prestastions_items_list_item_4').title }}</h2>
+								<p>{{ post.meta('prestastions_items_list_item_4').description }}</p>
+							</div>
+
+							<div class="margin-m">
+								<p class="badge margin-xs">Bienfaits</p>
+								<p>{{ post.meta('prestastions_items_list_item_4').benefits }}</p>
+							</div>
+
+							<p class="badge margin-xs">Durée & tarif</p>
+							<p class="detail">
+								<i class="fa-regular fa-clock"></i> <span class="h6">{{ post.meta('prestastions_items_list_item_4').duration }}</span>
+							</p>
+							<p class="detail">
+								<i class="fa-solid fa-tag"></i> <span class="h6">{{ post.meta('prestastions_items_list_item_4').price }}</span>
+							</p>
+						</div>
+					</div>
+				{% endif %}
+
+				{% if post.meta('prestastions_items_list_item_5').active == 1 %}
+					<div>
+						{% if post.meta('prestastions_items_list_item_5').illustration is not empty %}
+							<center class="margin-s"><img src="{{ post.meta('prestastions_items_list_item_5').illustration }}" alt="{{ post.meta('prestastions_items_list_item_5').title }}" /></center>
+						{% endif %}
+						<div>
+							<div class="margin-m">
+								<h2 class="title h4 margin-xs">{{ post.meta('prestastions_items_list_item_5').title }}</h2>
+								<p>{{ post.meta('prestastions_items_list_item_5').description }}</p>
+							</div>
+
+							<div class="margin-m">
+								<p class="badge margin-xs">Bienfaits</p>
+								<p>{{ post.meta('prestastions_items_list_item_5').benefits }}</p>
+							</div>
+
+							<p class="badge margin-xs">Durée & tarif</p>
+							<p class="detail">
+								<i class="fa-regular fa-clock"></i> <span class="h6">{{ post.meta('prestastions_items_list_item_5').duration }}</span>
+							</p>
+							<p class="detail">
+								<i class="fa-solid fa-tag"></i> <span class="h6">{{ post.meta('prestastions_items_list_item_5').price }}</span>
+							</p>
+						</div>
+					</div>
+				{% endif %}
+
+				{% if post.meta('prestastions_items_list_item_plus').active == 1 %}
+					<div>
+						{% if post.meta('prestastions_items_list_item_plus').illustration is not empty %}
+							<center class="margin-s"><img src="{{ post.meta('prestastions_items_list_item_plus').illustration }}" alt="{{ post.meta('prestastions_items_list_item_plus').title }}" /></center>
+						{% endif %}
+						<div>
+							<div class="margin-m">
+								<h2 class="title h4 margin-xs">{{ post.meta('prestastions_items_list_item_plus').title }}</h2>
+								<p>{{ post.meta('prestastions_items_list_item_plus').description }}</p>
+							</div>
+
+							<div class="margin-m">
+								<p class="badge margin-xs">Bienfaits</p>
+								<p>{{ post.meta('prestastions_items_list_item_plus').benefits }}</p>
+							</div>
+
+							<p class="badge margin-xs">Durée & tarif</p>
+							<p class="detail">
+								<i class="fa-regular fa-clock"></i> <span class="h6">{{ post.meta('prestastions_items_list_item_plus').duration }}</span>
+							</p>
+							<p class="detail">
+								<i class="fa-solid fa-tag"></i> <span class="h6">{{ post.meta('prestastions_items_list_item_plus').price }}</span>
 							</p>
 						</div>
 					</div>
