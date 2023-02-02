@@ -9,10 +9,13 @@
 .page-template-page-relaxations {
   //
   .cover {
+    //desktop
+    @media screen and (min-width: @screen-l) {
+      min-height: 500px;
+    }
     > * {
       padding-top: @space-m;
       padding-bottom: @space-m;
-      min-height: 500px;
       color: #fff;
     }
 
