@@ -46,8 +46,8 @@
 	<section>
 
 		<div class="margin-xl row contact-formulaire">
-			<h2>Une question ?</h2>
-			<p class="sub-title margin-xl">je vous réponds...</p>
+			<h2>{{ post.meta('contact_form_title') }}</h2>
+			<p class="sub-title margin-xl">{{ post.meta('contact_form_subtitle') }}</p>
 	
 			{% include 'partial/form.twig' %}
 
@@ -59,11 +59,7 @@
 	<div class="background-light-grey align-center caption color-grey-950 legal-notice">
 		<div class="row">
 			<br class="is-hidden-on-mobile">
-			<p>Vos données sont traitées par Cocon afin de répondre à vos demandes d'information.<br>
-			Le destinataire est Cocon et son sous-traitant en charge de la gestion du serveur web (o2switch - France).<br>
-			Pour plus d'informations sur le traitement de vos données et l'exercice de vos droits, reportez-vous à notre politique de confidentialité
-			<br><br>
-			Les informations demandées sont nécessaires au traitement de votre demande.</p>
+			{{ post.meta('contact_form_legale_notice') }}
 			<br class="is-hidden-on-mobile">
 		</div>
 	</div>
