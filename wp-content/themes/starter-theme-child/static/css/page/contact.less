@@ -11,14 +11,15 @@
       min-height: 700px;
     }
     > * {
-      padding-right: 35%;
+      
       // mobile
-      @media screen and (max-width: @screen-s) {    
-        //padding-right: 20%;
+      @media screen and (min-width: @screen-s) {    
+        padding-right: 35%;
       }
       // desktop
       @media screen and (min-width: 1250px) {  
         padding-right: 500px;
+
       }
 
       .contact-details {
