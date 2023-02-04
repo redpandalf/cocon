@@ -41,11 +41,6 @@
           @media screen and (min-width: @screen-xxl) {  
             min-width: 0;
             flex: none;
-
-            &.email-item {
-              min-width: 40%;
-              flex-wrap: initial;
-            }
           }
           // tablet
           @media screen and (max-width: 860px) {  
@@ -54,6 +49,13 @@
             flex-wrap: wrap;
             align-items: flex-start;
             padding: 0;
+          }
+          &.email-item {
+            flex-wrap: initial;
+            // desktop
+            @media screen and (min-width: @screen-xxl) {  
+              min-width: 40%;
+            }
           }
           i {
             margin-right: 0;
