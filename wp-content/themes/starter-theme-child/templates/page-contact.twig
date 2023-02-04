@@ -45,7 +45,7 @@
 	{# Form #}
 	<section>
 		<div class="margin-xl row contact-formulaire">
-			{% is post.meta('contact_form_title') is not empty %}
+			{% if post.meta('contact_form_title') is not empty %}
 				<h2>{{ post.meta('contact_form_title') }}</h2>
 			{% endif %}
 			{% if post.meta('contact_form_subtitle') is not empty %}
