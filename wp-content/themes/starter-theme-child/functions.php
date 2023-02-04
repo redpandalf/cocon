@@ -302,3 +302,9 @@ function filter_wpcf7_response_output( $output ){
 	return $output; 
 }
 add_filter( 'wpcf7_form_response_output', 'filter_wpcf7_response_output', 10, 1 );
+
+function cf7_add_custom_class( $error ) {
+	$error=str_replace("class=\"","class=\"MyClass1 MyClass2 ", $error);
+	return $error;
+}
+add_filter('wpcf7_validation_error', 'cf7_add_custom_class');
