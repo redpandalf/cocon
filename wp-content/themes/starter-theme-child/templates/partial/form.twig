@@ -1,7 +1,9 @@
 <form class="row form-contact"> 
   
-  {{ wp.do_shortcode('[contact-form-7 id="393" title="Contact form"]') }}
-  
+  {% filter shortcodes %}
+    [contact-form-7 id="393" title="Contact form"]
+  {% endfilter %}
+
 {#
   <div class="margin-s">
     <label for="contact-objet">Pour quel envie ?</label>
