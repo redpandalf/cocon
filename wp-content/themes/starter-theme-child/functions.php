@@ -290,3 +290,4 @@ function cocon_widgets_init() {
 
 
 add_filter('wpcf7_autop_or_not', '__return_false');
+remove_filter('the_content', 'wpautop');
