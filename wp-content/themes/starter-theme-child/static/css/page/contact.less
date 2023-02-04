@@ -39,8 +39,12 @@
           order: 3;
           // desktop
           @media screen and (min-width: @screen-xxl) {  
-            min-width: 31%;
+            min-width: 0;
             flex: none;
+
+            &:nth-child(2) {
+              min-width: 33%;
+            }
           }
           // tablet
           @media screen and (max-width: 860px) {  
