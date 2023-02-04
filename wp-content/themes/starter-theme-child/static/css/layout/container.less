@@ -191,7 +191,9 @@ body {
           margin-bottom: 5px;
           //tablet
           @media screen and (max-width: @screen-l) {
-            font-size: @font-size-h6;
+            &:not(.caption) {
+              font-size: @font-size-h6;
+            }
           }
           &.caption {
             min-width: 100%;
