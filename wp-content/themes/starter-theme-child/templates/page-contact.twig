@@ -44,25 +44,28 @@
 
 	{# Form #}
 	<section>
-
 		<div class="margin-xl row contact-formulaire">
-			<h2>{{ post.meta('contact_form_title') }}</h2>
-			<p class="sub-title margin-xl">{{ post.meta('contact_form_subtitle') }}</p>
-	
+			{% is post.meta('contact_form_title') is not empty %}
+				<h2>{{ post.meta('contact_form_title') }}</h2>
+			{% endif %}
+			{% if post.meta('contact_form_subtitle') is not empty %}
+				<p class="sub-title margin-xl">{{ post.meta('contact_form_subtitle') }}</p>
+			{% endif %}				
+
 			{% include 'partial/form.twig' %}
-
 		</div>
-
 	</section>
 
 	{# Legal notice #}
-	<div class="background-light-grey align-center caption color-grey-950 legal-notice">
-		<div class="row">
-			<br class="is-hidden-on-mobile">
-			{{ post.meta('contact_form_legal_notice') }}
-			<br class="is-hidden-on-mobile">
+	{% if post.meta('contact_form_legal_notice') is not empty %}
+		<div class="background-light-grey align-center caption color-grey-950 legal-notice">
+			<div class="row">
+				<br class="is-hidden-on-mobile">
+				{{ post.meta('contact_form_legal_notice') }}
+				<br class="is-hidden-on-mobile">
+			</div>
 		</div>
-	</div>
+	{% endif %}
 
 {% endblock %}
 
