@@ -288,9 +288,17 @@ function cocon_widgets_init() {
 
 }
 
-
+// Form settings
+//
 // Remove auto p from Contact Form 7 shortcode output
 add_filter('wpcf7_autop_or_not', 'wpcf7_autop_return_false');
 function wpcf7_autop_return_false() {
 	return false;
 }
+
+function filter_wpcf7_response_output( $output ){
+	// Replace Success CSS Class
+	$output = str_replace( ' wpcf7-mail-sent-ok', ' alert alert-success', $output );
+	return $output; 
+}
+add_filter( 'wpcf7_form_response_output', 'filter_wpcf7_response_output', 10, 1 );
