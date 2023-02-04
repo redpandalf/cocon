@@ -44,27 +44,26 @@
 	{% endif %}
 	
 
-	{# Philosophie
-	<div class="immersif-background my-philosophy">
-		<div class="bg-block"></div>
-		<div class="row content-text-block">
-			<div class="content revert">
-				<img src="{{ site.theme.link }}/static/img/natural-illustration-8.svg" alt="" class="illustration-top" height="190" />
-				<h2 class="align-center title">Ma philosophie</h2>
+	{# Philosophie #}
+	{% if post.meta('about_philosophy_title') is not empty 
+		or post.meta('about_philosophy_presentation') is not empty 
+		or post.meta('about_philosophy_background') is not empty 
+	%}
+		<div class="immersif-background my-philosophy">
+			<div class="bg-block" style="background-image: url('{{ post.meta('about_philosophy_background') }}');"></div>
+			<div class="row content-text-block">
+				<div class="content revert">
+					<img src="{{ site.theme.link }}/static/img/natural-illustration-8.svg" alt="" class="illustration-top" height="190" />
+					<h2 class="align-center title">{{ post.meta('about_philosophy_title') }}</h2>
 
-				<p>Les listes des choses à faire qui s’allongent, les obligations professionnelles, familiales, sociétales qui s’accumulent !</p> 
-				<p class="h6 margin-s">Et votre « soi » dans tout cela ?</p>
-				<p>A travers mon activité de bien-être c’est vous donner la porte d’accès à votre Être qui m’importe. 
-				Vous donnez l’opportunité de <strong>renouer avec vous-mêmes</strong>, d’être apaisé malgré une société oppressante et trop rapide. 
-				Vous proposer des instants uniques pour <strong>relâcher les pressions du corps et de l’esprit</strong> ; respirer enfin rien que pour vous.</p>
-				<p><strong>Se reconnecter à soi</strong>, c’est aussi s’accepter tel que Je Suis. Souvent noyer dans la multitude, nous oublions d’apprendre à nous aimer. Étant passer (et y travaillant toujours) par une longue quête d’acception de moi-même, je saurai plus qu’heureuse de pouvoir vous aider à faire quelques pas sur ce chemin.</p>
-				<p>Ma valeur intrinsèque est <strong>le respect</strong>. Aucun jugement ne sera émis lors de mes séances. Je sais être une bonne oreille et mes paroles ne sont que le vecteur d’astuces et d’exercices de bien-être que je partage avec vous. </p>
+					{{ post.meta('about_philosophy_presentation') }}
 			
-				<img src="{{ site.theme.link }}/static/img/natural-illustration-8.svg" alt="" class="illustration" height="320" />
+					<img src="{{ site.theme.link }}/static/img/natural-illustration-8.svg" alt="" class="illustration" height="320" />
+				</div>
 			</div>
 		</div>
-	</div>
-	#}
+	{% endif %}
+	
 
 	{# Engagements
 	<div class="immersif-background my-engagment">
