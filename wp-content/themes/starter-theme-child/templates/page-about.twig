@@ -15,32 +15,33 @@
 	</div>
 
 	{# Parcours #}
-	<div class="immersif-background my-cover">
-		<div class="bg-block" style="background-image: url('{{ post.meta('about_career_path_background') }}');"></div>
-		
-		<div class="row content-text-block">
-			<div class="content">
-				<h2 class="align-center title">{{ post.meta('about_career_path_title') }}</h2>
+	{% if post.meta('about_career_path_title') is not empty 
+		 or post.meta('about_career_path_presentation') is not empty 
+		 or post.meta('about_career_path_background') is not empty 
+	%}
+		<div class="immersif-background my-cover">
+			<div class="bg-block" style="background-image: url('{{ post.meta('about_career_path_background') }}');"></div>
+			
+			<div class="row content-text-block">
+				<div class="content">
+					{% if post.meta('about_career_path_title') is not empty %}
+						<h2 class="align-center title">{{ post.meta('about_career_path_title') }}</h2>
+					{% endif %}
 
-				<!--<p><span class="display-block h5 margin-xs">Je m’appelle Léa.</span> Nantaise d’origine mais tomber en amour pour le Morbihan, je m’y suis installé depuis quelques années.</p>
-				<p>J’eus ma révélation pour le massage bien-être en 2016, lors d’un festival de sensibilisation et d’intégration aux handicaps. <br>Bénévole dans l’espace détente, j’ai observé les résultats de courts massages : du relâchement, de l’apaisement et des sourires. Beaucoup de sourires ! Je me suis dit « d’accord, c’est ça que je veux faire. »</p>
-				<p>Depuis, je me suis formée au massage bien-être à l’école Azenday sur Nantes. J’ai ainsi pu développer des techniques professionnelles et découvrir la richesse du milieu du bien-être.</p>
-				<p>En parallèle, je mets en pratique <strong>plusieurs techniques de relaxation issues du massage, du yoga, de la sophrologie, de la méditation, du chamanisme ou encore de la communication non violente</strong>. Remarquant les résultats probants sur mon être, je me sens obligée de partager ces découvertes.</p>
-				<p>Au fil des jours, <strong>je continue de me former</strong> pour proposer des nouvelles techniques de massages et de relaxation pour permettre à d’autres âmes que la mienne de bénéficier du bien-être que cela procure.</p>
-				-->
-				{{ post.meta('about_career_path_presentation') }}
-				
-				{% if post.meta('about_career_path_button').url is not empty %}
-					<br><br>
-					<a href="{{ post.meta('about_career_path_button').url }}" title="{{ post.meta('about_career_path_button').label }}" class="button button-primary">
-						{{ post.meta('about_career_path_button').label }}
-					</a>
-				{% endif %}
+					{{ post.meta('about_career_path_presentation') }}
+					
+					{% if post.meta('about_career_path_button').url is not empty %}
+						<br><br>
+						<a href="{{ post.meta('about_career_path_button').url }}" title="{{ post.meta('about_career_path_button').label }}" class="button button-primary">
+							{{ post.meta('about_career_path_button').label }}
+						</a>
+					{% endif %}
 
-				<img src="{{ site.theme.link }}/static/img/natural-illustration-7.svg" alt="" class="illustration" height="250" />
+					<img src="{{ site.theme.link }}/static/img/natural-illustration-7.svg" alt="" class="illustration" height="250" />
+				</div>
 			</div>
-		</div>
-	</div> 
+		</div> 
+	{% endif %}
 	
 
 	{# Philosophie
