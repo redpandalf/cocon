@@ -288,7 +288,6 @@ function cocon_widgets_init() {
 
 }
 
-
 // Remove auto p from Contact Form 7 shortcode output
 //dd_filter('wpcf7_autop_or_not', 'wpcf7_autop_return_false');
 //unction wpcf7_autop_return_false() {
