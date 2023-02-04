@@ -120,14 +120,6 @@
   }
 
   // Response
-  .wpcf7-response-output:not(:empty) {
-    border: 1px dotted #aaa;
-    padding: @space-m;
-    margin-bottom: @space-l;
-    background-color: #f9f9f9;
-    border-radius: 4px;
-    color: #000;
-  }
 
   //legal notice
   .legal-notice {
@@ -144,10 +136,39 @@
     margin-top: 5px;
   }
 
-  .wpcf7 form.failed .wpcf7-response-output,
-.wpcf7 form.aborted .wpcf7-response-output {
-    border-color: #dc3232; /* Red */
-}
+
+
+  .wpcf7-response-output:not(:empty) {
+    border: 1px dotted #aaa;
+    padding: @space-m;
+    margin-bottom: @space-l;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    color: #000;
+  }
+  
+  .init .wpcf7-response-output {
+      display: none;
+  }
+  
+  .sent .wpcf7-response-output {
+      border-color: #46b450; /* Green */
+  }
+  
+  .failed .wpcf7-response-output,
+  .aborted .wpcf7-response-output {
+      border-color: #dc3232; /* Red */
+  }
+  
+  .spam .wpcf7-response-output {
+      border-color: #f56e28; /* Orange */
+  }
+  
+  .invalid .wpcf7-response-output,
+  .unaccepted .wpcf7-response-output {
+      border-color: #ffb900; /* Yellow */
+  }
+
 
 }
 //
