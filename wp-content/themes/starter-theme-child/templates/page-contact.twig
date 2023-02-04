@@ -48,10 +48,12 @@
 			{% if post.meta('contact_form_title') is not empty %}
 				<h2>{{ post.meta('contact_form_title') }}</h2>
 			{% endif %}
+			
+			<span  id="formulaire-contact"></span>
+			
 			{% if post.meta('contact_form_subtitle') is not empty %}
 				<p class="sub-title margin-xl">{{ post.meta('contact_form_subtitle') }}</p>
 			{% endif %}
-			<span  id="formulaire-contact"></span>
 
 			{% include 'partial/form.twig' %}
 		</div>
