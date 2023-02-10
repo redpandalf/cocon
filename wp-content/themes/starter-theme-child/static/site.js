@@ -9,6 +9,6 @@ jQuery(document).ready(function() {
           r = jQuery(this).find(".no-all-clickable");
       "undefined" != typeof inputOfCar ? jQuery(event.target).closest(i).length || e(t) : (void 0 !== r && jQuery(event.target).closest(r).length) || e(t);
     });
-  }),
+  });
 
 });
