@@ -2,6 +2,7 @@
 
 {% block content %}
 
+	{# Intro #}
 	<div class="cover flexbox align-items-center background-dark-grey ">
 		<div class="row">
 
@@ -20,6 +21,7 @@
 		</div>
 	</div>
 
+	{# Citation #}
 	{% if post.meta('home_quote').quote is not empty %}
 		<div class="quote-block">
 			<div class="row align-center">
@@ -32,7 +34,7 @@
 		</div>
 	{% endif %}
 
-
+	{# Presta #}
 	{% if post.meta('home_prestations_active') != 0 %}
 		<div class="background-dark-grey prestations-block">
 			<div class="row">
@@ -51,7 +53,7 @@
 					{% if post.meta('home_prestations_massages').title is not empty 
 						or post.meta('home_prestations_massages').description is not empty
 					%}
-						<div class="item margin-s">				
+						<div class="item margin-s all-clickable">				
 							{% if post.meta('home_prestations_massages').image is not empty %}
 								<img src="{{ post.meta('home_prestations_massages').image }}" alt="{{ post.meta('home_prestations_massages').title }}" />
 							{% endif %}
@@ -161,7 +163,7 @@
 		</div>
 	{% endif %}
 
-
+	{# Valeurs & engagements #}
 	{% if post.meta('home_value_active') != 0 %}
 		<div class="row engagements-block">
 
