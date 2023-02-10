@@ -1,6 +1,16 @@
 /* Qui suis-je ? */
 @import "../styles.less";
 
+@-webkit-keyframes move-my-bg {
+	from {
+		-webkit-transform: translatey(0);
+	}
+	to { 
+		-webkit-transform: translatey(-80%);
+	}
+}
+
+
 .page-template-page-about {
   // Cover
   .cover {
@@ -42,6 +52,11 @@
         background-size: 103%;
         background-position: top center;
       }
+
+      -webkit-animation-name: move-my-bg;
+      -webkit-animation-duration: 50s;
+      -webkit-animation-timing-function: linear;
+      -webkit-animation-iteration-count: infinite;
     }    
     // content
     .content-text-block {  
