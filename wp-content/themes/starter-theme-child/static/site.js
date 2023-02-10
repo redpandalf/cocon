@@ -10,7 +10,7 @@ $( document ).ready( function( $ ) {
     var toto = jQuery(this).find("a:first-of-type").attr("href");
 
     jQuery(this).on("click", function() {
-      console.log('tot' + toto);
+      console.log(toto + ' - ' + e);
       /*
       var i = jQuery(this).find("input");
       var r = jQuery(this).find(".no-all-clickable");
