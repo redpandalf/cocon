@@ -22,7 +22,6 @@
     margin-bottom: 200px;
     height: 1150px;
     display: flex;
-    transform-style: preserve-3d;
     // mobile
     @media screen and (max-width: 767.5px) {  
       margin-bottom: -@space-s;
@@ -31,14 +30,18 @@
     // background
     .bg-block {
       border: 1px solid red;
+      
+      transform-style: preserve-3d;
+      position: relative;      
+      transform: translateZ(-1px) scale(1.5);
+
       width: 100%;
       height: inherit;
-      position: absolute;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-attachment: fixed;
-      transform: translateZ(-1px) scale(1.5);
+      //position: absolute;
+      //background-position: center;
+      //background-repeat: no-repeat;
+      //background-size: cover;
+      //background-attachment: fixed;
       // mobile
       @media screen and (max-width: 767.5px) {
         height: 40%;
