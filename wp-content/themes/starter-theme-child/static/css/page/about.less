@@ -72,17 +72,15 @@
         width: 100%;
         //tablet
         @media screen and (min-width: @screen-m) {
-          //position: absolute;
-          //bottom: -400px;
           right: 0;
           padding: @space-xl @space-xxl;
-          //margin: auto;
           width: 92%;
           top: 400px;
           margin: 0 0 0 auto;
         }
         &.revert {
-          margin: 0 auto 0 0;
+          margin-left: auto;
+          margin-right: 0;
         }
         .title {
           margin-bottom: @space-l;
@@ -179,5 +177,6 @@
     
   }
 }
+
 
 
