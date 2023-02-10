@@ -51,7 +51,10 @@
       position: relative;
       z-index: 50;
       height: 100%;
-      padding: 0;
+      // mobile
+      @media screen and (max-width: 767.5px) {
+        padding: 0;
+      }
 
       .content {
         position: relative;
