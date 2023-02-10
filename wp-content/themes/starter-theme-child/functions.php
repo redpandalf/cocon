@@ -176,7 +176,8 @@ class StarterSite extends Timber\Site {
 		$twig->addExtension( new Twig\Extension\StringLoaderExtension() );
 		$twig->addFilter( new Twig\TwigFilter( 'myfoo', array( $this, 'myfoo' ) ) );
 
-		$function = new Twig_SimpleFunction('enqueue_style', function () {		
+		$function = new Twig_SimpleFunction('enqueue_style', function () {
+			
 			// Homepage
 			if (is_front_page()) {
 				wp_enqueue_style('cocon-home', get_stylesheet_directory_uri() . '/static/css/page/home.less');
