@@ -82,7 +82,7 @@
 					{% if post.meta('home_prestations_individual_relax').title is not empty 
 						or post.meta('home_prestations_individual_relax').description is not empty
 					%}
-						<div class="item margin-s">				
+						<div class="item margin-s  all-clickable">				
 							{% if post.meta('home_prestations_individual_relax').image is not empty %}
 								<img src="{{ post.meta('home_prestations_individual_relax').image }}" alt="{{ post.meta('home_prestations_individual_relax').title }}" />
 							{% endif %}
@@ -111,7 +111,7 @@
 					{% if post.meta('home_prestations_group_relax').title is not empty 
 						or post.meta('home_prestations_group_relax').description is not empty
 					%}
-						<div class="item margin-s">				
+						<div class="item margin-s all-clickable">				
 							{% if post.meta('home_prestations_group_relax').image is not empty %}
 								<img src="{{ post.meta('home_prestations_group_relax').image }}" alt="{{ post.meta('home_prestations_group_relax').title }}" />
 							{% endif %}
