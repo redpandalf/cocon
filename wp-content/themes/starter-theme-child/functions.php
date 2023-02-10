@@ -173,6 +173,7 @@ class StarterSite extends Timber\Site {
 	 * @param string $twig get extension.
 	 */
 	public function add_to_twig( $twig ) {
+
 		$twig->addExtension( new Twig\Extension\StringLoaderExtension() );
 		$twig->addFilter( new Twig\TwigFilter( 'myfoo', array( $this, 'myfoo' ) ) );
 
@@ -197,9 +198,12 @@ class StarterSite extends Timber\Site {
 				// by default
 				wp_enqueue_style('cocon-default', get_stylesheet_directory_uri() . '/static/css/page/default.less');
 			}
+
+			wp_enqueue_script('cocon-script', get_stylesheet_directory_uri() . '/static/site.js');
 	 	});
 
-		 
+		
+
 		$twig->addFunction($function);
 
 		return $twig;
