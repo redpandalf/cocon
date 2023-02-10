@@ -1,5 +1,6 @@
-$(document).ready(function() {
+jQuery( document ).ready( function( $ ) {
 
+  // Your JavaScript goes here
   alert('Coucou');
 
   /*
