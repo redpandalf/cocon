@@ -42,7 +42,7 @@
             </div>
           </div>
         [/dd-parallax]
-    {% endfilter %}
+      {% endfilter %}
 			<!--<div class="bg-block" style="background-image: url('{{ post.meta('about_career_path_background') }}');"></div>-->
 			
 			
@@ -56,17 +56,23 @@
 		or post.meta('about_philosophy_background') is not empty 
 	%}
 		<div class="immersif-background my-philosophy">
-			<div class="bg-block" style="background-image: url('{{ post.meta('about_philosophy_background') }}');"></div>
-			<div class="row content-text-block">
-				<div class="content revert">
-					<img src="{{ site.theme.link }}/static/img/natural-illustration-8.svg" alt="" class="illustration-top" height="190" />
-					<h2 class="align-center title">{{ post.meta('about_philosophy_title') }}</h2>
 
-					{{ post.meta('about_philosophy_presentation') }}
-			
-					<img src="{{ site.theme.link }}/static/img/natural-illustration-8.svg" alt="" class="illustration" height="320" />
-				</div>
-			</div>
+      {% filter shortcodes %}
+        [dd-parallax img="{{ post.meta('about_philosophy_background') }}" mobile="{{ post.meta('about_philosophy_background') }}" height="800" speed="3" z-index="-100" offset="true"]   
+          <!--<div class="bg-block" style="background-image: url('{{ post.meta('about_philosophy_background') }}');"></div>-->
+          <div class="row content-text-block">
+            <div class="content revert">
+              <img src="{{ site.theme.link }}/static/img/natural-illustration-8.svg" alt="" class="illustration-top" height="190" />
+              <h2 class="align-center title">{{ post.meta('about_philosophy_title') }}</h2>
+
+              {{ post.meta('about_philosophy_presentation') }}
+          
+              <img src="{{ site.theme.link }}/static/img/natural-illustration-8.svg" alt="" class="illustration" height="320" />
+            </div>
+          </div>        
+        [/dd-parallax]
+      {% endfilter %}
+
 		</div>
 	{% endif %}
 	
