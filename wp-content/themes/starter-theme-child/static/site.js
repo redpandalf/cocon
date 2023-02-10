@@ -1,9 +1,7 @@
 $( document ).ready( function( $ ) {
 
-  // Your JavaScript goes here
-  alert('Coucou');
 
-
+  // all clickable function 
   $(".all-clickable").each(function () {
     var t = $(this).find("a:first-of-type").attr("href");
     $(this).on("click", function () {
