@@ -7,19 +7,16 @@ $( document ).ready( function( $ ) {
   }
 
   jQuery(".all-clickable").each(function() {
-    var toto = jQuery(this).find("a:first-of-type").attr("href");
+    var link = jQuery(this).find("a:first-of-type").attr("href");
 
-    jQuery(this).on("click", function() {
-      console.log(toto + ' - ' + e);
-    
+    jQuery(this).on("click", function() {    
       var i = jQuery(this).find("input");
-      var r = jQuery(this).find(".no-all-clickable");
+      var nolink = jQuery(this).find(".no-all-clickable");
     
-      "undefined" != typeof inputOfCar ? jQuery(event.target).closest(i).length || e(toto) : void 0 !== r && jQuery(event.target).closest(r).length || e(toto);
-      
-    });
-    
+      "undefined" != typeof inputOfCar ? jQuery(event.target).closest(i).length || e(link) : void 0 !== r && jQuery(event.target).closest(nolink).length || e(link);
+    });    
   });
+  //
   
 });
 
