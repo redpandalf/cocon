@@ -22,7 +22,7 @@
 		<div class="immersif-background my-cover">
     
       {% filter shortcodes %}
-        [dd-parallax img="{{ post.meta('about_career_path_background') }}" mobile="{{ post.meta('about_career_path_background') }}" height="800" speed="3" z-index="-100" offset="true"] 
+        [dd-parallax img="{{ post.meta('about_career_path_background') }}" mobile="{{ post.meta('about_career_path_background') }}" height="900" speed="3" z-index="-100" offset="true"] 
           <div class="row content-text-block">
             <div class="content">
               {% if post.meta('about_career_path_title') is not empty %}
@@ -58,7 +58,7 @@
 		<div class="immersif-background my-philosophy">
 
       {% filter shortcodes %}
-        [dd-parallax img="{{ post.meta('about_philosophy_background') }}" mobile="{{ post.meta('about_philosophy_background') }}" height="800" speed="3" z-index="-100" offset="true"]   
+        [dd-parallax img="{{ post.meta('about_philosophy_background') }}" mobile="{{ post.meta('about_philosophy_background') }}" height="950" speed="3" z-index="-100" offset="true"]   
           <!--<div class="bg-block" style="background-image: url('{{ post.meta('about_philosophy_background') }}');"></div>-->
           <div class="row content-text-block">
             <div class="content revert">
@@ -83,20 +83,25 @@
 		 or post.meta('about_engagement_background') is not empty 
 	%}
 		<div class="immersif-background my-engagment">
-			<div class="bg-block" style="background-image: url('{{ post.meta('about_engagement_background') }}');"></div>
-			<div class="row content-text-block">
-				<div class="content">
-					<img src="{{ site.theme.link }}/static/img/natural-illustration-4.svg" alt="" class="illustration-top" height="45" />
+			{% filter shortcodes %}
+        [dd-parallax img="{{ post.meta('about_engagement_background') }}" mobile="{{ post.meta('about_engagement_background') }}" height="900" speed="3" z-index="-100" offset="true"]   
+            <!--<div class="bg-block" style="background-image: url('{{ post.meta('about_engagement_background') }}');"></div>-->
+          <div class="row content-text-block">
+            <div class="content">
+              <img src="{{ site.theme.link }}/static/img/natural-illustration-4.svg" alt="" class="illustration-top" height="45" />
 
-					{% if post.meta('about_engagement_title') is not empty %}
-						<h2 class="align-center title">{{ post.meta('about_engagement_title') }}</h2>
-					{% endif %}
+              {% if post.meta('about_engagement_title') is not empty %}
+                <h2 class="align-center title">{{ post.meta('about_engagement_title') }}</h2>
+              {% endif %}
 
-					{{ post.meta('about_engagement_presentation') }}
-						
-					<img src="{{ site.theme.link }}/static/img/natural-illustration-4.svg" alt="" class="illustration" height="48" />
-				</div>
-			</div>
+              {{ post.meta('about_engagement_presentation') }}
+                
+              <img src="{{ site.theme.link }}/static/img/natural-illustration-4.svg" alt="" class="illustration" height="48" />
+            </div>
+          </div>  
+        [/dd-parallax]
+      {% endfilter %}
+
 		</div>
 	{% endif %}
 	
