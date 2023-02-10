@@ -1,4 +1,4 @@
-jQuery( document ).ready( function( $ ) {
+$( document ).ready( function( $ ) {
 
   // Your JavaScript goes here
   alert('Coucou');
