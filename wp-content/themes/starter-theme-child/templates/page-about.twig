@@ -22,34 +22,30 @@
 		<div class="immersif-background my-cover">
     
       {% filter shortcodes %}
-  
+        [dd-parallax img="{{ post.meta('about_career_path_background') }}" mobile="{{ post.meta('about_career_path_background') }}" height="100%" speed="3" z-index="-100" offset="true"] 
+          <div class="row content-text-block">
+            <div class="content">
+              {% if post.meta('about_career_path_title') is not empty %}
+                <h2 class="align-center title">{{ post.meta('about_career_path_title') }}</h2>
+              {% endif %}
 
-  [dd-parallax img="{{ post.meta('about_career_path_background') }}" height="600" speed="3" z-index="-100" mobile="mobile-image.jpg" offset="true"] 
+              {{ post.meta('about_career_path_presentation') }}
+              
+              {% if post.meta('about_career_path_button').url is not empty %}
+                <br><br>
+                <a href="{{ post.meta('about_career_path_button').url }}" title="{{ post.meta('about_career_path_button').label }}" class="button button-primary">
+                  {{ post.meta('about_career_path_button').label }}
+                </a>
+              {% endif %}
 
-    Text to be overlaid on the paralllax window
-
-    [/dd-parallax]
-  {% endfilter %}
+              <img src="{{ site.theme.link }}/static/img/natural-illustration-7.svg" alt="" class="illustration" height="250" />
+            </div>
+          </div>
+        [/dd-parallax]
+    {% endfilter %}
 			<!--<div class="bg-block" style="background-image: url('{{ post.meta('about_career_path_background') }}');"></div>-->
 			
-			<div class="row content-text-block">
-				<div class="content">
-					{% if post.meta('about_career_path_title') is not empty %}
-						<h2 class="align-center title">{{ post.meta('about_career_path_title') }}</h2>
-					{% endif %}
-
-					{{ post.meta('about_career_path_presentation') }}
-					
-					{% if post.meta('about_career_path_button').url is not empty %}
-						<br><br>
-						<a href="{{ post.meta('about_career_path_button').url }}" title="{{ post.meta('about_career_path_button').label }}" class="button button-primary">
-							{{ post.meta('about_career_path_button').label }}
-						</a>
-					{% endif %}
-
-					<img src="{{ site.theme.link }}/static/img/natural-illustration-7.svg" alt="" class="illustration" height="250" />
-				</div>
-			</div>
+			
 		</div> 
 	{% endif %}
 	
