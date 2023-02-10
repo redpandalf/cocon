@@ -123,7 +123,10 @@
           top: 43%;
           // mobile
           @media screen and (max-width: @screen-m) {
-            display: none;
+            top: -74px;
+            right: 45px;
+            transform: rotate(-90deg);
+            left: initial;
           }
         }
         .illustration-top {
@@ -133,11 +136,7 @@
           transform: rotate(180deg);
           // mobile
           @media screen and (max-width: @screen-m) {
-            top: -74px;
-            right: 45px;
-            transform: rotate(-90deg);
-            left: initial;
-            
+            display: none;            
           }
         }
       }
