@@ -2,22 +2,16 @@ $( document ).ready( function( $ ) {
 
 
   // all clickable function 
-  $(".all-clickable").each(function () {
-    var t = $(this).find("a:first-of-type").attr("href");
-    
-    $(this).on("click", function (e) {
-      console.log(t);
+  function e(e) {
+    window.location.href = e
+  }
 
-      var i = $(this).find("input");
-      r = $(this).find(".no-all-clickable");
-
-      t != typeof inputOfCar ? $(event.target).closest(i).length || e(t) : (void 0 !== r && $(event.target).closest(r).length) || e(t);
-      /*var i = $(this).find("input"),
-          r = $(this).find(".no-all-clickable");
-      "undefined" != typeof inputOfCar ? $(event.target).closest(i).length || e(t) : (void 0 !== r && $(event.target).closest(r).length) || e(t);
-      */
-    });
-    
-  });
+  jQuery(".all-clickable").each((function() {
+    var t = jQuery(this).find("a:first-of-type").attr("href");
+    jQuery(this).on("click", (function() {
+        var i = jQuery(this).find("input"),
+            r = jQuery(this).find(".no-all-clickable");
+        "undefined" != typeof inputOfCar ? jQuery(event.target).closest(i).length || e(t) : void 0 !== r && jQuery(event.target).closest(r).length || e(t)
+    }));
   
 });
