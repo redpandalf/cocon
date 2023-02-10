@@ -11,11 +11,12 @@ $( document ).ready( function( $ ) {
 
     jQuery(this).on("click", function() {
       console.log(toto + ' - ' + e);
-      /*
+    
       var i = jQuery(this).find("input");
       var r = jQuery(this).find(".no-all-clickable");
+    
       "undefined" != typeof inputOfCar ? jQuery(event.target).closest(i).length || e(t) : void 0 !== r && jQuery(event.target).closest(r).length || e(t);
-      */
+      
     });
     
   });
