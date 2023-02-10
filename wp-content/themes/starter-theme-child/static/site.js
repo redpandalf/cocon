@@ -3,7 +3,7 @@ $( document ).ready( function( $ ) {
 
   // all clickable function 
   function e(e) {
-    window.location.href = e
+    window.location.href = e;
   }
 
   jQuery(".all-clickable").each((function() {
@@ -13,5 +13,7 @@ $( document ).ready( function( $ ) {
             r = jQuery(this).find(".no-all-clickable");
         "undefined" != typeof inputOfCar ? jQuery(event.target).closest(i).length || e(t) : void 0 !== r && jQuery(event.target).closest(r).length || e(t)
     }));
+  
+  });
   
 });
