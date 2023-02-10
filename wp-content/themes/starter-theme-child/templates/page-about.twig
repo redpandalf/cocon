@@ -20,7 +20,7 @@
 		 or post.meta('about_career_path_background') is not empty 
 	%}
 		<div class="immersif-background my-cover">
-			<div class="bg-block" style=""></div>
+			<div class="bg-block" style="background-image: url('{{ post.meta('about_career_path_background') }}');"></div>
 			
 			<div class="row content-text-block">
 				<div class="content">
@@ -90,12 +90,5 @@
 	
 	
 	<div class="margin-xl"></div>
-
-
-  <style>
-    .my-cover .bg-block:after {
-      background-image: url('{{ post.meta('about_career_path_background') }}');
-    }
-  </style>
 
 {% endblock %}
