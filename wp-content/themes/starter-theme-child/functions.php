@@ -198,16 +198,21 @@ class StarterSite extends Timber\Site {
 				// by default
 				wp_enqueue_style('cocon-default', get_stylesheet_directory_uri() . '/static/css/page/default.less');
 			}
-
-			wp_enqueue_script('cocon-script', get_stylesheet_directory_uri() . '/static/site.js');
 	 	});
-
-		
 
 		$twig->addFunction($function);
 
 		return $twig;
 	}
+
+
+
+	function custom_enqueue_scripts() {
+		//wp_enqueue_script('ledger', mix('public/js/main.js'), array(), false, true);
+		wp_enqueue_script('cocon-script', get_stylesheet_directory_uri() . '/static/site.js');
+
+	}
+	add_action('wp_enqueue_scripts', 'custom_enqueue_scripts', 101);
 
 }
 
