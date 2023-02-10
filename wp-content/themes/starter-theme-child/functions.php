@@ -200,13 +200,15 @@ class StarterSite extends Timber\Site {
 			}
 	 	});
 
-		$function = new Twig_SimpleFunction('enqueue_scripts', function () {
+		$twig->addFunction($function);
+
+		$functionScript = new Twig_SimpleFunction('enqueue_scripts', function () {
 			//wp_enqueue_script('ledger', mix('public/js/main.js'), array(), false, true);
 			wp_enqueue_script('cocon-script', get_stylesheet_directory_uri() . '/static/site.js');
 		});
 
 
-		$twig->addFunction($function);
+		$twig->addFunction($functionScript);
 
 		return $twig;
 	}
