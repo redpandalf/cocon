@@ -22,9 +22,6 @@
     margin-bottom: 200px;
     height: 1150px;
     display: flex;
-    overflow-x: hidden;
-  overflow-y: auto;
-  perspective: 2px;
     // mobile
     @media screen and (max-width: 767.5px) {  
       margin-bottom: -@space-s;
@@ -32,38 +29,20 @@
     }
     // background
     .bg-block {
-      border: 1px solid red;
-      transform-style: preserve-3d;
-      position: absolute;      
-
       width: 100%;
-      height: 100%;
-      //position: absolute;
-      //background-position: center;
-      //background-repeat: no-repeat;
-      //background-size: cover;
-      //background-attachment: fixed;
+      height: inherit;
+      position: absolute;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
       // mobile
       @media screen and (max-width: 767.5px) {
         height: 40%;
-      //background-size: 103%;
-      //background-position: top center;
+        background-size: 103%;
+        background-position: top center;
       }
-
-      &:after {
-        border: 1px solid red;
-        width: 100%;
-        height: 100%;
-        content: " ";
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        z-index: -1;
-        
-        transform: translateZ(-1px) scale(1.1);
-      }
+      
     }    
     // content
     .content-text-block {  
