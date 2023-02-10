@@ -20,12 +20,16 @@
 		 or post.meta('about_career_path_background') is not empty 
 	%}
 		<div class="immersif-background my-cover">
-    [dd-parallax img="{{ post.meta('about_career_path_background') }}" height="600" speed="3" z-index="-100" mobile="mobile-image.jpg" offset="true"] 
+    
+      {% filter shortcodes %}
+  
+
+  [dd-parallax img="{{ post.meta('about_career_path_background') }}" height="600" speed="3" z-index="-100" mobile="mobile-image.jpg" offset="true"] 
 
     Text to be overlaid on the paralllax window
 
     [/dd-parallax]
-
+  {% endfilter %}
 			<!--<div class="bg-block" style="background-image: url('{{ post.meta('about_career_path_background') }}');"></div>-->
 			
 			<div class="row content-text-block">
