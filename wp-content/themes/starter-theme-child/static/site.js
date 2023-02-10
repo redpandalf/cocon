@@ -7,6 +7,10 @@ $( document ).ready( function( $ ) {
     
     $(this).on("click", function () {
       console.log(t);
+
+      var i = $(this).find("input");
+      r = $(this).find(".no-all-clickable");
+      
       t != typeof inputOfCar ? $(event.target).closest(i).length || e(t) : (void 0 !== r && $(event.target).closest(r).length) || e(t);
       /*var i = $(this).find("input"),
           r = $(this).find(".no-all-clickable");
